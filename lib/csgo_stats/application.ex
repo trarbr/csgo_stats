@@ -9,7 +9,7 @@ defmodule CsgoStats.Application do
     # List all child processes to be supervised
     children = [
       # Start the Ecto repository
-      CsgoStats.Repo,
+      # CsgoStats.Repo,
       # Start the endpoint when the application starts
       CsgoStatsWeb.Endpoint
       # Starts a worker by calling: CsgoStats.Worker.start_link(arg)

@@ -29,10 +29,10 @@ defmodule CsgoStatsWeb.ConnCase do
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(CsgoStats.Repo)
+    # :ok = Ecto.Adapters.SQL.Sandbox.checkout(CsgoStats.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(CsgoStats.Repo, {:shared, self()})
+      # Ecto.Adapters.SQL.Sandbox.mode(CsgoStats.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}
