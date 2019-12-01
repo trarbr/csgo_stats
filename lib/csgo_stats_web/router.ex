@@ -19,8 +19,9 @@ defmodule CsgoStatsWeb.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", CsgoStatsWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", CsgoStatsWeb do
+    pipe_through :api
+
+    post "/logs", LogController, :create
+  end
 end
