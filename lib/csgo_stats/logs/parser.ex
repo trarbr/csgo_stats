@@ -510,11 +510,11 @@ defmodule CsgoStats.Logs.Parser do
   game_event =
     choice([
       game_commencing,
+      freeze_period_started,
       match_start,
       round_start,
-      round_end,
-      freeze_period_started,
       team_won,
+      round_end,
       game_over
     ])
 

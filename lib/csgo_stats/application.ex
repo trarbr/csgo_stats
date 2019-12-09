@@ -4,10 +4,13 @@ defmodule CsgoStats.Application do
   use Application
 
   def start(_type, _args) do
+    CsgoStats.Matches.DB.init()
+
     children = [
       CsgoStats.Logs.Supervisor,
       CsgoStats.Matches.Supervisor,
-      {Registry, keys: :unique, name: CsgoStats.Matches.Registry},
+      {Registry, keys: :unique, name: CsgoStats.Matches.EventHandler},
+      {Registry, keys: :duplicate, name: CsgoStats.Matches.DB},
       # CsgoStats.Repo,
       CsgoStatsWeb.Endpoint
     ]

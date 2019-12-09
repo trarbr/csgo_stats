@@ -1,57 +1,123 @@
 defmodule CsgoStats.Matches.Match do
-  @behaviour :gen_statem
+  alias CsgoStats.Events
 
-  alias CsgoStats.Matches.Registry
+  defstruct [
+    :server_instance_token,
+    :phase,
+    :wins,
+    :map,
+    :players,
+    :round_timeout,
+    :bomb_timeout
+  ]
 
-  def child_spec(opts) do
-    %{
-      id: __MODULE__,
-      start: {__MODULE__, :start_link, [opts]},
-      type: :worker,
-      restart: :permanent,
-      shutdown: 500
+  defmodule Player do
+    defstruct team: nil, health: 100, armor: 100, kills: 0, assists: 0, deaths: 0
+  end
+
+  def new(server_instance_token) do
+    %__MODULE__{
+      server_instance_token: server_instance_token,
+      phase: :pre_game,
+      wins: [],
+      players: %{}
     }
   end
 
-  def start_link(opts) do
-    :gen_statem.start_link(__MODULE__, opts, [])
+  def apply(state, event)
+
+  def apply(%{phase: phase} = state, %Events.GameCommencing{})
+      when phase in [:pre_game, :game_over] do
+    %{state | phase: :game_commencing}
   end
 
-  def apply(match, events) do
-    :gen_statem.cast(match, {:apply, events})
+  def apply(%{phase: :game_commencing} = state, %Events.MatchStart{} = event) do
+    %{state | phase: :freeze_period, map: event.map}
   end
 
-  @impl true
-  def callback_mode(), do: [:handle_event_function]
-
-  @impl true
-  def init(opts) do
-    server_instance_token = Keyword.fetch!(opts, :server_instance_token)
-
-    case Registry.register(server_instance_token) do
-      {:ok, _pid} ->
-        events = Keyword.get(opts, :events, [])
-        data = %{}
-        actions = events_to_actions(events)
-        {:ok, :initial_state, data, actions}
-
-      {:error, {reason, _pid}} ->
-        {:stop, reason}
-    end
+  def apply(%{phase: :freeze_period} = state, %Events.RoundStart{}) do
+    # TODO: set timeout depending on cvar mp_roundtime or mp_roundtime_defuse
+    timeout = NaiveDateTime.add(NaiveDateTime.utc_now(), 3 * 60, :second)
+    %{state | phase: :round, round_timeout: timeout}
   end
 
-  @impl true
-  def handle_event(:cast, {:apply, events}, :initial_state, _data) do
-    actions = events_to_actions(events)
-    {:keep_state_and_data, actions}
+  def apply(%{phase: :round} = state, %Events.TeamWon{} = event) do
+    %{state | wins: state.wins ++ [event.win_condition]}
   end
 
-  def handle_event(event_type, event, state, data) do
-    IO.inspect({:__MODULE__, {event_type, event, state, data}})
-    :keep_state_and_data
+  def apply(%{phase: :round} = state, %Events.RoundEnd{}) do
+    %{state | phase: :round_over, round_timeout: nil, bomb_timeout: nil}
   end
 
-  defp events_to_actions(events) do
-    Enum.map(events, fn event -> {:next_event, :internal, {:apply, event}} end)
+  def apply(%{phase: :round_over} = state, %Events.GameOver{}) do
+    %{state | phase: :game_over}
+  end
+
+  def apply(%{phase: :round_over} = state, %Events.FreezePeriodStarted{}) do
+    players =
+      Map.new(state.players, fn {username, player} ->
+        {username, %{player | health: 100, armor: 100}}
+      end)
+
+    %{state | phase: :freeze_period, players: players}
+  end
+
+  def apply(state, %Events.PlayerSwitchedTeam{} = event) do
+    players =
+      Map.update(state.players, event.player.username, %Player{team: event.to}, fn player ->
+        %{player | team: event.to}
+      end)
+
+    %{state | players: players}
+  end
+
+  def apply(state, %Events.PlantedTheBomb{}) do
+    timeout = NaiveDateTime.add(NaiveDateTime.utc_now(), 40, :second)
+    %{state | bomb_timeout: timeout}
+  end
+
+  def apply(state, %Events.Attacked{} = event) do
+    players =
+      Map.update!(state.players, event.attacked.username, fn player ->
+        %{player | health: event.health, armor: event.armor}
+      end)
+
+    %{state | players: players}
+  end
+
+  def apply(state, %Events.Killed{} = event) do
+    players =
+      Map.update!(state.players, event.killed.username, fn player ->
+        %{player | deaths: player.deaths + 1}
+      end)
+
+    players =
+      Map.update!(players, event.killer.username, fn player ->
+        %{player | kills: player.kills + 1}
+      end)
+
+    %{state | players: players}
+  end
+
+  def apply(state, %Events.Assisted{} = event) do
+    players =
+      Map.update!(state.players, event.assistant.username, fn player ->
+        %{player | assists: player.assists + 1}
+      end)
+
+    %{state | players: players}
+  end
+
+  def apply(state, %Events.KilledByTheBomb{} = event) do
+    players =
+      Map.update!(state.players, event.player.username, fn player ->
+        %{player | deaths: player.deaths + 1}
+      end)
+
+    %{state | players: players}
+  end
+
+  def apply(state, _event) do
+    state
   end
 end
