@@ -1,0 +1,23 @@
+<h1>Match!</h1>
+
+<div>
+<%= Map.from_struct(@match) |> Map.drop([:players]) |> Jason.encode!(pretty: true) %>
+</div>
+
+<h2>CTs!</h2>
+
+<%= for {username, player} <- @match.players, player.team == :ct do %>
+<div>
+  <%= username %> <%= Map.from_struct(player) |> Jason.encode!(pretty: :true) %>
+</div>
+<% end %>
+
+
+<h2>Terrorists!</h2>
+
+<%= for {username, player} <- @match.players, player.team == :terrorist do %>
+<div>
+  <%= username %> <%= Map.from_struct(player) |> Jason.encode!(pretty: :true) %>
+</div>
+<% end %>
+

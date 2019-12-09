@@ -1,0 +1,5 @@
+<p>A list of all matches</p>
+
+<%= for match <- @matches do %>
+    <p><%= link("#{match.server_instance_token}", to: Routes.match_path(@socket, :show, match.server_instance_token)) %></p>
+<% end %>
