@@ -6,7 +6,7 @@ defmodule CsgoStatsWeb.MatchLive.Show do
       CsgoStats.Matches.get_match(params.server_instance_token) ||
         CsgoStats.Matches.Match.new(params.server_instance_token)
 
-    CsgoStats.Matches.DB.subscribe_match(params.server_instance_token)
+    CsgoStats.Matches.subscribe_match(params.server_instance_token)
 
     {:ok, assign(socket, match: match)}
   end

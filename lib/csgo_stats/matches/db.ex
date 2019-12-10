@@ -5,12 +5,20 @@ defmodule CsgoStats.Matches.DB do
     :ets.new(@db, [:named_table, :set, :public])
   end
 
+  def subscribe_all() do
+    Registry.register(__MODULE__, :all, [])
+  end
+
   def subscribe_match(server_instance_token) do
     Registry.register(__MODULE__, server_instance_token, [])
   end
 
   def upsert(match) do
     :ets.insert(@db, {match.server_instance_token, match})
+
+    Registry.dispatch(__MODULE__, :all, fn entries ->
+      for {pid, _} <- entries, do: send(pid, :matches_updated)
+    end)
 
     Registry.dispatch(__MODULE__, match.server_instance_token, fn entries ->
       for {pid, _} <- entries, do: send(pid, {:match_updated, match})

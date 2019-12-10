@@ -9,6 +9,14 @@ defmodule CsgoStats.Matches do
     DB.get(server_instance_token)
   end
 
+  def subscribe_all() do
+    DB.subscribe_all()
+  end
+
+  def subscribe_match(server_instance_token) do
+    DB.subscribe_match(server_instance_token)
+  end
+
   def apply(server_instance_token, events) do
     case EventHandler.lookup(server_instance_token) do
       {:ok, event_handler} ->
