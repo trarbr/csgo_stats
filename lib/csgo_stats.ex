@@ -7,11 +7,11 @@ defmodule CsgoStats do
   if it comes from the database, an external API or others.
   """
 
-  def playback(logfile) do
-    spawn(fn -> do_playback(logfile) end)
+  def playback(logfile, speedup \\ 1) do
+    spawn(fn -> do_playback(logfile, speedup) end)
   end
 
-  def do_playback(logfile) do
+  def do_playback(logfile, speedup) do
     loglines =
       File.read!(logfile)
       |> String.split("\n")
@@ -47,7 +47,8 @@ defmodule CsgoStats do
     sleep_intervals =
       Enum.zip([timestamps, rest])
       |> Enum.map(fn {first_ts, next_ts} ->
-        NaiveDateTime.diff(next_ts, first_ts, :millisecond)
+        diff = NaiveDateTime.diff(next_ts, first_ts, :millisecond)
+        trunc(diff / speedup)
       end)
 
     Enum.zip([loglines, sleep_intervals])
