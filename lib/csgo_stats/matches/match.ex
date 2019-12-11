@@ -12,7 +12,7 @@ defmodule CsgoStats.Matches.Match do
   ]
 
   defmodule Player do
-    defstruct team: nil, health: 100, armor: 100, kills: 0, assists: 0, deaths: 0
+    defstruct team: nil, health: 100, armor: 0, kills: 0, assists: 0, deaths: 0
   end
 
   def new(server_instance_token) do
