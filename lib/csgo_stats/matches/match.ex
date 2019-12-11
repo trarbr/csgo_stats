@@ -12,7 +12,7 @@ defmodule CsgoStats.Matches.Match do
   ]
 
   defmodule Player do
-    defstruct team: nil, health: 100, armor: 100, kills: 0, assists: 0, deaths: 0
+    defstruct team: nil, health: 100, armor: 0, kills: 0, assists: 0, deaths: 0
   end
 
   def new(server_instance_token) do
@@ -56,7 +56,7 @@ defmodule CsgoStats.Matches.Match do
   def apply(%{phase: :round_over} = state, %Events.FreezePeriodStarted{}) do
     players =
       Map.new(state.players, fn {username, player} ->
-        {username, %{player | health: 100, armor: 100}}
+        {username, %{player | health: 100}}
       end)
 
     %{state | phase: :freeze_period, players: players}
@@ -88,7 +88,7 @@ defmodule CsgoStats.Matches.Match do
   def apply(state, %Events.Killed{} = event) do
     players =
       Map.update!(state.players, event.killed.username, fn player ->
-        %{player | deaths: player.deaths + 1}
+        %{player | deaths: player.deaths + 1, armor: 0}
       end)
 
     players =
