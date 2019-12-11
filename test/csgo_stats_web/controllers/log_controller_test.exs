@@ -1,7 +1,7 @@
 defmodule CsgoStatsWeb.LogControllerTest do
   use CsgoStatsWeb.ConnCase
 
-  test "handle new log entry", %{conn: conn} do
+  test "returns 205 when game server posts logs the first time, then 200", %{conn: conn} do
     body = "11/25/2019 - 20:20:38.763 - World triggered \"Game_Commencing\"\n"
 
     headers = [
@@ -22,6 +22,13 @@ defmodule CsgoStatsWeb.LogControllerTest do
 
     conn =
       conn
+      |> put_req_headers(headers)
+      |> post("/api/logs", body)
+
+    assert json_response(conn, 205) =~ ""
+
+    conn =
+      build_conn()
       |> put_req_headers(headers)
       |> post("/api/logs", body)
 

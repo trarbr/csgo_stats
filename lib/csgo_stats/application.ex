@@ -7,7 +7,6 @@ defmodule CsgoStats.Application do
     CsgoStats.Matches.DB.init()
 
     children = [
-      CsgoStats.Logs.Supervisor,
       CsgoStats.Matches.Supervisor,
       {Registry, keys: :unique, name: CsgoStats.Matches.EventHandler},
       {Registry, keys: :duplicate, name: CsgoStats.Matches.DB},

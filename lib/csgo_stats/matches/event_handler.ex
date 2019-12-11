@@ -8,7 +8,7 @@ defmodule CsgoStats.Matches.EventHandler do
 
   def lookup(server_instance_token) do
     case Registry.lookup(__MODULE__, server_instance_token) do
-      [{match, _value}] -> {:ok, match}
+      [{event_handler, _value}] -> {:ok, event_handler}
       [] -> {:error, :not_found}
     end
   end
