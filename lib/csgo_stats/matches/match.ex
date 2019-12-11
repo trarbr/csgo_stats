@@ -88,7 +88,7 @@ defmodule CsgoStats.Matches.Match do
   def apply(state, %Events.Killed{} = event) do
     players =
       Map.update!(state.players, event.killed.username, fn player ->
-        %{player | deaths: player.deaths + 1}
+        %{player | deaths: player.deaths + 1, armor: 0}
       end)
 
     players =
