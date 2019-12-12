@@ -24,8 +24,9 @@ jobs:
         mix local.rebar --force
         mix local.hex --force
         mix deps.get
-    - name: Format checks
-      uses: Nitrino/actions-elixir@v1.0
       
     - name: Run Tests
       run: mix test
+    
+    - name: Format checks
+      run: mix format --check-formatted
