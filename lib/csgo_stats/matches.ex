@@ -17,15 +17,23 @@ defmodule CsgoStats.Matches do
     DB.subscribe_match(server_instance_token)
   end
 
-  def apply(server_instance_token, events) do
+  def started?(server_instance_token) do
     case EventHandler.lookup(server_instance_token) do
-      {:ok, event_handler} ->
-        EventHandler.apply(event_handler, events)
+      {:ok, _} -> true
+      {:error, :not_found} -> false
+    end
+  end
 
-      {:error, :not_found} ->
-        Supervisor.start_child(
-          {EventHandler, server_instance_token: server_instance_token, events: events}
-        )
+  def start(server_instance_token) do
+    Supervisor.start_child({EventHandler, server_instance_token: server_instance_token})
+  end
+
+  def update(server_instance_token, events) do
+    # TODO: return error if the match starts in invalid state, e.g. if log is
+    # started in the middle of a match
+    case EventHandler.lookup(server_instance_token) do
+      {:ok, event_handler} -> :ok = EventHandler.apply(event_handler, events)
+      {:error, :not_found} -> {:error, :not_started}
     end
   end
 end
