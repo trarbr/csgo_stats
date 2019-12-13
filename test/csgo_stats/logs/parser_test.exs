@@ -171,7 +171,7 @@ defmodule CsgoStats.Logs.ParserTest do
                 penetrated: false
               }} = Parser.parse(knifed)
 
-      knifed =
+      silencer =
         "\"Niles<16><BOT><TERRORIST>\" [632 585 91] killed \"Albert<23><BOT><CT>\" [600 555 154] with \"usp_silencer\""
 
       assert {:ok,
@@ -181,7 +181,7 @@ defmodule CsgoStats.Logs.ParserTest do
                 weapon: "usp_silencer",
                 headshot: false,
                 penetrated: false
-              }} = Parser.parse(knifed)
+              }} = Parser.parse(silencer)
 
       headshot =
         "\"tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>\" [1873 314 160] killed \"Yanni<15><BOT><CT>\" [1841 283 206] with \"glock\" (headshot)"
