@@ -301,7 +301,7 @@ defmodule CsgoStats.Logs.Parser do
 
   weapon =
     ignore(string(~s/"/))
-    |> ascii_string([?a..?z, ?0..?9], min: 1)
+    |> ascii_string([?a..?z, ?0..?9, ?_], min: 1)
     |> ignore(string(~s/"/))
 
   stat =
