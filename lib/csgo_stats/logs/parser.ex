@@ -455,7 +455,29 @@ defmodule CsgoStats.Logs.Parser do
     %Events.KilledOther{
       killer: killer,
       killed: killed,
-      weapon: weapon
+      weapon: weapon,
+      headshot: false,
+      penetrated: false
+    }
+  end
+
+  defp killed_other([killer, killed, weapon, " (headshot)"]) do
+    %Events.KilledOther{
+      killer: killer,
+      killed: killed,
+      weapon: weapon,
+      penetrated: false,
+      headshot: true
+    }
+  end
+
+  defp killed_other([killer, killed, weapon, " (penetrated)"]) do
+    %Events.KilledOther{
+      killer: killer,
+      killed: killed,
+      weapon: weapon,
+      penetrated: true,
+      headshot: false
     }
   end
 
