@@ -8,7 +8,8 @@ defmodule CsgoStats.Matches.Match do
     :map,
     :players,
     :round_timeout,
-    :bomb_timeout
+    :bomb_timeout,
+    :kill_feed
   ]
 
   defmodule Player do
@@ -20,7 +21,8 @@ defmodule CsgoStats.Matches.Match do
       server_instance_token: server_instance_token,
       phase: :pre_game,
       wins: [],
-      players: %{}
+      players: %{},
+      kill_feed: []
     }
   end
 
@@ -59,7 +61,7 @@ defmodule CsgoStats.Matches.Match do
         {username, %{player | health: 100}}
       end)
 
-    %{state | phase: :freeze_period, players: players}
+    %{state | phase: :freeze_period, players: players, kill_feed: []}
   end
 
   def apply(state, %Events.PlayerSwitchedTeam{} = event) do
@@ -96,7 +98,7 @@ defmodule CsgoStats.Matches.Match do
         %{player | kills: player.kills + 1}
       end)
 
-    %{state | players: players}
+    %{state | players: players, kill_feed: [event | state.kill_feed]}
   end
 
   def apply(state, %Events.Assisted{} = event) do
