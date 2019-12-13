@@ -29,6 +29,7 @@ defmodule CsgoStats.Logs do
 
   defp do_parse(entry) do
     Enum.reduce(entry.lines, [], fn line, acc ->
+      # Cut date out of the log. Example: "12/12/2019 - 21:13:56.031 - "
       event_text = String.slice(line, 28..-1)
 
       case Parser.parse(event_text) do
