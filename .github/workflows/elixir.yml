@@ -25,8 +25,8 @@ jobs:
         mix local.hex --force
         mix deps.get
       
-    - name: Run Tests
+    - name: Run tests
       run: mix test
     
     - name: Format checks
-      run: mix format --check-formatted
+      run: mix format --check-formatted --dry-run
