@@ -1,7 +1,25 @@
 <h1>Match!</h1>
 
-<div>
-<%= Map.from_struct(@match) |> Map.drop([:players]) |> Jason.encode!(pretty: true) %>
+<div style="display: flex;justify-content: space-between;">
+  <div>
+    <%= Map.from_struct(@match) |> Map.drop([:players, :kill_feed]) |> Jason.encode!(pretty: true) %>
+  </div>
+
+  <div style="width: 100%;max-width: 200px;flex-shrink: 0;text-align: right;">
+    <%= for %{ killer: killer, killed: killed, weapon: weapon } <- @match.kill_feed |> Enum.slice(0..2) do %>
+      <div>
+        <%= killer.username %>
+        <span style="transform: scaleX(-1);display: inline-block;">
+          <%= if weapon == "knife_t" or weapon == "knife_ct" do %>
+            🗡️
+          <% else %>
+            🔫
+          <% end %>
+        </span>
+        <%= killed.username %>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 <h2>CTs!</h2>
