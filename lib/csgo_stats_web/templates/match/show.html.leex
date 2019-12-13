@@ -10,11 +10,11 @@
       <div>
         <%= killer.username %>
         <span style="transform: scaleX(-1);display: inline-block;">
-          <%= if weapon == "knife_t" do %>
+          <%= if weapon == "knife_t" or weapon == "knife_ct" do %>
             🗡️
-          <%= else %>
+          <% else %>
             🔫
-          <%= end %>
+          <% end %>
         </span>
         <%= killed.username %>
       </div>
