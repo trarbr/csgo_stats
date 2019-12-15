@@ -4,7 +4,6 @@ defmodule CsgoStats.ServerCommunicator.Client do
   @moduledoc """
   A client for communicating with a game server using RCON
   """
-  alias CsgoBot.Rcon.Packet
 
   @behaviour :gen_statem
 
@@ -13,7 +12,7 @@ defmodule CsgoStats.ServerCommunicator.Client do
   @auth_backoff_timeout 5000
 
   # TODO: derive protocol to avoid logging password
-  defstruct [:instance, :password, :socket, :next_packet_id]
+  defstruct [:instance, :password, :log_address, :socket, :next_packet_id]
 
   def execute(conn, command) do
     :gen_statem.call(conn, {:execute, command})
@@ -30,7 +29,8 @@ defmodule CsgoStats.ServerCommunicator.Client do
   def init(opts) do
     data = %__MODULE__{
       instance: Keyword.get(opts, :instance),
-      password: Keyword.get(opts, :password, "1234")
+      password: Keyword.get(opts, :password, "1234"),
+      log_address: Keyword.get(opts, :log_address, "127.0.0.1:4000/api/logs")
     }
 
     actions = [{:next_event, :internal, :connect}]
@@ -56,8 +56,12 @@ defmodule CsgoStats.ServerCommunicator.Client do
 
   def handle_event(:internal, :forward_logs, :authenticated, data) do
     id = data.next_packet_id
-    logaddress = "127.0.0.1:48932"
-    command = "log on; mp_logdetail 3; logaddress_del #{logaddress}; logaddress_add #{logaddress}"
+
+    command =
+      "log on; mp_logdetail 3; logaddress_del #{data.log_address}; logaddress_add #{
+        data.log_address
+      }"
+
     packet = serverdata_execcommand(id, command)
     :ok = send_packet(data.socket, packet)
     data = %{data | next_packet_id: id + 1}

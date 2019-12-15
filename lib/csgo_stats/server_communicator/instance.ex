@@ -27,11 +27,19 @@ defmodule CsgoStats.ServerCommunicator.Instance do
     }
   end
 
-  def resolveAddress(address) when is_binary(address) do
+  def key(%__MODULE__{ip_address: ip_address, port: port} = instance) do
+    ip_address
+    |> :inet_parse.ntoa()
+    |> to_string()
+    |> Kernel.<>(":")
+    |> Kernel.<>(to_string(port))
+  end
+
+  defp resolveAddress(address) when is_binary(address) do
     address |> to_charlist() |> resolveAddress()
   end
 
-  def resolveAddress(address) do
+  defp resolveAddress(address) do
     with {:error, :einval} <- :inet.parse_address(address),
          {:ok, {:hostent, _, _, _, _, ips}} <- :inet_res.gethostbyname(address),
          false <- Enum.empty?(ips) do
