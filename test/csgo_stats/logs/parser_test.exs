@@ -214,15 +214,41 @@ defmodule CsgoStats.Logs.ParserTest do
     end
 
     test "Killed other" do
-      line =
+      chicken =
         "\"tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>\" [849 2387 143] killed other \"chicken<159>\" [814 2555 138] with \"awp\""
 
       assert {:ok,
               %Events.KilledOther{
                 killer: %{username: "tbroedsgaard"},
                 killed: "chicken",
-                weapon: "awp"
-              }} = Parser.parse(line)
+                weapon: "awp",
+                penetrated: false,
+                headshot: false
+              }} = Parser.parse(chicken)
+
+      chicken =
+        "\"tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>\" [849 2387 143] killed other \"chicken<159>\" [814 2555 138] with \"awp\" (headshot)"
+
+      assert {:ok,
+              %Events.KilledOther{
+                killer: %{username: "tbroedsgaard"},
+                killed: "chicken",
+                weapon: "awp",
+                penetrated: false,
+                headshot: true
+              }} = Parser.parse(chicken)
+
+      func_breakable =
+        "\"Yogi<49><BOT><CT>\" [-471 -139 6] killed other \"func_breakable<113>\" [973 -61 175] with \"mp7\" (penetrated)"
+
+      assert {:ok,
+              %Events.KilledOther{
+                killer: %{username: "Yogi"},
+                killed: "func_breakable",
+                weapon: "mp7",
+                penetrated: true,
+                headshot: false
+              }} = Parser.parse(func_breakable)
     end
 
     test "Assisted" do
