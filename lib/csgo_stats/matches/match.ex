@@ -9,7 +9,9 @@ defmodule CsgoStats.Matches.Match do
     :players,
     :round_timeout,
     :bomb_timeout,
-    :kill_feed
+    :kill_feed,
+    :score_terrorist,
+    :score_ct
   ]
 
   defmodule Player do
@@ -20,6 +22,8 @@ defmodule CsgoStats.Matches.Match do
     %__MODULE__{
       server_instance_token: server_instance_token,
       phase: :pre_game,
+      score_terrorist: 0,
+      score_ct: 0,
       wins: [],
       players: %{},
       kill_feed: []
@@ -43,8 +47,8 @@ defmodule CsgoStats.Matches.Match do
     %{state | phase: :round, round_timeout: timeout}
   end
 
-  def apply(%{phase: :round} = state, %Events.TeamWon{} = event) do
-    %{state | wins: state.wins ++ [event.win_condition]}
+  def apply(state, %Events.TeamWon{} = event) do
+    %{state | wins: state.wins ++ [event.win_condition], score_terrorist: event.terrorist_score, score_ct: event.ct_score}
   end
 
   def apply(%{phase: :round} = state, %Events.RoundEnd{}) do
