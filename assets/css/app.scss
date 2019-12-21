@@ -197,10 +197,21 @@ body {
     }
 }
 
-.map-info {
+.game-info {
     display: flex;
-    justify-content: flex-end;
     height: 100px;
+    width: 100%;
+    padding-left: 150px;
+    justify-content: space-between;
+
+    .stat {
+        font-size: 30px;
+        color: whitesmoke;
+
+        .key {
+            font-weight: bold;
+        }
+    }
 }
 
 .kill-feed {
@@ -208,6 +219,7 @@ body {
     max-width: 400px;
     flex-shrink: 0;
     text-align: right;
+    justify-self: flex-end;
     display: flex;
     flex-direction: column;
     align-items: flex-end;

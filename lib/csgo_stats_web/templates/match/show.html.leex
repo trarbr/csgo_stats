@@ -1,4 +1,13 @@
-<div class="map-info">
+<div class="game-info">
+  <div class="stat">
+    <div class="key">
+      Map
+    </div>
+    <div class="value">
+      Cache
+    </div>
+  </div>
+
   <div class="kill-feed">
     <%= for %{ killer: killer, killed: killed, weapon: weapon, headshot: headshot } <- @match.kill_feed |> Enum.slice(0..2) do %>
     <div class="kill">
