@@ -7,7 +7,7 @@ config :logger, :console,
 
 # Configures the endpoint
 config :csgo_stats, CsgoStatsWeb.Endpoint,
-  server: true,
+  server: false,
   http: [port: 4000],
   url: [host: "localhost", port: 4000],
   cache_static_manifest: "priv/static/cache_manifest.json",
