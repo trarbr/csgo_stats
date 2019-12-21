@@ -48,7 +48,12 @@ defmodule CsgoStats.Matches.Match do
   end
 
   def apply(state, %Events.TeamWon{} = event) do
-    %{state | wins: state.wins ++ [event.win_condition], score_terrorist: event.terrorist_score, score_ct: event.ct_score}
+    %{
+      state
+      | wins: state.wins ++ [event.win_condition],
+        score_terrorist: event.terrorist_score,
+        score_ct: event.ct_score
+    }
   end
 
   def apply(%{phase: :round} = state, %Events.RoundEnd{}) do
