@@ -1,3 +1,3 @@
 defmodule CsgoStats.Events.PlayerDisconnected do
-  defstruct [:player, :reason]
+  defstruct [:player, :reason, :timestamp]
 end

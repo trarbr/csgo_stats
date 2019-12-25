@@ -12,14 +12,43 @@ defmodule CsgoStats.Logs.Parser do
 
   ## Examples
 
-      iex> CsgoStats.Logs.Parser.parse(~s/World triggered "Game_Commencing"/)
-      {:ok, %CsgoStats.Events.GameCommencing{}}
+      iex> CsgoStats.Logs.Parser.parse(~s|11/24/2019 - 21:43:39.781 - World triggered "Game_Commencing"|)
+      {:ok, %CsgoStats.Events.GameCommencing{timestamp: ~N[2019-11-24 21:43:39.781]}}
   """
   def parse(line) do
     case do_parse(line) do
       {:ok, [event], "", _, _, _} -> {:ok, event}
       {:ok, [event], leftovers, _, _, _} -> {:ok, event, leftovers}
       {:error, error, unparsed, _context, _, _} -> {:error, error, unparsed}
+    end
+  end
+
+  date =
+    integer(2)
+    |> ignore(string("/"))
+    |> integer(2)
+    |> ignore(string("/"))
+    |> integer(4)
+
+  time =
+    integer(2)
+    |> ignore(string(":"))
+    |> integer(2)
+    |> ignore(string(":"))
+    |> integer(2)
+    |> ignore(string("."))
+    |> integer(3)
+
+  timestamp =
+    date
+    |> ignore(string(" - "))
+    |> concat(time)
+    |> reduce({:timestamp, []})
+
+  defp timestamp([month, day, year, hour, minute, second, millisecond]) do
+    case NaiveDateTime.new(year, month, day, hour, minute, second, {millisecond * 1000, 3}) do
+      {:ok, datetime} -> datetime
+      {:error, _error} -> nil
     end
   end
 
@@ -561,6 +590,13 @@ defmodule CsgoStats.Logs.Parser do
 
   defparsecp(
     :do_parse,
-    choice([game_event, player_event])
+    timestamp
+    |> ignore(string(" - "))
+    |> choice([game_event, player_event])
+    |> reduce({:set_timestamp, []})
   )
+
+  defp set_timestamp([timestamp, event]) do
+    %{event | timestamp: timestamp}
+  end
 end

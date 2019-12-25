@@ -1,3 +1,3 @@
 defmodule CsgoStats.Events.FreezePeriodStarted do
-  defstruct []
+  defstruct [:timestamp]
 end
