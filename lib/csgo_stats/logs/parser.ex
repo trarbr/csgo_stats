@@ -2,24 +2,38 @@ defmodule CsgoStats.Logs.Parser do
   @moduledoc """
   Parses CS:GO game server log lines to events
   """
-
   import NimbleParsec
+
+  require Logger
 
   alias CsgoStats.Events
 
   @doc """
-  Parse a log line into a corresponding event.
+  Parse a set of log lines into their corresponding events.
 
   ## Examples
 
       iex> CsgoStats.Logs.Parser.parse(~s|11/24/2019 - 21:43:39.781 - World triggered "Game_Commencing"|)
-      {:ok, %CsgoStats.Events.GameCommencing{timestamp: ~N[2019-11-24 21:43:39.781]}}
+      {:ok, [%CsgoStats.Events.GameCommencing{timestamp: ~N[2019-11-24 21:43:39.781]}]}
   """
-  def parse(line) do
-    case do_parse(line) do
-      {:ok, [event], "", _, _, _} -> {:ok, event}
-      {:ok, [event], leftovers, _, _, _} -> {:ok, event, leftovers}
-      {:error, error, unparsed, _context, _, _} -> {:error, error, unparsed}
+  def parse(lines, accumulator \\ [])
+
+  def parse("", accumulator) do
+    {:ok, accumulator}
+  end
+
+  def parse(lines, accumulator) do
+    case do_parse(lines) do
+      {:ok, events, "", _, _, _} ->
+        {:ok, accumulator ++ events}
+
+      {:ok, events, leftovers, _, _, _} ->
+        [unhandled, next_events] = String.split(leftovers, "\n", parts: 2)
+        Logger.info("event_unhandled||#{unhandled}")
+        parse(next_events, accumulator ++ events)
+
+      {:error, error, unparsed, _context, _, _} ->
+        {:error, error, unparsed}
     end
   end
 
@@ -593,7 +607,9 @@ defmodule CsgoStats.Logs.Parser do
     timestamp
     |> ignore(string(" - "))
     |> choice([game_event, player_event])
+    |> ignore(optional(string("\n")))
     |> reduce({:set_timestamp, []})
+    |> repeat()
   )
 
   defp set_timestamp([timestamp, event]) do
