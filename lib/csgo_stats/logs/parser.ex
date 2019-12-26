@@ -37,6 +37,8 @@ defmodule CsgoStats.Logs.Parser do
     end
   end
 
+  ### Helpers
+  # Example: 11/24/2019
   date =
     integer(2)
     |> ignore(string("/"))
@@ -44,6 +46,7 @@ defmodule CsgoStats.Logs.Parser do
     |> ignore(string("/"))
     |> integer(4)
 
+  # Example: 21:43:39.781
   time =
     integer(2)
     |> ignore(string(":"))
@@ -53,6 +56,7 @@ defmodule CsgoStats.Logs.Parser do
     |> ignore(string("."))
     |> integer(3)
 
+  # Example: 11/24/2019 - 21:43:39.781
   timestamp =
     date
     |> ignore(string(" - "))
@@ -66,54 +70,7 @@ defmodule CsgoStats.Logs.Parser do
     end
   end
 
-  ### World events
-  # World triggered "Game_Commencing"
-  game_commencing =
-    ignore(string(~s/World triggered "Game_Commencing"/))
-    |> reduce({:game_commencing, []})
-
-  defp game_commencing([]) do
-    %Events.GameCommencing{}
-  end
-
-  # World triggered "Match_Start" on "de_inferno"
-  match_start =
-    ignore(string(~s/World triggered "Match_Start" on "/))
-    |> ascii_string([?a..?z, ?_], min: 1)
-    |> ignore(string(~s/"/))
-    |> reduce({:match_start, []})
-
-  defp match_start([map]) do
-    %Events.MatchStart{map: map}
-  end
-
-  # World triggered "Round_Start"
-  round_start =
-    ignore(string(~s/World triggered "Round_Start"/))
-    |> reduce({:round_start, []})
-
-  defp round_start([]) do
-    %Events.RoundStart{}
-  end
-
-  # World triggered "Round_End"
-  round_end =
-    ignore(string(~s/World triggered "Round_End"/))
-    |> reduce({:round_end, []})
-
-  defp round_end([]) do
-    %Events.RoundEnd{}
-  end
-
-  # Starting Freeze period
-  freeze_period_started =
-    ignore(string("Starting Freeze period"))
-    |> reduce({:freeze_period_started, []})
-
-  defp freeze_period_started([]) do
-    %Events.FreezePeriodStarted{}
-  end
-
+  # Example: TERRORIST
   team =
     choice([string("CT"), string("TERRORIST"), string("T"), string("Unassigned")])
     |> reduce({:team, []})
@@ -127,6 +84,7 @@ defmodule CsgoStats.Logs.Parser do
     end
   end
 
+  # Example: SFUI_Notice_Terrorists_Win
   win_condition =
     ignore(string("SFUI_Notice_"))
     |> choice([
@@ -148,12 +106,167 @@ defmodule CsgoStats.Logs.Parser do
     end
   end
 
+  # Example: "casual"
+  game_mode =
+    choice([
+      string("casual"),
+      string("competitive")
+    ])
+
+  # Example: "de_inferno"
+  game_map =
+    choice([
+      string("de_cache"),
+      string("de_vertigo"),
+      string("de_dust2"),
+      string("de_inferno"),
+      string("de_mirage"),
+      string("de_nuke"),
+      string("de_overpass"),
+      string("de_train")
+    ])
+
+  # Example: (CT "0")
   team_score =
     ignore(string("("))
     |> concat(team)
     |> ignore(string(~s/ "/))
     |> integer(min: 1)
     |> ignore(string(~s/")/))
+
+  # Example: tbroedsgaard
+  username = utf8_string([{:not, ?<}], min: 1)
+
+  # Example: <14>
+  user_tag =
+    ignore(string("<"))
+    |> integer(min: 1)
+    |> ignore(string(">"))
+
+  # Example: <STEAM_1:1:42376214>
+  steam_id =
+    ignore(string("<"))
+    |> choice([string("BOT"), utf8_string([{:not, ?>}], min: 1)])
+    |> ignore(string(">"))
+
+  # Example: <CT>
+  team_angle =
+    ignore(string("<"))
+    |> concat(optional(team))
+    |> ignore(string(">"))
+
+  # Example: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>"
+  player =
+    ignore(string(~s/"/))
+    |> concat(username)
+    |> concat(user_tag)
+    |> concat(steam_id)
+    |> concat(optional(team_angle))
+    |> ignore(string(~s/"/))
+    |> reduce({:player, []})
+
+  defp player([username, _tag, steam_id]) do
+    %{username: username, steam_id: steam_id, team: nil}
+  end
+
+  defp player([username, _tag, steam_id, team]) do
+    %{username: username, steam_id: steam_id, team: team}
+  end
+
+  # Example: [849 2387 143]
+  position =
+    ignore(string("["))
+    |> ascii_string([?0..?9, ?-], min: 1)
+    |> ignore(string(" "))
+    |> ascii_string([?0..?9, ?-], min: 1)
+    |> ignore(string(" "))
+    |> ascii_string([?0..?9, ?-], min: 1)
+    |> ignore(string("]"))
+
+  # Example: "glock"
+  weapon =
+    ignore(string(~s/"/))
+    |> ascii_string([?a..?z, ?0..?9, ?_], min: 1)
+    |> ignore(string(~s/"/))
+
+  # Example: (damage_armor "32")
+  stat =
+    ignore(
+      choice([
+        string(~s/(damage_armor "/),
+        string(~s/(damage "/),
+        string(~s/(health "/),
+        string(~s/(armor "/)
+      ])
+    )
+    |> integer(min: 1)
+    |> ignore(string(~s/")/))
+
+  # Example: (hitgroup "right leg")
+  hitgroup =
+    ignore(string(~s/(hitgroup "/))
+    |> ascii_string([?a..?z, ?\s], min: 1)
+    |> ignore(string(~s/")/))
+
+  # Example: "3k"
+  award =
+    choice([
+      string("3k"),
+      string("hsp"),
+      string("firstkills"),
+      string("cashspent"),
+      string("deaths"),
+      string("mvps"),
+      string("assists")
+    ])
+
+  ### Events
+  # World triggered "Game_Commencing"
+  game_commencing =
+    ignore(string(~s/"Game_Commencing"/))
+    |> reduce({:game_commencing, []})
+
+  defp game_commencing([]) do
+    %Events.GameCommencing{}
+  end
+
+  # World triggered "Match_Start" on "de_inferno"
+  match_start =
+    ignore(string(~s/"Match_Start" on "/))
+    |> concat(game_map)
+    |> ignore(string(~s/"/))
+    |> reduce({:match_start, []})
+
+  defp match_start([map]) do
+    %Events.MatchStart{map: map}
+  end
+
+  # World triggered "Round_Start"
+  round_start =
+    ignore(string(~s/"Round_Start"/))
+    |> reduce({:round_start, []})
+
+  defp round_start([]) do
+    %Events.RoundStart{}
+  end
+
+  # World triggered "Round_End"
+  round_end =
+    ignore(string(~s/"Round_End"/))
+    |> reduce({:round_end, []})
+
+  defp round_end([]) do
+    %Events.RoundEnd{}
+  end
+
+  # Starting Freeze period
+  freeze_period_started =
+    ignore(string("Starting Freeze period"))
+    |> reduce({:freeze_period_started, []})
+
+  defp freeze_period_started([]) do
+    %Events.FreezePeriodStarted{}
+  end
 
   # Team "TERRORIST" triggered "SFUI_Notice_Terrorists_Win" (CT "0") (T "1")
   team_won =
@@ -175,9 +288,6 @@ defmodule CsgoStats.Logs.Parser do
       terrorist_score: terrorist_score
     }
   end
-
-  game_mode = string("casual")
-  game_map = string("de_inferno")
 
   # Game Over: casual mg_de_inferno de_inferno score 3:8 after 18 min
   game_over =
@@ -206,168 +316,104 @@ defmodule CsgoStats.Logs.Parser do
     }
   end
 
-  ### Player events
-
-  username = utf8_string([{:not, ?<}], min: 1)
-
-  user_tag =
-    ignore(string("<"))
-    |> integer(min: 1)
-    |> ignore(string(">"))
-
-  steam_id =
-    ignore(string("<"))
-    |> choice([string("BOT"), utf8_string([{:not, ?>}], min: 1)])
-    |> ignore(string(">"))
-
-  team_angle =
-    ignore(string("<"))
-    |> concat(optional(team))
-    |> ignore(string(">"))
-
-  player =
-    ignore(string(~s/"/))
-    |> concat(username)
-    |> concat(user_tag)
-    |> concat(steam_id)
-    |> concat(optional(team_angle))
-    |> ignore(string(~s/"/))
-    |> reduce({:player, []})
-
-  defp player([username, _tag, steam_id]) do
-    %{username: username, steam_id: steam_id, team: nil}
-  end
-
-  defp player([username, _tag, steam_id, team]) do
-    %{username: username, steam_id: steam_id, team: team}
-  end
-
   # "Uri<13><BOT><>" connected, address ""
   player_connected =
-    player
-    |> ignore(string(~s/ connected, address "/))
+    ignore(string(~s/ connected, address "/))
     |> optional(utf8_string([{:not, ?"}], min: 1))
     |> ignore(string(~s/"/))
     |> reduce({:player_connected, []})
 
-  defp player_connected([player]) do
-    %Events.PlayerConnected{player: player}
+  defp player_connected([]) do
+    %Events.PlayerConnected{}
   end
 
-  defp player_connected([player, address]) do
-    %Events.PlayerConnected{player: player, address: address}
+  defp player_connected([address]) do
+    %Events.PlayerConnected{address: address}
   end
 
   # "Uri<13><BOT>" switched from team <Unassigned> to <CT>
   player_switched_team =
-    player
-    |> ignore(string(" switched from team "))
+    ignore(string(" switched from team "))
     |> concat(team_angle)
     |> ignore(string(" to "))
     |> concat(team_angle)
     |> reduce({:player_switched_team, []})
 
-  defp player_switched_team([player, from, to]) do
-    %Events.PlayerSwitchedTeam{player: player, from: from, to: to}
+  defp player_switched_team([from, to]) do
+    %Events.PlayerSwitchedTeam{from: from, to: to}
   end
 
   # "Uri<13><BOT><>" entered the game
   player_entered_the_game =
-    player
-    |> ignore(string(" entered the game"))
+    ignore(string(" entered the game"))
     |> reduce({:player_entered_the_game, []})
 
-  defp player_entered_the_game([player]) do
-    %Events.PlayerEnteredTheGame{player: player}
+  defp player_entered_the_game([]) do
+    %Events.PlayerEnteredTheGame{}
   end
 
   # "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Got_The_Bomb"
   got_the_bomb =
-    player
-    |> ignore(string(~s/ triggered "Got_The_Bomb"/))
+    ignore(string(~s/ triggered "Got_The_Bomb"/))
     |> reduce({:got_the_bomb, []})
 
-  defp got_the_bomb([player]) do
-    %Events.GotTheBomb{player: player}
+  defp got_the_bomb([]) do
+    %Events.GotTheBomb{}
   end
 
   # "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Dropped_The_Bomb"
   dropped_the_bomb =
-    player
-    |> ignore(string(~s/ triggered "Dropped_The_Bomb"/))
+    ignore(string(~s/ triggered "Dropped_The_Bomb"/))
     |> reduce({:dropped_the_bomb, []})
 
-  defp dropped_the_bomb([player]) do
-    %Events.DroppedTheBomb{player: player}
+  defp dropped_the_bomb([]) do
+    %Events.DroppedTheBomb{}
   end
 
   # "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Planted_The_Bomb"
   planted_the_bomb =
-    player
-    |> ignore(string(~s/ triggered "Planted_The_Bomb"/))
+    ignore(string(~s/ triggered "Planted_The_Bomb"/))
     |> reduce({:planted_the_bomb, []})
 
-  defp planted_the_bomb([player]) do
-    %Events.PlantedTheBomb{player: player}
+  defp planted_the_bomb([]) do
+    %Events.PlantedTheBomb{}
   end
 
   # "Clarence<17><BOT><CT>" triggered "Begin_Bomb_Defuse_With_Kit"
   began_bomb_defuse =
-    player
-    |> ignore(string(~s/ triggered "/))
+    ignore(string(~s/ triggered "/))
     |> string("Begin_Bomb_Defuse_With_Kit")
     |> ignore(string(~s/"/))
     |> reduce({:began_bomb_defuse, []})
 
-  defp began_bomb_defuse([player, "Begin_Bomb_Defuse_With_Kit"]) do
-    %Events.BeganBombDefuse{player: player, kit: true}
+  # TODO: Handle Without_Kit
+  defp began_bomb_defuse(["Begin_Bomb_Defuse_With_Kit"]) do
+    %Events.BeganBombDefuse{kit: true}
   end
 
   # "Elmer<18><BOT><CT>" triggered "Defused_The_Bomb"
   defused_the_bomb =
-    player
-    |> ignore(string(~s/ triggered "Defused_The_Bomb"/))
+    ignore(string(~s/ triggered "Defused_The_Bomb"/))
     |> reduce({:defused_the_bomb, []})
 
-  defp defused_the_bomb([player]) do
-    %Events.DefusedTheBomb{player: player}
+  defp defused_the_bomb([]) do
+    %Events.DefusedTheBomb{}
   end
 
-  position =
-    ignore(string("["))
-    |> ascii_string([?0..?9, ?-], min: 1)
-    |> ignore(string(" "))
-    |> ascii_string([?0..?9, ?-], min: 1)
-    |> ignore(string(" "))
-    |> ascii_string([?0..?9, ?-], min: 1)
-    |> ignore(string("]"))
+  # "Graham<14><BOT><TERRORIST>" [1494 792 204] was killed by the bomb.
+  killed_by_the_bomb =
+    ignore(string(" "))
+    |> ignore(position)
+    |> ignore(string(" was killed by the bomb."))
+    |> reduce({:killed_by_the_bomb, []})
 
-  weapon =
-    ignore(string(~s/"/))
-    |> ascii_string([?a..?z, ?0..?9, ?_], min: 1)
-    |> ignore(string(~s/"/))
-
-  stat =
-    ignore(
-      choice([
-        string(~s/(damage_armor "/),
-        string(~s/(damage "/),
-        string(~s/(health "/),
-        string(~s/(armor "/)
-      ])
-    )
-    |> integer(min: 1)
-    |> ignore(string(~s/")/))
-
-  hitgroup =
-    ignore(string(~s/(hitgroup "/))
-    |> ascii_string([?a..?z, ?\s], min: 1)
-    |> ignore(string(~s/")/))
+  defp killed_by_the_bomb([]) do
+    %Events.KilledByTheBomb{}
+  end
 
   # "Niles<16><BOT><TERRORIST>" [123 616 72] attacked "Elmer<18><BOT><CT>" [932 550 88] with "glock" (damage "17") (damage_armor "0") (health "83") (armor "100") (hitgroup "right leg")
   attacked =
-    player
-    |> ignore(string(" "))
+    ignore(string(" "))
     |> ignore(position)
     |> ignore(string(" attacked "))
     |> concat(player)
@@ -388,7 +434,6 @@ defmodule CsgoStats.Logs.Parser do
     |> reduce({:attacked, []})
 
   defp attacked([
-         attacker,
          attacked,
          weapon,
          damage,
@@ -399,7 +444,6 @@ defmodule CsgoStats.Logs.Parser do
        ]) do
     %Events.Attacked{
       attacked: attacked,
-      attacker: attacker,
       weapon: weapon,
       damage: damage,
       damage_armor: damage_armor,
@@ -411,8 +455,7 @@ defmodule CsgoStats.Logs.Parser do
 
   # "Niles<16><BOT><TERRORIST>" [418 570 87] killed "Elmer<18><BOT><CT>" [944 538 152] with "glock"
   killed =
-    player
-    |> ignore(string(" "))
+    ignore(string(" "))
     |> ignore(position)
     |> ignore(string(" killed "))
     |> concat(player)
@@ -423,9 +466,8 @@ defmodule CsgoStats.Logs.Parser do
     |> optional(choice([string(" (headshot)"), string(" (penetrated)")]))
     |> reduce({:killed, []})
 
-  defp killed([killer, killed, weapon]) do
+  defp killed([killed, weapon]) do
     %Events.Killed{
-      killer: killer,
       killed: killed,
       weapon: weapon,
       headshot: false,
@@ -433,56 +475,30 @@ defmodule CsgoStats.Logs.Parser do
     }
   end
 
-  defp killed([killer, killed, weapon, " (headshot)"]) do
-    %Events.Killed{
-      killer: killer,
-      killed: killed,
-      weapon: weapon,
-      headshot: true,
-      penetrated: false
-    }
-  end
+  defp killed([killed, weapon, extra]) do
+    event = killed([killed, weapon])
 
-  defp killed([killer, killed, weapon, " (penetrated)"]) do
-    %Events.Killed{
-      killer: killer,
-      killed: killed,
-      weapon: weapon,
-      headshot: false,
-      penetrated: true
-    }
+    case extra do
+      " (headshot)" -> %{event | headshot: true, penetrated: false}
+      " (penetrated)" -> %{event | headshot: false, penetrated: true}
+    end
   end
 
   # "Elmer<18><BOT><CT>" assisted killing "Niles<16><BOT><TERRORIST>"
   assisted =
-    player
-    |> ignore(string(" assisted killing "))
+    ignore(string(" assisted killing "))
     |> concat(player)
     |> reduce({:assisted, []})
 
-  defp assisted([assistant, killed]) do
+  defp assisted([killed]) do
     %Events.Assisted{
-      assistant: assistant,
       killed: killed
     }
   end
 
-  # "Graham<14><BOT><TERRORIST>" [1494 792 204] was killed by the bomb.
-  killed_by_the_bomb =
-    player
-    |> ignore(string(" "))
-    |> ignore(position)
-    |> ignore(string(" was killed by the bomb."))
-    |> reduce({:killed_by_the_bomb, []})
-
-  defp killed_by_the_bomb([player]) do
-    %Events.KilledByTheBomb{player: player}
-  end
-
   # "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [849 2387 143] killed other "chicken<159>" [814 2555 138] with "awp"
   killed_other =
-    player
-    |> ignore(string(" "))
+    ignore(string(" "))
     |> ignore(position)
     |> ignore(string(~s/ killed other "/))
     |> choice([string("chicken"), string("func_breakable")])
@@ -494,9 +510,8 @@ defmodule CsgoStats.Logs.Parser do
     |> optional(choice([string(" (headshot)"), string(" (penetrated)")]))
     |> reduce({:killed_other, []})
 
-  defp killed_other([killer, killed, weapon]) do
+  defp killed_other([killed, weapon]) do
     %Events.KilledOther{
-      killer: killer,
       killed: killed,
       weapon: weapon,
       headshot: false,
@@ -504,36 +519,14 @@ defmodule CsgoStats.Logs.Parser do
     }
   end
 
-  defp killed_other([killer, killed, weapon, " (headshot)"]) do
-    %Events.KilledOther{
-      killer: killer,
-      killed: killed,
-      weapon: weapon,
-      penetrated: false,
-      headshot: true
-    }
-  end
+  defp killed_other([killed, weapon, extra]) do
+    event = killed_other([killed, weapon])
 
-  defp killed_other([killer, killed, weapon, " (penetrated)"]) do
-    %Events.KilledOther{
-      killer: killer,
-      killed: killed,
-      weapon: weapon,
-      penetrated: true,
-      headshot: false
-    }
+    case extra do
+      " (headshot)" -> %{event | headshot: true, penetrated: false}
+      " (penetrated)" -> %{event | headshot: false, penetrated: true}
+    end
   end
-
-  award =
-    choice([
-      string("3k"),
-      string("hsp"),
-      string("firstkills"),
-      string("cashspent"),
-      string("deaths"),
-      string("mvps"),
-      string("assists")
-    ])
 
   # ACCOLADE, FINAL: {3k},	Neil<8>,	VALUE: 1.000000,	POS: 2,	SCORE: 20.000002
   accolade =
@@ -562,29 +555,27 @@ defmodule CsgoStats.Logs.Parser do
 
   # "tbroedsgaard<12><STEAM_1:1:42376214><Unassigned>" disconnected (reason "Disconnect")
   player_disconnected =
-    player
-    |> ignore(string(~s/ disconnected (reason "/))
+    ignore(string(~s/ disconnected (reason "/))
     |> choice([string("Disconnect"), string("Kicked by Console")])
     |> ignore(string(~s/")/))
     |> reduce({:player_disconnected, []})
 
-  defp player_disconnected([player, reason]) do
-    %Events.PlayerDisconnected{player: player, reason: reason}
+  defp player_disconnected([reason]) do
+    %Events.PlayerDisconnected{reason: reason}
   end
 
-  game_event =
-    choice([
+  world_triggered =
+    ignore(string("World triggered "))
+    |> choice([
       game_commencing,
-      freeze_period_started,
       match_start,
       round_start,
-      team_won,
-      round_end,
-      game_over
+      round_end
     ])
 
   player_event =
-    choice([
+    player
+    |> choice([
       player_connected,
       player_switched_team,
       player_entered_the_game,
@@ -593,20 +584,47 @@ defmodule CsgoStats.Logs.Parser do
       planted_the_bomb,
       began_bomb_defuse,
       defused_the_bomb,
+      killed_by_the_bomb,
+      player_disconnected,
       attacked,
       killed,
       assisted,
-      killed_by_the_bomb,
-      killed_other,
-      accolade,
-      player_disconnected
+      killed_other
     ])
+    |> reduce({:set_player, []})
+
+  defp set_player([player, %Events.Attacked{} = event]) do
+    %{event | attacker: player}
+  end
+
+  defp set_player([player, %Events.Killed{} = event]) do
+    %{event | killer: player}
+  end
+
+  defp set_player([player, %Events.Assisted{} = event]) do
+    %{event | assistant: player}
+  end
+
+  defp set_player([player, %Events.KilledOther{} = event]) do
+    %{event | killer: player}
+  end
+
+  defp set_player([player, event]) do
+    %{event | player: player}
+  end
 
   defparsecp(
     :do_parse,
     timestamp
     |> ignore(string(" - "))
-    |> choice([game_event, player_event])
+    |> choice([
+      world_triggered,
+      freeze_period_started,
+      team_won,
+      game_over,
+      player_event,
+      accolade
+    ])
     |> ignore(optional(string("\n")))
     |> reduce({:set_timestamp, []})
     |> repeat()
