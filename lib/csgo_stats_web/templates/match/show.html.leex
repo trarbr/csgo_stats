@@ -3,13 +3,11 @@
     <div class="key">
       Map
     </div>
-    <div class="value">
-      Cache
-    </div>
+    <div class="value"><%= if @match.map != nil, do: @match.map, else: "Unknown" %></div>
   </div>
 
   <div class="kill-feed">
-    <%= for %{ killer: killer, killed: killed, weapon: weapon, headshot: headshot } <- @match.kill_feed |> Enum.slice(0..2) do %>
+    <%= for %{killer: killer, killed: killed, weapon: weapon, headshot: headshot} <- @match.kill_feed |> Enum.slice(0..2) do %>
     <div class="kill">
       <div class="killer <%= killer.team %>">
         <%= killer.username %>
@@ -55,38 +53,38 @@
           <div class="table-data"><%= player.deaths %></div>
         </div>
         <% end %>
-        <%= if @match.players |> Enum.filter(fn {_, player} -> player.team == :ct end) |> Enum.empty?() do %>
+        <%= unless Enum.any?(@match.players, fn {_, player} -> player.team == :ct end) do %>
         <div class="table-row">
           <div class="table-data">No players</div>
         </div>
         <% end %>
       </div>
     </div>
+  </div>
 
-    <div class="team">
-      <div class="t">
-        <div class="score">
-          <div class="rounds">
-            <img src="/images/t-icon.png"/>
-            <div class="number"><%= @match.score_terrorist %></div>
-          </div>
-          <div class="team-name">TERRORISTS</div>
+  <div class="team">
+    <div class="t">
+      <div class="score">
+        <div class="rounds">
+          <img src="/images/t-icon.png"/>
+          <div class="number"><%= @match.score_terrorist %></div>
         </div>
-        <div class="table">
-          <%= for {username, player} <- @match.players, player.team == :terrorist do %>
-          <div class="table-row">
-            <div class="table-data"><%= username %></div>
-            <div class="table-data"><%= player.kills %></div>
-            <div class="table-data"><%= player.assists %></div>
-            <div class="table-data"><%= player.deaths %></div>
-          </div>
-          <% end %>
-          <%= if @match.players |> Enum.filter(fn {_, player} -> player.team == :terrorist end) |> Enum.empty?() do %>
-          <div class="table-row">
-            <div class="table-data">No players</div>
-          </div>
-          <% end %>
+        <div class="team-name">TERRORISTS</div>
+      </div>
+      <div class="table">
+        <%= for {username, player} <- @match.players, player.team == :terrorist do %>
+        <div class="table-row">
+          <div class="table-data"><%= username %></div>
+          <div class="table-data"><%= player.kills %></div>
+          <div class="table-data"><%= player.assists %></div>
+          <div class="table-data"><%= player.deaths %></div>
         </div>
+        <% end %>
+        <%= unless Enum.any?(@match.players, fn {_, player} -> player.team == :terrorist end) do %>
+        <div class="table-row">
+          <div class="table-data">No players</div>
+        </div>
+        <% end %>
       </div>
     </div>
   </div>
