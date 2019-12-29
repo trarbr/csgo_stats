@@ -6,8 +6,20 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'stratum2';
+    src: url('/fonts/stratum2-regular-webfont.eot');
+    src: url('/fonts/stratum2-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/stratum2-regular-webfont.woff') format('woff'),
+         url('/fonts/stratum2-regular-webfont.ttf') format('truetype'),
+         url('/fonts/stratum2-regular-webfont.svg#stratum2') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0;
+    font-family: stratum2, Helvetica, sans-serif;
 
     &:before {
         position: fixed;
@@ -107,7 +119,6 @@ body {
         .ct, .t {
             align-items: center;
             display: flex;
-            font-family: "Arial Black", Gadget, sans-serif;
 
             .score {
                 width: 100%;
@@ -137,6 +148,7 @@ body {
                         justify-content: center;
                         align-items: center;
                         text-shadow: 2px 2px 0 #53606c;
+                        font-family: "Arial Black", Gadget, sans-serif;
                     }
                 }
 
@@ -171,6 +183,7 @@ body {
         width: 100%;
         display: flex;
         flex-direction: column;
+        font-family: "Arial Black", Gadget, sans-serif;
 
         .table-row.table-header {
             color: #c1c1c1;
@@ -232,7 +245,7 @@ body {
     .kill {
         background-color: rgba(0, 0, 0, 0.3);
         border: 1px solid orangered;
-        padding: 5px 10px;
+        padding: 3px 10px;
         border-radius: 2px;
         display: flex;
         align-items: center;
