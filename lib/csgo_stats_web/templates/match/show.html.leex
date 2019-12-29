@@ -13,11 +13,13 @@
         <%= killer.username %>
       </div>
 
-      <img src="https://www.hltv.org/img/static/scoreboard/weapons/<%= weapon %>.png">
+      <!--<img src="https://www.hltv.org/img/static/scoreboard/weapons/<%= weapon %>.png">
 
       <%= if headshot == true do %>
       <img class="headshot" src="https://www.hltv.org/img/static/scoreboard/weapons/headshot.png">
-      <% end %>
+      <% end %>-->
+
+      <div style="transform: rotateY(180deg);margin-right: 5px;">🔫</div>
 
       <div class="killed <%= killed.team %>">
         <%= killed.username %>
