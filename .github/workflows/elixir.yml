@@ -1,6 +1,6 @@
 name: Elixir CI
 
-on: 
+on:
   push:
     branches:
       - master
@@ -18,15 +18,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-      
+
     - name: Install Dependencies
       run: |
         mix local.rebar --force
         mix local.hex --force
         mix deps.get
-      
+
     - name: Run tests
       run: mix test
-    
+
     - name: Format checks
+      if: always()
       run: mix format --check-formatted --dry-run

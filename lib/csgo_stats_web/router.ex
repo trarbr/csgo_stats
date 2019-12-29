@@ -17,8 +17,7 @@ defmodule CsgoStatsWeb.Router do
   scope "/", CsgoStatsWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
-    get "/matches", MatchController, :index
+    get "/", MatchController, :index
     get "/matches/:id", MatchController, :show
   end
 
