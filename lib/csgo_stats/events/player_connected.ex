@@ -1,3 +1,3 @@
 defmodule CsgoStats.Events.PlayerConnected do
-  defstruct [:player, :address]
+  defstruct [:player, :address, :timestamp]
 end

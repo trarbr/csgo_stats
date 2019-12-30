@@ -1,3 +1,3 @@
 defmodule CsgoStats.Events.BeganBombDefuse do
-  defstruct [:player, :kit]
+  defstruct [:player, :kit, :timestamp]
 end

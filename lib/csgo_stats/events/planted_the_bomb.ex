@@ -1,3 +1,3 @@
 defmodule CsgoStats.Events.PlantedTheBomb do
-  defstruct [:player]
+  defstruct [:player, :timestamp]
 end

@@ -1,3 +1,3 @@
 defmodule CsgoStats.Events.RoundEnd do
-  defstruct []
+  defstruct [:timestamp]
 end

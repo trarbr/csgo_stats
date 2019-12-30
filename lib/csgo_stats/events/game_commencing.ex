@@ -1,3 +1,3 @@
 defmodule CsgoStats.Events.GameCommencing do
-  defstruct []
+  defstruct [:timestamp]
 end

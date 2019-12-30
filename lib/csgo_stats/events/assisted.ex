@@ -1,3 +1,3 @@
 defmodule CsgoStats.Events.Assisted do
-  defstruct [:assistant, :killed]
+  defstruct [:assistant, :killed, :timestamp]
 end

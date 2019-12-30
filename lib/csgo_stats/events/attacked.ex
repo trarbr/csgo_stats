@@ -7,6 +7,7 @@ defmodule CsgoStats.Events.Attacked do
     :damage_armor,
     :health,
     :armor,
-    :hitgroup
+    :hitgroup,
+    :timestamp
   ]
 end

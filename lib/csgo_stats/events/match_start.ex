@@ -1,3 +1,3 @@
 defmodule CsgoStats.Events.MatchStart do
-  defstruct [:map]
+  defstruct [:map, :timestamp]
 end

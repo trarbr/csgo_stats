@@ -28,37 +28,13 @@ defmodule CsgoStats.Logs do
   end
 
   defp do_parse(entry) do
-    Enum.reduce(entry.lines, [], fn line, acc ->
-      # Cut date out of the log. Example: "12/12/2019 - 21:13:56.031 - "
-      event_text = String.slice(line, 28..-1)
+    case Parser.parse(entry.lines) do
+      {:ok, events} ->
+        events
 
-      case Parser.parse(event_text) do
-        {:ok, %event_type{} = event} ->
-          Logger.debug([
-            "event_parsed||",
-            Atom.to_string(event_type),
-            "||",
-            event |> Map.from_struct() |> Jason.encode!()
-          ])
-
-          [event | acc]
-
-        {:ok, %event_type{} = event, leftovers} ->
-          Logger.warn([
-            "event_leftover||",
-            Atom.to_string(event_type),
-            "||",
-            event |> Map.from_struct() |> Jason.encode!(),
-            "||",
-            leftovers
-          ])
-
-          [event | acc]
-
-        {:error, _, unparsed} ->
-          Logger.error(["event_error||", event_text, "||", unparsed])
-          acc
-      end
-    end)
+      {:error, _, unparsed} ->
+        Logger.error(["event_error||", entry.lines, "||", unparsed])
+        []
+    end
   end
 end

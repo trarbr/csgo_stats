@@ -1,3 +1,3 @@
 defmodule CsgoStats.Events.RoundStart do
-  defstruct []
+  defstruct [:timestamp]
 end

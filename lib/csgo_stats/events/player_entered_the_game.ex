@@ -1,3 +1,3 @@
 defmodule CsgoStats.Events.PlayerEnteredTheGame do
-  defstruct [:player]
+  defstruct [:player, :timestamp]
 end
