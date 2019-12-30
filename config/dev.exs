@@ -7,8 +7,6 @@ use Mix.Config
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
 config :csgo_stats, CsgoStatsWeb.Endpoint,
-  server: true,
-  http: [port: 4000],
   cache_static_manifest: nil,
   debug_errors: true,
   code_reloader: true,
