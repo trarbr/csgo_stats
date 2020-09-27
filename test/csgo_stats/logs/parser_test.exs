@@ -6,7 +6,12 @@ defmodule CsgoStats.Logs.ParserTest do
   alias CsgoStats.Logs.Parser
   alias CsgoStats.Events
 
-  describe "World events" do
+  describe "Events" do
+    test "Unhandled event" do
+      line = "11/24/2019 - 21:43:02.156 - \"coop\" = \"0\""
+      assert {:ok, []} = Parser.parse(line)
+    end
+
     test "Game commencing" do
       line = "11/24/2019 - 21:43:39.781 - World triggered \"Game_Commencing\""
       assert {:ok, [%Events.GameCommencing{timestamp: ts}]} = Parser.parse(line)
@@ -63,9 +68,7 @@ defmodule CsgoStats.Logs.ParserTest do
                 }
               ]} = Parser.parse(line)
     end
-  end
 
-  describe "Player events" do
     test "Player connected" do
       line = "11/24/2019 - 21:43:39.781 - \"Uri<13><BOT><>\" connected, address \"\""
 

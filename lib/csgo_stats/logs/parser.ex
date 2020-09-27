@@ -28,7 +28,12 @@ defmodule CsgoStats.Logs.Parser do
         {:ok, accumulator ++ events}
 
       {:ok, events, leftovers, _, _, _} ->
-        [unhandled, next_events] = String.split(leftovers, "\n", parts: 2)
+        [unhandled, next_events] =
+          case String.split(leftovers, "\n", parts: 2) do
+            [unhandled, next_events] -> [unhandled, next_events]
+            [unhandled] -> [unhandled, ""]
+          end
+
         Logger.info("event_unhandled||#{unhandled}")
         parse(next_events, accumulator ++ events)
 
