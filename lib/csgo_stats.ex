@@ -7,15 +7,19 @@ defmodule CsgoStats do
   if it comes from the database, an external API or others.
   """
 
-  def playback(logfile, speedup \\ 1) do
-    spawn(fn -> do_playback(logfile, speedup) end)
+  def playback(logfile, url \\ 'http://localhost:4000/api/logs', speedup \\ 1) do
+    spawn(fn -> do_playback(logfile, url, speedup) end)
   end
 
-  def do_playback(logfile, speedup) do
+  def do_playback(logfile, url, speedup) do
     loglines =
       File.read!(logfile)
       |> String.split("\n")
       |> Enum.reject(fn logline -> logline == "" end)
+      |> Enum.map(fn
+        <<"L ", local_log::binary>> -> String.replace(local_log, ": ", ".000 - ")
+        server_log -> server_log
+      end)
 
     timestamps =
       loglines
@@ -53,18 +57,19 @@ defmodule CsgoStats do
 
     Enum.zip([loglines, sleep_intervals])
     |> Enum.each(fn {logline, sleep_interval} ->
-      :httpc.request(
-        :post,
-        {'http://localhost:4000/api/logs',
-         [
-           {'x-server-addr', '0:0:0:0:12345'},
-           {'x-server-instance-token', 'abcdefg'},
-           {'x-steamid', '1'},
-           {'x-timestamp', '1234'}
-         ], 'text/plain', logline},
-        [],
-        []
-      )
+      {:ok, _} =
+        :httpc.request(
+          :post,
+          {url,
+           [
+             {'x-server-addr', '0:0:0:0:12345'},
+             {'x-server-instance-token', 'abcdefg'},
+             {'x-steamid', '1'},
+             {'x-timestamp', '1234'}
+           ], 'text/plain', logline},
+          [],
+          []
+        )
 
       Process.sleep(sleep_interval)
     end)

@@ -43,6 +43,8 @@ defmodule CsgoStats.Logs.Parser do
   end
 
   ### Helpers
+  quotation_mark = string(~s/"/)
+
   # Example: 11/24/2019
   date =
     integer(2)
@@ -162,12 +164,12 @@ defmodule CsgoStats.Logs.Parser do
 
   # Example: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>"
   player =
-    ignore(string(~s/"/))
+    ignore(quotation_mark)
     |> concat(username)
     |> concat(user_tag)
     |> concat(steam_id)
     |> concat(optional(team_angle))
-    |> ignore(string(~s/"/))
+    |> ignore(quotation_mark)
     |> reduce({:player, []})
 
   defp player([username, _tag, steam_id]) do
@@ -190,9 +192,9 @@ defmodule CsgoStats.Logs.Parser do
 
   # Example: "glock"
   weapon =
-    ignore(string(~s/"/))
+    ignore(quotation_mark)
     |> ascii_string([?a..?z, ?0..?9, ?_], min: 1)
-    |> ignore(string(~s/"/))
+    |> ignore(quotation_mark)
 
   # Example: (damage_armor "32")
   stat =
@@ -239,7 +241,7 @@ defmodule CsgoStats.Logs.Parser do
   match_start =
     ignore(string(~s/"Match_Start" on "/))
     |> concat(game_map)
-    |> ignore(string(~s/"/))
+    |> ignore(quotation_mark)
     |> reduce({:match_start, []})
 
   defp match_start([map]) do
@@ -325,7 +327,7 @@ defmodule CsgoStats.Logs.Parser do
   player_connected =
     ignore(string(~s/ connected, address "/))
     |> optional(utf8_string([{:not, ?"}], min: 1))
-    |> ignore(string(~s/"/))
+    |> ignore(quotation_mark)
     |> reduce({:player_connected, []})
 
   defp player_connected([]) do
@@ -388,7 +390,7 @@ defmodule CsgoStats.Logs.Parser do
   began_bomb_defuse =
     ignore(string(~s/ triggered "/))
     |> string("Begin_Bomb_Defuse_With_Kit")
-    |> ignore(string(~s/"/))
+    |> ignore(quotation_mark)
     |> reduce({:began_bomb_defuse, []})
 
   # TODO: Handle Without_Kit

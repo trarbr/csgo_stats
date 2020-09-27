@@ -44,7 +44,8 @@ defmodule CsgoStats.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:nimble_parsec, "~> 0.5.2"},
-      {:phoenix_live_view, "~> 0.4.1"}
+      {:phoenix_live_view, "~> 0.4.1"},
+      {:benchee, "~> 1.0", only: :dev}
     ]
   end
 
@@ -57,8 +58,9 @@ defmodule CsgoStats.MixProject do
   defp aliases do
     [
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
-      "ecto.reset": ["ecto.drop", "ecto.setup"]
+      "ecto.reset": ["ecto.drop", "ecto.setup"],
       # test: ["ecto.create --quiet", "ecto.migrate", "test"]
+      bench: ["run bench/parser.ex"]
     ]
   end
 end
