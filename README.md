@@ -22,3 +22,10 @@ docker run -it -p 4000:4000 \
 ```
 
 Then launch a CS:GO server and set the following cvars: `log on; mp_logdetail 3; logaddress_add_http "http://localhost:4000/api/logs`
+
+## Running tests and benchmarks
+
+```
+$ mix test
+$ mix bench
+```

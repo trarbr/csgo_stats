@@ -1,0 +1,967 @@
+L 11/24/2019 - 21:43:38: Log file started (file "logs/L000_000_000_000_27015_201911242143_001.log") (game "/Users/troels/Library/Application Support/Steam/steamapps/common/Counter-Strike Global Offensive/csgo") (version "7685")
+L 11/24/2019 - 21:43:39: "tbroedsgaard<12><STEAM_1:1:42376214>" switched from team <Unassigned> to <TERRORIST>
+L 11/24/2019 - 21:43:39: World triggered "Game_Commencing"
+L 11/24/2019 - 21:43:39: "Uri<13><BOT><>" connected, address ""
+L 11/24/2019 - 21:43:39: "Uri<13><BOT>" switched from team <Unassigned> to <CT>
+L 11/24/2019 - 21:43:39: "Uri<13><BOT><>" entered the game
+L 11/24/2019 - 21:43:39: "Graham<14><BOT><>" connected, address ""
+L 11/24/2019 - 21:43:39: "Graham<14><BOT>" switched from team <Unassigned> to <TERRORIST>
+L 11/24/2019 - 21:43:39: "Graham<14><BOT><>" entered the game
+L 11/24/2019 - 21:43:40: "Yanni<15><BOT><>" connected, address ""
+L 11/24/2019 - 21:43:40: "Yanni<15><BOT>" switched from team <Unassigned> to <CT>
+L 11/24/2019 - 21:43:40: "Yanni<15><BOT><>" entered the game
+L 11/24/2019 - 21:43:40: "Niles<16><BOT><>" connected, address ""
+L 11/24/2019 - 21:43:40: "Niles<16><BOT>" switched from team <Unassigned> to <TERRORIST>
+L 11/24/2019 - 21:43:40: "Niles<16><BOT><>" entered the game
+L 11/24/2019 - 21:43:40: "Clarence<17><BOT><>" connected, address ""
+L 11/24/2019 - 21:43:40: "Clarence<17><BOT>" switched from team <Unassigned> to <CT>
+L 11/24/2019 - 21:43:40: "Clarence<17><BOT><>" entered the game
+L 11/24/2019 - 21:43:40: "Elmer<18><BOT><>" connected, address ""
+L 11/24/2019 - 21:43:40: "Elmer<18><BOT>" switched from team <Unassigned> to <CT>
+L 11/24/2019 - 21:43:40: "Elmer<18><BOT><>" entered the game
+L 11/24/2019 - 21:43:40: "Neil<19><BOT><>" connected, address ""
+L 11/24/2019 - 21:43:40: "Neil<19><BOT>" switched from team <Unassigned> to <TERRORIST>
+L 11/24/2019 - 21:43:40: "Neil<19><BOT><>" entered the game
+L 11/24/2019 - 21:43:40: "Fergus<20><BOT><>" connected, address ""
+L 11/24/2019 - 21:43:40: "Fergus<20><BOT>" switched from team <Unassigned> to <TERRORIST>
+L 11/24/2019 - 21:43:40: "Fergus<20><BOT><>" entered the game
+L 11/24/2019 - 21:43:40: "Bob<21><BOT><>" connected, address ""
+L 11/24/2019 - 21:43:40: "Bob<21><BOT>" switched from team <Unassigned> to <CT>
+L 11/24/2019 - 21:43:40: "Bob<21><BOT><>" entered the game
+L 11/24/2019 - 21:43:42: Starting Freeze period
+L 11/24/2019 - 21:43:42: World triggered "Match_Start" on "de_inferno"
+L 11/24/2019 - 21:43:42: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Got_The_Bomb"
+L 11/24/2019 - 21:43:48: World triggered "Round_Start"
+L 11/24/2019 - 21:43:49: "Graham<14><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock kevlar(100) helmet ]
+L 11/24/2019 - 21:43:49: "Elmer<18><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:43:49: "Bob<21><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:43:49: "Clarence<17><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:43:49: "Fergus<20><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock kevlar(100) helmet ]
+L 11/24/2019 - 21:43:49: "Niles<16><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock kevlar(100) helmet ]
+L 11/24/2019 - 21:43:50: "Uri<13><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:43:50: "Neil<19><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock kevlar(100) helmet ]
+L 11/24/2019 - 21:43:54: "Yanni<15><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:44:00: "Elmer<18><BOT><CT>" [932 550 88] attacked "Niles<16><BOT><TERRORIST>" [145 648 77] with "hkp2000" (damage "61") (damage_armor "29") (health "39") (armor "70") (hitgroup "head")
+L 11/24/2019 - 21:44:01: "Niles<16><BOT><TERRORIST>" [123 616 72] attacked "Elmer<18><BOT><CT>" [932 550 88] with "glock" (damage "17") (damage_armor "0") (health "83") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:44:01: "Niles<16><BOT><TERRORIST>" [123 616 72] attacked "Clarence<17><BOT><CT>" [1029 548 98] with "glock" (damage "3") (damage_armor "0") (health "97") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:44:02: "Graham<14><BOT><TERRORIST>" [84 638 71] attacked "Elmer<18><BOT><CT>" [932 550 88] with "glock" (damage "13") (damage_armor "7") (health "70") (armor "92") (hitgroup "stomach")
+L 11/24/2019 - 21:44:02: "Graham<14><BOT><TERRORIST>" [84 638 71] attacked "Bob<21><BOT><CT>" [981 537 90] with "glock" (damage "2") (damage_armor "1") (health "98") (armor "98") (hitgroup "stomach")
+L 11/24/2019 - 21:44:02: "Niles<16><BOT><TERRORIST>" [270 601 83] attacked "Bob<21><BOT><CT>" [981 537 90] with "glock" (damage "11") (damage_armor "6") (health "87") (armor "91") (hitgroup "chest")
+L 11/24/2019 - 21:44:03: "Niles<16><BOT><TERRORIST>" [387 589 86] attacked "Bob<21><BOT><CT>" [981 537 90] with "glock" (damage "18") (damage_armor "0") (health "69") (armor "91") (hitgroup "left leg")
+L 11/24/2019 - 21:44:04: "Niles<16><BOT><TERRORIST>" [470 580 86] attacked "Elmer<18><BOT><CT>" [932 550 88] with "glock" (damage "15") (damage_armor "8") (health "55") (armor "83") (hitgroup "stomach")
+L 11/24/2019 - 21:44:04: "Niles<16><BOT><TERRORIST>" [470 580 86] attacked "Bob<21><BOT><CT>" [981 537 90] with "glock" (damage "5") (damage_armor "0") (health "64") (armor "91") (hitgroup "left leg")
+L 11/24/2019 - 21:44:04: "Graham<14><BOT><TERRORIST>" [84 638 71] attacked "Elmer<18><BOT><CT>" [932 550 88] with "glock" (damage "17") (damage_armor "0") (health "38") (armor "83") (hitgroup "right leg")
+L 11/24/2019 - 21:44:04: "Graham<14><BOT><TERRORIST>" [84 638 71] attacked "Clarence<17><BOT><CT>" [1029 548 98] with "glock" (damage "16") (damage_armor "0") (health "81") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:44:04: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Dropped_The_Bomb"
+L 11/24/2019 - 21:44:05: "Niles<16><BOT><TERRORIST>" [636 566 90] attacked "Elmer<18><BOT><CT>" [932 550 88] with "glock" (damage "20") (damage_armor "0") (health "18") (armor "83") (hitgroup "left leg")
+L 11/24/2019 - 21:44:05: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock kevlar(100) helmet ]
+L 11/24/2019 - 21:44:05: "Niles<16><BOT><TERRORIST>" [742 539 87] attacked "Bob<21><BOT><CT>" [981 537 90] with "glock" (damage "16") (damage_armor "9") (health "48") (armor "81") (hitgroup "stomach")
+L 11/24/2019 - 21:44:06: "Niles<16><BOT><TERRORIST>" [743 379 96] attacked "Bob<21><BOT><CT>" [981 537 90] with "glock" (damage "16") (damage_armor "9") (health "32") (armor "71") (hitgroup "stomach")
+L 11/24/2019 - 21:44:06: "Niles<16><BOT><TERRORIST>" [766 400 88] attacked "Elmer<18><BOT><CT>" [932 550 88] with "glock" (damage "16") (damage_armor "9") (health "2") (armor "73") (hitgroup "stomach")
+L 11/24/2019 - 21:44:07: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Got_The_Bomb"
+L 11/24/2019 - 21:44:08: "Elmer<18><BOT><CT>" [932 550 88] attacked "Neil<19><BOT><TERRORIST>" [94 649 72] with "hkp2000" (damage "22") (damage_armor "0") (health "78") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:44:08: "Niles<16><BOT><TERRORIST>" [501 564 84] attacked "Bob<21><BOT><CT>" [981 537 90] with "glock" (damage "19") (damage_armor "0") (health "13") (armor "71") (hitgroup "left leg")
+L 11/24/2019 - 21:44:09: "Clarence<17><BOT><CT>" [1087 548 106] attacked "Niles<16><BOT><TERRORIST>" [435 569 87] with "hkp2000" (damage "15") (damage_armor "7") (health "24") (armor "62") (hitgroup "chest")
+L 11/24/2019 - 21:44:09: "Elmer<18><BOT><CT>" [932 550 88] attacked "Niles<16><BOT><TERRORIST>" [434 569 87] with "hkp2000" (damage "23") (damage_armor "0") (health "1") (armor "62") (hitgroup "right leg")
+L 11/24/2019 - 21:44:09: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_c4 kevlar(100) helmet C4 ]
+L 11/24/2019 - 21:44:09: "Niles<16><BOT><TERRORIST>" [418 570 87] attacked "Elmer<18><BOT><CT>" [944 538 88] with "glock" (damage "14") (damage_armor "8") (health "0") (armor "64") (hitgroup "stomach")
+L 11/24/2019 - 21:44:09: "Niles<16><BOT><TERRORIST>" [418 570 87] killed "Elmer<18><BOT><CT>" [944 538 152] with "glock"
+L 11/24/2019 - 21:44:09: "Niles<16><BOT><TERRORIST>" [418 570 87] attacked "Bob<21><BOT><CT>" [981 537 90] with "glock" (damage "5") (damage_armor "0") (health "8") (armor "71") (hitgroup "right leg")
+L 11/24/2019 - 21:44:09: "Clarence<17><BOT><CT>" [1162 545 113] attacked "Niles<16><BOT><TERRORIST>" [411 570 87] with "hkp2000" (damage "15") (damage_armor "7") (health "0") (armor "54") (hitgroup "chest")
+L 11/24/2019 - 21:44:09: "Clarence<17><BOT><CT>" [1162 545 113] killed "Niles<16><BOT><TERRORIST>" [411 570 151] with "hkp2000"
+L 11/24/2019 - 21:44:09: "Elmer<18><BOT><CT>" assisted killing "Niles<16><BOT><TERRORIST>"
+L 11/24/2019 - 21:44:09: "Clarence<17><BOT><CT>" [1162 545 113] attacked "Fergus<20><BOT><TERRORIST>" [392 590 86] with "hkp2000" (damage "5") (damage_armor "2") (health "95") (armor "97") (hitgroup "chest")
+L 11/24/2019 - 21:44:10: "Clarence<17><BOT><CT>" [1345 505 128] attacked "Fergus<20><BOT><TERRORIST>" [390 591 86] with "hkp2000" (damage "14") (damage_armor "7") (health "81") (armor "89") (hitgroup "chest")
+L 11/24/2019 - 21:44:10: "Fergus<20><BOT><TERRORIST>" [390 591 86] attacked "Bob<21><BOT><CT>" [981 537 90] with "glock" (damage "18") (damage_armor "0") (health "0") (armor "71") (hitgroup "left leg")
+L 11/24/2019 - 21:44:10: "Fergus<20><BOT><TERRORIST>" [390 591 86] killed "Bob<21><BOT><CT>" [981 537 154] with "glock"
+L 11/24/2019 - 21:44:10: "Niles<16><BOT><TERRORIST>" assisted killing "Bob<21><BOT><CT>"
+L 11/24/2019 - 21:44:28: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [1873 314 160] attacked "Yanni<15><BOT><CT>" [1841 288 160] with "glock" (damage "13") (damage_armor "7") (health "87") (armor "92") (hitgroup "right arm")
+L 11/24/2019 - 21:44:28: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [1873 314 160] attacked "Yanni<15><BOT><CT>" [1841 283 160] with "glock" (damage "13") (damage_armor "7") (health "74") (armor "84") (hitgroup "right arm")
+L 11/24/2019 - 21:44:28: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [1873 314 160] attacked "Yanni<15><BOT><CT>" [1841 283 160] with "glock" (damage "55") (damage_armor "31") (health "19") (armor "52") (hitgroup "head")
+L 11/24/2019 - 21:44:28: "Yanni<15><BOT><CT>" [1841 283 160] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [1873 314 160] with "hkp2000" (damage "26") (damage_armor "0") (health "74") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:44:29: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [1873 314 160] attacked "Yanni<15><BOT><CT>" [1841 283 160] with "glock" (damage "13") (damage_armor "7") (health "6") (armor "44") (hitgroup "chest")
+L 11/24/2019 - 21:44:29: "Yanni<15><BOT><CT>" [1841 283 160] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [1873 314 160] with "hkp2000" (damage "26") (damage_armor "0") (health "48") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:44:29: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [1873 314 160] attacked "Yanni<15><BOT><CT>" [1841 283 160] with "glock" (damage "55") (damage_armor "31") (health "0") (armor "12") (hitgroup "head")
+L 11/24/2019 - 21:44:29: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [1873 314 160] killed "Yanni<15><BOT><CT>" [1841 283 206] with "glock" (headshot)
+L 11/24/2019 - 21:44:35: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Planted_The_Bomb"
+L 11/24/2019 - 21:44:41: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [1894 49 128] attacked "Clarence<17><BOT><CT>" [1802 111 130] with "glock" (damage "13") (damage_armor "7") (health "68") (armor "92") (hitgroup "chest")
+L 11/24/2019 - 21:44:41: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [1872 49 128] attacked "Clarence<17><BOT><CT>" [1809 114 130] with "glock" (damage "13") (damage_armor "7") (health "55") (armor "84") (hitgroup "chest")
+L 11/24/2019 - 21:44:41: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [1872 49 128] attacked "Clarence<17><BOT><CT>" [1809 114 130] with "glock" (damage "13") (damage_armor "7") (health "42") (armor "76") (hitgroup "chest")
+L 11/24/2019 - 21:44:43: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2080 149 160] attacked "Clarence<17><BOT><CT>" [1876 106 151] with "glock" (damage "20") (damage_armor "0") (health "22") (armor "76") (hitgroup "left leg")
+L 11/24/2019 - 21:44:43: "Uri<13><BOT><CT>" [1511 104 128] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2120 155 160] with "hkp2000" (damage "63") (damage_armor "30") (health "0") (armor "69") (hitgroup "head")
+L 11/24/2019 - 21:44:43: "Uri<13><BOT><CT>" [1511 104 128] killed "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2120 155 224] with "hkp2000" (headshot)
+L 11/24/2019 - 21:44:43: "Yanni<15><BOT><CT>" assisted killing "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>"
+L 11/24/2019 - 21:44:44: "Neil<19><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock kevlar(100) helmet ]
+L 11/24/2019 - 21:44:56: "Clarence<17><BOT><CT>" triggered "Begin_Bomb_Defuse_With_Kit"
+L 11/24/2019 - 21:44:56: "Uri<13><BOT><CT>" triggered "Begin_Bomb_Defuse_With_Kit"
+L 11/24/2019 - 21:44:58: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2150 407 160] attacked "Uri<13><BOT><CT>" [1906 605 160] with "glock" (damage "12") (damage_armor "7") (health "88") (armor "92") (hitgroup "chest")
+L 11/24/2019 - 21:44:58: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2150 407 160] attacked "Clarence<17><BOT><CT>" [1879 628 160] with "glock" (damage "4") (damage_armor "2") (health "18") (armor "73") (hitgroup "chest")
+L 11/24/2019 - 21:44:58: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2150 407 160] attacked "Uri<13><BOT><CT>" [1906 605 160] with "glock" (damage "12") (damage_armor "7") (health "76") (armor "84") (hitgroup "chest")
+L 11/24/2019 - 21:44:58: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2150 407 160] attacked "Clarence<17><BOT><CT>" [1879 628 160] with "glock" (damage "16") (damage_armor "9") (health "2") (armor "63") (hitgroup "head")
+L 11/24/2019 - 21:44:59: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2150 407 160] attacked "Uri<13><BOT><CT>" [1906 605 160] with "glock" (damage "12") (damage_armor "7") (health "64") (armor "76") (hitgroup "chest")
+L 11/24/2019 - 21:44:59: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2150 407 160] attacked "Clarence<17><BOT><CT>" [1879 628 160] with "glock" (damage "4") (damage_armor "2") (health "0") (armor "60") (hitgroup "right arm")
+L 11/24/2019 - 21:44:59: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2150 407 160] killed "Clarence<17><BOT><CT>" [1879 628 224] with "glock" (penetrated)
+L 11/24/2019 - 21:44:59: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2150 407 160] attacked "Uri<13><BOT><CT>" [1906 605 160] with "glock" (damage "12") (damage_armor "7") (health "52") (armor "68") (hitgroup "left arm")
+L 11/24/2019 - 21:44:59: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2150 407 160] attacked "Uri<13><BOT><CT>" [1906 605 160] with "glock" (damage "12") (damage_armor "7") (health "40") (armor "60") (hitgroup "chest")
+L 11/24/2019 - 21:44:59: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2150 407 160] attacked "Uri<13><BOT><CT>" [1906 605 160] with "glock" (damage "12") (damage_armor "7") (health "28") (armor "52") (hitgroup "chest")
+L 11/24/2019 - 21:44:59: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2150 407 160] attacked "Uri<13><BOT><CT>" [1906 605 160] with "glock" (damage "12") (damage_armor "7") (health "16") (armor "44") (hitgroup "chest")
+L 11/24/2019 - 21:44:59: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2150 407 160] attacked "Uri<13><BOT><CT>" [1906 605 160] with "glock" (damage "51") (damage_armor "28") (health "0") (armor "15") (hitgroup "head")
+L 11/24/2019 - 21:44:59: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2150 407 160] killed "Uri<13><BOT><CT>" [1906 605 224] with "glock" (headshot)
+L 11/24/2019 - 21:44:59: Team "TERRORIST" triggered "SFUI_Notice_Terrorists_Win" (CT "0") (T "1")
+L 11/24/2019 - 21:44:59: Team "CT" scored "0" with "5" players
+L 11/24/2019 - 21:44:59: Team "TERRORIST" scored "1" with "5" players
+L 11/24/2019 - 21:44:59: World triggered "Round_End"
+L 11/24/2019 - 21:45:10: Starting Freeze period
+L 11/24/2019 - 21:45:10: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Got_The_Bomb"
+L 11/24/2019 - 21:45:10: "Uri<13><BOT><CT>" purchased "mag7"
+L 11/24/2019 - 21:45:10: "Uri<13><BOT><CT>" purchased "decoy"
+L 11/24/2019 - 21:45:10: "Yanni<15><BOT><CT>" purchased "p90"
+L 11/24/2019 - 21:45:10: "Clarence<17><BOT><CT>" purchased "aug"
+L 11/24/2019 - 21:45:10: "Neil<19><BOT><TERRORIST>" purchased "sg556"
+L 11/24/2019 - 21:45:10: "Neil<19><BOT><TERRORIST>" purchased "p250"
+L 11/24/2019 - 21:45:10: "Neil<19><BOT><TERRORIST>" purchased "hegrenade"
+L 11/24/2019 - 21:45:10: "Bob<21><BOT><CT>" purchased "nova"
+L 11/24/2019 - 21:45:10: "Bob<21><BOT><CT>" purchased "p250"
+L 11/24/2019 - 21:45:10: "Bob<21><BOT><CT>" purchased "hegrenade"
+L 11/24/2019 - 21:45:10: "Graham<14><BOT><TERRORIST>" purchased "mac10"
+L 11/24/2019 - 21:45:10: "Niles<16><BOT><TERRORIST>" purchased "mac10"
+L 11/24/2019 - 21:45:10: "Elmer<18><BOT><CT>" purchased "nova"
+L 11/24/2019 - 21:45:10: "Elmer<18><BOT><CT>" purchased "p250"
+L 11/24/2019 - 21:45:10: "Fergus<20><BOT><TERRORIST>" purchased "nova"
+L 11/24/2019 - 21:45:15: World triggered "Round_Start"
+L 11/24/2019 - 21:45:16: "Bob<21><BOT><CT>" left buyzone with [ weapon_knife weapon_p250 weapon_nova weapon_hegrenade defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:45:16: "Elmer<18><BOT><CT>" left buyzone with [ weapon_knife weapon_p250 weapon_nova defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:45:16: "Niles<16><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_mac10 kevlar(100) helmet ]
+L 11/24/2019 - 21:45:16: "Neil<19><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_p250 weapon_sg556 weapon_hegrenade kevlar(100) helmet ]
+L 11/24/2019 - 21:45:16: "Clarence<17><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_aug defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:45:17: "Yanni<15><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_p90 defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:45:17: "Fergus<20><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_nova kevlar(100) helmet ]
+L 11/24/2019 - 21:45:17: "Uri<13><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_mag7 weapon_decoy defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:45:17: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" purchased "deagle"
+L 11/24/2019 - 21:45:17: "Graham<14><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_mac10 kevlar(100) helmet ]
+L 11/24/2019 - 21:45:19: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" left buyzone with [ weapon_knife_t weapon_deagle weapon_c4 kevlar(100) helmet C4 ]
+L 11/24/2019 - 21:45:26: "Bob<21><BOT><CT>" left buyzone with [ weapon_knife weapon_p250 weapon_nova weapon_hegrenade defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:45:35: "Bob<21><BOT><CT>" threw hegrenade [582 1917 138]
+L 11/24/2019 - 21:45:36: "Neil<19><BOT><TERRORIST>" threw hegrenade [1897 -296 258]
+L 11/24/2019 - 21:45:38: "Niles<16><BOT><TERRORIST>" [1799 -362 256] attacked "Clarence<17><BOT><CT>" [1936 -184 256] with "mac10" (damage "15") (damage_armor "5") (health "85") (armor "94") (hitgroup "chest")
+L 11/24/2019 - 21:45:38: "Niles<16><BOT><TERRORIST>" [1799 -362 256] attacked "Clarence<17><BOT><CT>" [1936 -184 256] with "mac10" (damage "19") (damage_armor "0") (health "66") (armor "94") (hitgroup "left leg")
+L 11/24/2019 - 21:45:40: "Clarence<17><BOT><CT>" [1936 -184 256] attacked "Neil<19><BOT><TERRORIST>" [1830 -306 256] with "aug" (damage "20") (damage_armor "0") (health "80") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:45:40: "Clarence<17><BOT><CT>" [1936 -184 256] attacked "Niles<16><BOT><TERRORIST>" [1798 -366 256] with "aug" (damage "12") (damage_armor "0") (health "88") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:45:40: "Clarence<17><BOT><CT>" [1936 -184 256] attacked "Neil<19><BOT><TERRORIST>" [1831 -304 256] with "aug" (damage "31") (damage_armor "1") (health "49") (armor "98") (hitgroup "stomach")
+L 11/24/2019 - 21:45:40: "Clarence<17><BOT><CT>" [1936 -184 256] attacked "Neil<19><BOT><TERRORIST>" [1831 -303 256] with "aug" (damage "25") (damage_armor "1") (health "24") (armor "96") (hitgroup "chest")
+L 11/24/2019 - 21:45:40: "Clarence<17><BOT><CT>" [1936 -184 256] attacked "Niles<16><BOT><TERRORIST>" [1798 -366 256] with "aug" (damage "18") (damage_armor "1") (health "70") (armor "98") (hitgroup "stomach")
+L 11/24/2019 - 21:45:40: "Clarence<17><BOT><CT>" [1936 -184 256] attacked "Neil<19><BOT><TERRORIST>" [1831 -303 256] with "aug" (damage "25") (damage_armor "1") (health "0") (armor "94") (hitgroup "chest")
+L 11/24/2019 - 21:45:40: "Clarence<17><BOT><CT>" [1936 -184 256] killed "Neil<19><BOT><TERRORIST>" [1831 -303 320] with "aug"
+L 11/24/2019 - 21:45:41: "Clarence<17><BOT><CT>" [1936 -184 256] attacked "Niles<16><BOT><TERRORIST>" [1798 -366 256] with "aug" (damage "24") (damage_armor "1") (health "46") (armor "96") (hitgroup "chest")
+L 11/24/2019 - 21:45:41: "Clarence<17><BOT><CT>" [1936 -184 256] attacked "Niles<16><BOT><TERRORIST>" [1798 -366 256] with "aug" (damage "24") (damage_armor "1") (health "22") (armor "94") (hitgroup "chest")
+L 11/24/2019 - 21:45:41: "Clarence<17><BOT><CT>" [1936 -184 256] attacked "Niles<16><BOT><TERRORIST>" [1798 -366 256] with "aug" (damage "31") (damage_armor "1") (health "0") (armor "92") (hitgroup "stomach")
+L 11/24/2019 - 21:45:41: "Clarence<17><BOT><CT>" [1936 -184 256] killed "Niles<16><BOT><TERRORIST>" [1798 -366 320] with "aug"
+L 11/24/2019 - 21:45:43: "Graham<14><BOT><TERRORIST>" [1774 -349 256] attacked "Clarence<17><BOT><CT>" [1867 -293 256] with "mac10" (damage "63") (damage_armor "23") (health "3") (armor "70") (hitgroup "head")
+L 11/24/2019 - 21:45:43: "Graham<14><BOT><TERRORIST>" [1787 -347 256] attacked "Clarence<17><BOT><CT>" [1865 -290 256] with "mac10" (damage "16") (damage_armor "5") (health "0") (armor "64") (hitgroup "chest")
+L 11/24/2019 - 21:45:43: "Graham<14><BOT><TERRORIST>" [1787 -347 256] killed "Clarence<17><BOT><CT>" [1865 -290 320] with "mac10"
+L 11/24/2019 - 21:45:59: "Elmer<18><BOT><CT>" [1734 1740 160] attacked "Fergus<20><BOT><TERRORIST>" [1804 1661 160] with "nova" (damage "18") (damage_armor "0") (health "82") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:45:59: "Elmer<18><BOT><CT>" [1734 1740 160] attacked "Fergus<20><BOT><TERRORIST>" [1804 1661 160] with "nova" (damage "18") (damage_armor "0") (health "64") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:45:59: "Elmer<18><BOT><CT>" [1734 1740 160] attacked "Fergus<20><BOT><TERRORIST>" [1804 1661 160] with "nova" (damage "18") (damage_armor "0") (health "46") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:45:59: "Elmer<18><BOT><CT>" [1734 1740 160] attacked "Fergus<20><BOT><TERRORIST>" [1804 1661 160] with "nova" (damage "18") (damage_armor "0") (health "28") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:45:59: "Elmer<18><BOT><CT>" [1734 1740 160] attacked "Fergus<20><BOT><TERRORIST>" [1804 1661 160] with "nova" (damage "15") (damage_armor "7") (health "13") (armor "92") (hitgroup "stomach")
+L 11/24/2019 - 21:45:59: "Elmer<18><BOT><CT>" [1734 1740 160] attacked "Fergus<20><BOT><TERRORIST>" [1804 1661 160] with "nova" (damage "18") (damage_armor "0") (health "0") (armor "92") (hitgroup "left leg")
+L 11/24/2019 - 21:45:59: "Elmer<18><BOT><CT>" [1734 1740 160] killed "Fergus<20><BOT><TERRORIST>" [1804 1661 224] with "nova"
+L 11/24/2019 - 21:45:59: "Elmer<18><BOT><CT>" [1734 1740 160] attacked "Graham<14><BOT><TERRORIST>" [1829 1655 160] with "nova" (damage "4") (damage_armor "0") (health "96") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:45:59: "Elmer<18><BOT><CT>" [1734 1740 160] attacked "Graham<14><BOT><TERRORIST>" [1829 1655 160] with "nova" (damage "17") (damage_armor "0") (health "79") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:45:59: "Elmer<18><BOT><CT>" [1734 1740 160] attacked "Graham<14><BOT><TERRORIST>" [1829 1655 160] with "nova" (damage "17") (damage_armor "0") (health "62") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:46:00: "Graham<14><BOT><TERRORIST>" [1831 1656 160] attacked "Elmer<18><BOT><CT>" [1734 1740 160] with "mac10" (damage "15") (damage_armor "5") (health "85") (armor "94") (hitgroup "left arm")
+L 11/24/2019 - 21:46:00: "Elmer<18><BOT><CT>" [1734 1740 160] attacked "Graham<14><BOT><TERRORIST>" [1831 1656 160] with "nova" (damage "14") (damage_armor "7") (health "48") (armor "92") (hitgroup "stomach")
+L 11/24/2019 - 21:46:00: "Elmer<18><BOT><CT>" [1734 1740 160] attacked "Graham<14><BOT><TERRORIST>" [1831 1656 160] with "nova" (damage "14") (damage_armor "7") (health "34") (armor "84") (hitgroup "stomach")
+L 11/24/2019 - 21:46:00: "Elmer<18><BOT><CT>" [1734 1740 160] attacked "Graham<14><BOT><TERRORIST>" [1831 1656 160] with "nova" (damage "14") (damage_armor "7") (health "20") (armor "76") (hitgroup "stomach")
+L 11/24/2019 - 21:46:00: "Elmer<18><BOT><CT>" [1734 1740 160] attacked "Graham<14><BOT><TERRORIST>" [1831 1656 160] with "nova" (damage "14") (damage_armor "7") (health "6") (armor "68") (hitgroup "stomach")
+L 11/24/2019 - 21:46:00: "Graham<14><BOT><TERRORIST>" [1831 1656 160] attacked "Elmer<18><BOT><CT>" [1734 1740 160] with "mac10" (damage "15") (damage_armor "5") (health "70") (armor "88") (hitgroup "left arm")
+L 11/24/2019 - 21:46:01: "Graham<14><BOT><TERRORIST>" [1831 1656 160] attacked "Elmer<18><BOT><CT>" [1734 1740 160] with "mac10" (damage "15") (damage_armor "5") (health "55") (armor "82") (hitgroup "left arm")
+L 11/24/2019 - 21:46:01: "Graham<14><BOT><TERRORIST>" [1831 1656 160] attacked "Elmer<18><BOT><CT>" [1734 1740 160] with "mac10" (damage "15") (damage_armor "5") (health "40") (armor "76") (hitgroup "left arm")
+L 11/24/2019 - 21:46:01: "Graham<14><BOT><TERRORIST>" [1831 1656 160] attacked "Elmer<18><BOT><CT>" [1734 1740 160] with "mac10" (damage "15") (damage_armor "5") (health "25") (armor "70") (hitgroup "chest")
+L 11/24/2019 - 21:46:01: "Graham<14><BOT><TERRORIST>" [1831 1656 160] attacked "Elmer<18><BOT><CT>" [1734 1740 160] with "mac10" (damage "19") (damage_armor "7") (health "6") (armor "62") (hitgroup "stomach")
+L 11/24/2019 - 21:46:01: "Graham<14><BOT><TERRORIST>" [1831 1656 160] attacked "Elmer<18><BOT><CT>" [1734 1740 160] with "mac10" (damage "19") (damage_armor "7") (health "0") (armor "54") (hitgroup "stomach")
+L 11/24/2019 - 21:46:01: "Graham<14><BOT><TERRORIST>" [1831 1656 160] killed "Elmer<18><BOT><CT>" [1734 1740 224] with "mac10"
+L 11/24/2019 - 21:46:04: "Bob<21><BOT><CT>" left buyzone with [ weapon_knife weapon_p250 weapon_nova defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:46:05: "Yanni<15><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_p90 defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:46:07: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Planted_The_Bomb"
+L 11/24/2019 - 21:46:07: "Graham<14><BOT><TERRORIST>" [1831 1656 160] attacked "Uri<13><BOT><CT>" [1854 1136 160] with "mac10" (damage "17") (damage_armor "0") (health "83") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:46:07: "Graham<14><BOT><TERRORIST>" [1831 1656 160] attacked "Uri<13><BOT><CT>" [1854 1136 160] with "mac10" (damage "16") (damage_armor "6") (health "67") (armor "93") (hitgroup "stomach")
+L 11/24/2019 - 21:46:08: "Graham<14><BOT><TERRORIST>" [1831 1656 160] attacked "Uri<13><BOT><CT>" [1854 1136 160] with "mac10" (damage "13") (damage_armor "4") (health "54") (armor "88") (hitgroup "neck")
+L 11/24/2019 - 21:46:08: "Graham<14><BOT><TERRORIST>" [1831 1656 160] attacked "Uri<13><BOT><CT>" [1854 1136 160] with "mac10" (damage "13") (damage_armor "4") (health "41") (armor "83") (hitgroup "chest")
+L 11/24/2019 - 21:46:09: "Graham<14><BOT><TERRORIST>" [1831 1656 160] attacked "Uri<13><BOT><CT>" [1854 1136 160] with "mac10" (damage "13") (damage_armor "4") (health "28") (armor "78") (hitgroup "chest")
+L 11/24/2019 - 21:46:09: "Graham<14><BOT><TERRORIST>" [1831 1656 160] attacked "Uri<13><BOT><CT>" [1854 1136 160] with "mac10" (damage "53") (damage_armor "19") (health "0") (armor "58") (hitgroup "head")
+L 11/24/2019 - 21:46:09: "Graham<14><BOT><TERRORIST>" [1831 1656 160] killed "Uri<13><BOT><CT>" [1854 1136 224] with "mac10" (headshot)
+L 11/24/2019 - 21:46:20: "Graham<14><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_mac10 kevlar(68) helmet ]
+L 11/24/2019 - 21:46:22: "Uri<13><BOT><CT>" threw decoy [1941 1778 162]
+L 11/24/2019 - 21:46:32: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2386 855 156] attacked "Bob<21><BOT><CT>" [1959 183 160] with "sg556" (damage "29") (damage_armor "0") (health "71") (armor "100") (hitgroup "chest")
+L 11/24/2019 - 21:46:32: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2386 855 156] attacked "Bob<21><BOT><CT>" [1955 191 160] with "sg556" (damage "29") (damage_armor "0") (health "42") (armor "100") (hitgroup "chest")
+L 11/24/2019 - 21:46:33: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2386 855 156] attacked "Bob<21><BOT><CT>" [1955 191 160] with "sg556" (damage "29") (damage_armor "0") (health "13") (armor "100") (hitgroup "chest")
+L 11/24/2019 - 21:46:33: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2386 855 156] attacked "Bob<21><BOT><CT>" [1955 191 160] with "sg556" (damage "29") (damage_armor "0") (health "0") (armor "100") (hitgroup "chest")
+L 11/24/2019 - 21:46:33: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2386 855 156] killed "Bob<21><BOT><CT>" [1955 191 224] with "sg556"
+L 11/24/2019 - 21:46:41: "Graham<14><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_mac10 kevlar(68) helmet ]
+L 11/24/2019 - 21:46:48: Team "TERRORIST" triggered "SFUI_Notice_Target_Bombed" (CT "0") (T "2")
+L 11/24/2019 - 21:46:48: Team "CT" scored "0" with "5" players
+L 11/24/2019 - 21:46:48: Team "TERRORIST" scored "2" with "5" players
+L 11/24/2019 - 21:46:48: World triggered "Round_End"
+L 11/24/2019 - 21:46:48: "Graham<14><BOT><TERRORIST>" [1494 792 204] was killed by the bomb.
+L 11/24/2019 - 21:46:48: "Yanni<15><BOT><CT>" [2305 1166 227] was killed by the bomb.
+L 11/24/2019 - 21:46:58: Starting Freeze period
+L 11/24/2019 - 21:46:58: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Got_The_Bomb"
+L 11/24/2019 - 21:46:59: "Graham<14><BOT><TERRORIST>" purchased "negev"
+L 11/24/2019 - 21:46:59: "Graham<14><BOT><TERRORIST>" purchased "p250"
+L 11/24/2019 - 21:46:59: "Graham<14><BOT><TERRORIST>" purchased "hegrenade"
+L 11/24/2019 - 21:46:59: "Niles<16><BOT><TERRORIST>" purchased "mac10"
+L 11/24/2019 - 21:46:59: "Elmer<18><BOT><CT>" purchased "bizon"
+L 11/24/2019 - 21:46:59: "Fergus<20><BOT><TERRORIST>" purchased "mac10"
+L 11/24/2019 - 21:46:59: "Uri<13><BOT><CT>" purchased "mp7"
+L 11/24/2019 - 21:46:59: "Yanni<15><BOT><CT>" purchased "p90"
+L 11/24/2019 - 21:46:59: "Yanni<15><BOT><CT>" purchased "deagle"
+L 11/24/2019 - 21:46:59: "Clarence<17><BOT><CT>" purchased "negev"
+L 11/24/2019 - 21:46:59: "Neil<19><BOT><TERRORIST>" purchased "p90"
+L 11/24/2019 - 21:46:59: "Neil<19><BOT><TERRORIST>" purchased "p250"
+L 11/24/2019 - 21:46:59: "Bob<21><BOT><CT>" purchased "m4a1"
+L 11/24/2019 - 21:46:59: "Bob<21><BOT><CT>" purchased "deagle"
+L 11/24/2019 - 21:47:03: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" purchased "awp"
+L 11/24/2019 - 21:47:03: World triggered "Round_Start"
+L 11/24/2019 - 21:47:04: "Graham<14><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_p250 weapon_negev weapon_hegrenade kevlar(100) helmet ]
+L 11/24/2019 - 21:47:05: "Niles<16><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_mac10 kevlar(100) helmet ]
+L 11/24/2019 - 21:47:05: "Clarence<17><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_negev defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:47:05: "Fergus<20><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_mac10 kevlar(100) helmet ]
+L 11/24/2019 - 21:47:05: "Elmer<18><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_bizon defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:47:05: "Bob<21><BOT><CT>" left buyzone with [ weapon_knife weapon_deagle weapon_m4a1 defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:47:05: "Yanni<15><BOT><CT>" left buyzone with [ weapon_knife weapon_deagle weapon_p90 defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:47:05: "Neil<19><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_p250 weapon_p90 kevlar(100) helmet ]
+L 11/24/2019 - 21:47:05: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" left buyzone with [ weapon_knife_t weapon_deagle weapon_c4 weapon_awp kevlar(100) helmet C4 ]
+L 11/24/2019 - 21:47:06: "Uri<13><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_mp7 defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:47:18: "Elmer<18><BOT><CT>" [374 1889 130] attacked "Graham<14><BOT><TERRORIST>" [250 1655 121] with "bizon" (damage "18") (damage_armor "0") (health "82") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:47:19: "Elmer<18><BOT><CT>" [377 1890 130] attacked "Graham<14><BOT><TERRORIST>" [251 1656 122] with "bizon" (damage "17") (damage_armor "0") (health "65") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:47:19: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [76 1196 93] attacked "Bob<21><BOT><CT>" [372 1891 130] with "awp" (damage "110") (damage_armor "1") (health "0") (armor "98") (hitgroup "chest")
+L 11/24/2019 - 21:47:19: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [76 1196 93] killed "Bob<21><BOT><CT>" [372 1891 194] with "awp"
+L 11/24/2019 - 21:47:20: "Graham<14><BOT><TERRORIST>" threw hegrenade [290 1856 128]
+L 11/24/2019 - 21:47:23: "Elmer<18><BOT><CT>" [934 2192 140] attacked "Graham<14><BOT><TERRORIST>" [276 1796 125] with "bizon" (damage "13") (damage_armor "5") (health "52") (armor "94") (hitgroup "stomach")
+L 11/24/2019 - 21:47:23: "Graham<14><BOT><TERRORIST>" [276 1796 125] attacked "Elmer<18><BOT><CT>" [934 2192 140] with "negev" (damage "23") (damage_armor "4") (health "77") (armor "94") (hitgroup "left arm")
+L 11/24/2019 - 21:47:25: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [265 1879 128] attacked "Elmer<18><BOT><CT>" [934 2192 140] with "awp" (damage "110") (damage_armor "1") (health "0") (armor "92") (hitgroup "chest")
+L 11/24/2019 - 21:47:25: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [265 1879 128] killed "Elmer<18><BOT><CT>" [934 2192 204] with "awp"
+L 11/24/2019 - 21:47:27: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [409 1975 128] attacked "Yanni<15><BOT><CT>" [707 2118 136] with "awp" (damage "111") (damage_armor "1") (health "0") (armor "98") (hitgroup "chest")
+L 11/24/2019 - 21:47:27: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [409 1975 128] killed "Yanni<15><BOT><CT>" [707 2118 200] with "awp"
+L 11/24/2019 - 21:47:48: "Neil<19><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_p250 weapon_p90 kevlar(100) helmet ]
+L 11/24/2019 - 21:47:50: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Planted_The_Bomb"
+L 11/24/2019 - 21:47:50: "Niles<16><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_mac10 kevlar(100) helmet ]
+L 11/24/2019 - 21:47:55: "Graham<14><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_p250 weapon_negev kevlar(94) helmet ]
+L 11/24/2019 - 21:47:56: "Fergus<20><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_mac10 kevlar(100) helmet ]
+L 11/24/2019 - 21:47:57: "Neil<19><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_p250 weapon_p90 kevlar(100) helmet ]
+L 11/24/2019 - 21:48:00: "Clarence<17><BOT><CT>" [2484 1146 160] attacked "Fergus<20><BOT><TERRORIST>" [2497 1193 160] with "negev" (damage "24") (damage_armor "5") (health "76") (armor "94") (hitgroup "left arm")
+L 11/24/2019 - 21:48:00: "Fergus<20><BOT><TERRORIST>" [2497 1193 160] attacked "Clarence<17><BOT><CT>" [2484 1146 160] with "mac10" (damage "20") (damage_armor "7") (health "80") (armor "92") (hitgroup "stomach")
+L 11/24/2019 - 21:48:00: "Clarence<17><BOT><CT>" [2484 1146 160] attacked "Fergus<20><BOT><TERRORIST>" [2497 1193 160] with "negev" (damage "26") (damage_armor "0") (health "50") (armor "94") (hitgroup "right leg")
+L 11/24/2019 - 21:48:00: "Fergus<20><BOT><TERRORIST>" [2497 1193 160] attacked "Clarence<17><BOT><CT>" [2484 1146 160] with "mac10" (damage "20") (damage_armor "7") (health "60") (armor "84") (hitgroup "stomach")
+L 11/24/2019 - 21:48:00: "Clarence<17><BOT><CT>" [2484 1146 160] attacked "Fergus<20><BOT><TERRORIST>" [2497 1193 160] with "negev" (damage "26") (damage_armor "0") (health "24") (armor "94") (hitgroup "right leg")
+L 11/24/2019 - 21:48:01: "Fergus<20><BOT><TERRORIST>" [2497 1193 160] attacked "Clarence<17><BOT><CT>" [2484 1146 160] with "mac10" (damage "20") (damage_armor "7") (health "40") (armor "76") (hitgroup "stomach")
+L 11/24/2019 - 21:48:01: "Clarence<17><BOT><CT>" [2484 1146 160] attacked "Fergus<20><BOT><TERRORIST>" [2497 1193 160] with "negev" (damage "24") (damage_armor "5") (health "0") (armor "88") (hitgroup "left arm")
+L 11/24/2019 - 21:48:01: "Clarence<17><BOT><CT>" [2484 1146 160] killed "Fergus<20><BOT><TERRORIST>" [2497 1193 224] with "negev"
+L 11/24/2019 - 21:48:06: "Clarence<17><BOT><CT>" [2329 1557 160] attacked "Neil<19><BOT><TERRORIST>" [2318 1876 128] with "negev" (damage "24") (damage_armor "4") (health "76") (armor "95") (hitgroup "right arm")
+L 11/24/2019 - 21:48:07: "Clarence<17><BOT><CT>" [2329 1557 160] attacked "Neil<19><BOT><TERRORIST>" [2318 1876 128] with "negev" (damage "24") (damage_armor "4") (health "52") (armor "90") (hitgroup "chest")
+L 11/24/2019 - 21:48:07: "Clarence<17><BOT><CT>" [2329 1557 160] attacked "Neil<19><BOT><TERRORIST>" [2318 1876 128] with "negev" (damage "24") (damage_armor "4") (health "28") (armor "85") (hitgroup "chest")
+L 11/24/2019 - 21:48:07: "Clarence<17><BOT><CT>" [2329 1557 160] attacked "Neil<19><BOT><TERRORIST>" [2318 1876 128] with "negev" (damage "24") (damage_armor "4") (health "4") (armor "80") (hitgroup "chest")
+L 11/24/2019 - 21:48:07: "Neil<19><BOT><TERRORIST>" [2318 1876 128] attacked "Clarence<17><BOT><CT>" [2329 1557 160] with "p90" (damage "16") (damage_armor "3") (health "24") (armor "72") (hitgroup "chest")
+L 11/24/2019 - 21:48:07: "Neil<19><BOT><TERRORIST>" [2318 1876 128] attacked "Clarence<17><BOT><CT>" [2329 1557 160] with "p90" (damage "17") (damage_armor "0") (health "7") (armor "72") (hitgroup "right leg")
+L 11/24/2019 - 21:48:07: "Neil<19><BOT><TERRORIST>" [2318 1876 128] attacked "Clarence<17><BOT><CT>" [2329 1557 160] with "p90" (damage "17") (damage_armor "0") (health "0") (armor "72") (hitgroup "right leg")
+L 11/24/2019 - 21:48:07: "Neil<19><BOT><TERRORIST>" [2318 1876 128] killed "Clarence<17><BOT><CT>" [2329 1557 224] with "p90"
+L 11/24/2019 - 21:48:07: "Fergus<20><BOT><TERRORIST>" assisted killing "Clarence<17><BOT><CT>"
+L 11/24/2019 - 21:48:09: "Neil<19><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_p250 weapon_p90 kevlar(80) helmet ]
+L 11/24/2019 - 21:48:13: "Uri<13><BOT><CT>" [632 1969 131] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [848 2388 143] with "mp7" (damage "18") (damage_armor "0") (health "82") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:48:16: "Uri<13><BOT><CT>" [632 1970 131] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [849 2387 143] with "mp7" (damage "18") (damage_armor "0") (health "64") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:48:16: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [849 2387 143] killed other "chicken<159>" [814 2555 138] with "awp"
+L 11/24/2019 - 21:48:19: "Uri<13><BOT><CT>" [738 1956 134] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [849 2387 143] with "mp7" (damage "19") (damage_armor "5") (health "45") (armor "94") (hitgroup "stomach")
+L 11/24/2019 - 21:48:22: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [849 2387 143] attacked "Uri<13><BOT><CT>" [854 1928 136] with "awp" (damage "85") (damage_armor "0") (health "15") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:48:23: "Uri<13><BOT><CT>" [942 1941 142] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [849 2387 143] with "mp7" (damage "19") (damage_armor "5") (health "26") (armor "88") (hitgroup "stomach")
+L 11/24/2019 - 21:48:24: "Uri<13><BOT><CT>" [942 1941 142] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [849 2387 143] with "mp7" (damage "19") (damage_armor "5") (health "7") (armor "82") (hitgroup "stomach")
+L 11/24/2019 - 21:48:24: "Graham<14><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_p250 weapon_negev kevlar(94) helmet ]
+L 11/24/2019 - 21:48:27: "Niles<16><BOT><TERRORIST>" [473 3001 160] attacked "Uri<13><BOT><CT>" [942 1941 142] with "mac10" (damage "13") (damage_armor "0") (health "2") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:48:27: "Niles<16><BOT><TERRORIST>" [473 3001 160] attacked "Uri<13><BOT><CT>" [942 1941 142] with "mac10" (damage "12") (damage_armor "4") (health "0") (armor "95") (hitgroup "stomach")
+L 11/24/2019 - 21:48:27: "Niles<16><BOT><TERRORIST>" [473 3001 160] killed "Uri<13><BOT><CT>" [942 1941 206] with "mac10"
+L 11/24/2019 - 21:48:27: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" assisted killing "Uri<13><BOT><CT>"
+L 11/24/2019 - 21:48:27: Team "TERRORIST" triggered "SFUI_Notice_Terrorists_Win" (CT "0") (T "3")
+L 11/24/2019 - 21:48:27: Team "CT" scored "0" with "5" players
+L 11/24/2019 - 21:48:27: Team "TERRORIST" scored "3" with "5" players
+L 11/24/2019 - 21:48:27: World triggered "Round_End"
+L 11/24/2019 - 21:48:31: "Niles<16><BOT><TERRORIST>" [628 2634 224] was killed by the bomb.
+L 11/24/2019 - 21:48:31: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [768 2533 200] was killed by the bomb.
+L 11/24/2019 - 21:48:37: Starting Freeze period
+L 11/24/2019 - 21:48:37: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Got_The_Bomb"
+L 11/24/2019 - 21:48:38: "Niles<16><BOT><TERRORIST>" purchased "mac10"
+L 11/24/2019 - 21:48:38: "Elmer<18><BOT><CT>" purchased "m4a1"
+L 11/24/2019 - 21:48:38: "Elmer<18><BOT><CT>" purchased "hegrenade"
+L 11/24/2019 - 21:48:38: "Fergus<20><BOT><TERRORIST>" purchased "ak47"
+L 11/24/2019 - 21:48:38: "Fergus<20><BOT><TERRORIST>" purchased "flashbang"
+L 11/24/2019 - 21:48:38: "Uri<13><BOT><CT>" purchased "m4a1"
+L 11/24/2019 - 21:48:38: "Neil<19><BOT><TERRORIST>" purchased "smokegrenade"
+L 11/24/2019 - 21:48:38: "Yanni<15><BOT><CT>" purchased "negev"
+L 11/24/2019 - 21:48:38: "Yanni<15><BOT><CT>" purchased "hegrenade"
+L 11/24/2019 - 21:48:38: "Bob<21><BOT><CT>" purchased "nova"
+L 11/24/2019 - 21:48:38: "Bob<21><BOT><CT>" purchased "hegrenade"
+L 11/24/2019 - 21:48:38: "Clarence<17><BOT><CT>" purchased "xm1014"
+L 11/24/2019 - 21:48:38: "Clarence<17><BOT><CT>" purchased "hegrenade"
+L 11/24/2019 - 21:48:43: World triggered "Round_Start"
+L 11/24/2019 - 21:48:44: "Neil<19><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_p250 weapon_p90 weapon_smokegrenade kevlar(100) helmet ]
+L 11/24/2019 - 21:48:44: "Niles<16><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_mac10 kevlar(100) helmet ]
+L 11/24/2019 - 21:48:44: "Clarence<17><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_xm1014 weapon_hegrenade defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:48:44: "Fergus<20><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_ak47 weapon_flashbang kevlar(100) helmet ]
+L 11/24/2019 - 21:48:44: "Yanni<15><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_negev weapon_hegrenade defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:48:44: "Elmer<18><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_m4a1 weapon_hegrenade defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:48:45: "Bob<21><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_nova weapon_hegrenade defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:48:45: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_c4 kevlar(100) helmet C4 ]
+L 11/24/2019 - 21:48:45: "Uri<13><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_m4a1 defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:48:45: "Graham<14><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_p250 weapon_negev kevlar(100) helmet ]
+L 11/24/2019 - 21:48:54: "Elmer<18><BOT><CT>" threw hegrenade [613 2521 163]
+L 11/24/2019 - 21:49:02: "Fergus<20><BOT><TERRORIST>" threw flashbang [1449 281 133] flashbang entindex 185)
+L 11/24/2019 - 21:49:02: "Neil<19><BOT><TERRORIST>" blinded for 0.95 by "Fergus<20><BOT><TERRORIST>" from flashbang entindex 185 
+L 11/24/2019 - 21:49:02: "Fergus<20><BOT><TERRORIST>" blinded for 1.88 by "Fergus<20><BOT><TERRORIST>" from flashbang entindex 185 
+L 11/24/2019 - 21:49:02: "Neil<19><BOT><TERRORIST>" threw smokegrenade [1516 892 146]
+L 11/24/2019 - 21:49:06: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Planted_The_Bomb"
+L 11/24/2019 - 21:49:12: "Bob<21><BOT><CT>" [1291 457 121] attacked "Neil<19><BOT><TERRORIST>" [1420 680 135] with "nova" (damage "16") (damage_armor "0") (health "84") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:49:12: "Bob<21><BOT><CT>" [1291 457 121] attacked "Neil<19><BOT><TERRORIST>" [1420 680 135] with "nova" (damage "16") (damage_armor "0") (health "68") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:49:12: "Bob<21><BOT><CT>" [1291 457 121] attacked "Neil<19><BOT><TERRORIST>" [1420 680 135] with "nova" (damage "16") (damage_armor "0") (health "52") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:49:12: "Neil<19><BOT><TERRORIST>" [1420 680 135] attacked "Bob<21><BOT><CT>" [1291 457 121] with "p90" (damage "20") (damage_armor "4") (health "80") (armor "95") (hitgroup "stomach")
+L 11/24/2019 - 21:49:12: "Neil<19><BOT><TERRORIST>" [1420 680 135] attacked "Bob<21><BOT><CT>" [1291 457 121] with "p90" (damage "20") (damage_armor "4") (health "60") (armor "90") (hitgroup "stomach")
+L 11/24/2019 - 21:49:12: "Neil<19><BOT><TERRORIST>" [1420 680 135] attacked "Bob<21><BOT><CT>" [1291 457 121] with "p90" (damage "16") (damage_armor "3") (health "44") (armor "86") (hitgroup "chest")
+L 11/24/2019 - 21:49:12: "Neil<19><BOT><TERRORIST>" [1420 680 135] attacked "Bob<21><BOT><CT>" [1291 457 121] with "p90" (damage "20") (damage_armor "4") (health "24") (armor "81") (hitgroup "stomach")
+L 11/24/2019 - 21:49:12: "Neil<19><BOT><TERRORIST>" [1420 680 135] attacked "Bob<21><BOT><CT>" [1291 457 121] with "p90" (damage "16") (damage_armor "3") (health "8") (armor "77") (hitgroup "chest")
+L 11/24/2019 - 21:49:12: "Neil<19><BOT><TERRORIST>" [1420 680 135] attacked "Bob<21><BOT><CT>" [1291 457 121] with "p90" (damage "20") (damage_armor "4") (health "0") (armor "72") (hitgroup "stomach")
+L 11/24/2019 - 21:49:12: "Neil<19><BOT><TERRORIST>" [1420 680 135] killed "Bob<21><BOT><CT>" [1291 457 185] with "p90"
+L 11/24/2019 - 21:49:14: "Uri<13><BOT><CT>" [153 3011 160] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [21 2623 160] with "m4a1" (damage "22") (damage_armor "4") (health "78") (armor "95") (hitgroup "chest")
+L 11/24/2019 - 21:49:15: "Elmer<18><BOT><CT>" triggered "Begin_Bomb_Defuse_With_Kit"
+L 11/24/2019 - 21:49:15: "Uri<13><BOT><CT>" [153 3011 160] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [48 2660 160] with "m4a1" (damage "28") (damage_armor "6") (health "50") (armor "88") (hitgroup "stomach")
+L 11/24/2019 - 21:49:17: "Uri<13><BOT><CT>" [153 3011 160] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [48 2660 160] with "m4a1" (damage "24") (damage_armor "0") (health "26") (armor "88") (hitgroup "right leg")
+L 11/24/2019 - 21:49:17: "Uri<13><BOT><CT>" [153 3011 160] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [48 2660 160] with "m4a1" (damage "24") (damage_armor "0") (health "2") (armor "88") (hitgroup "right leg")
+L 11/24/2019 - 21:49:17: "Uri<13><BOT><CT>" [153 3011 160] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [48 2660 160] with "m4a1" (damage "24") (damage_armor "0") (health "0") (armor "88") (hitgroup "right leg")
+L 11/24/2019 - 21:49:17: "Uri<13><BOT><CT>" [153 3011 160] killed "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [48 2660 224] with "m4a1"
+L 11/24/2019 - 21:49:20: "Clarence<17><BOT><CT>" [1870 1033 166] attacked "Neil<19><BOT><TERRORIST>" [1398 1083 161] with "xm1014" (damage "10") (damage_armor "0") (health "42") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:49:20: "Clarence<17><BOT><CT>" [1870 1033 166] attacked "Neil<19><BOT><TERRORIST>" [1398 1083 161] with "xm1014" (damage "10") (damage_armor "0") (health "32") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:49:20: "Clarence<17><BOT><CT>" [1870 1033 166] attacked "Neil<19><BOT><TERRORIST>" [1398 1083 161] with "xm1014" (damage "10") (damage_armor "0") (health "22") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:49:20: "Uri<13><BOT><CT>" [333 2951 160] attacked "Niles<16><BOT><TERRORIST>" [862 2330 144] with "m4a1" (damage "21") (damage_armor "4") (health "79") (armor "95") (hitgroup "left arm")
+L 11/24/2019 - 21:49:20: "Elmer<18><BOT><CT>" triggered "Defused_The_Bomb"
+L 11/24/2019 - 21:49:20: Team "CT" triggered "SFUI_Notice_Bomb_Defused" (CT "1") (T "3")
+L 11/24/2019 - 21:49:20: Team "CT" scored "1" with "5" players
+L 11/24/2019 - 21:49:20: Team "TERRORIST" scored "3" with "5" players
+L 11/24/2019 - 21:49:20: World triggered "Round_End"
+L 11/24/2019 - 21:49:21: "Clarence<17><BOT><CT>" [1870 1033 166] attacked "Neil<19><BOT><TERRORIST>" [1396 986 158] with "xm1014" (damage "11") (damage_armor "1") (health "11") (armor "98") (hitgroup "chest")
+L 11/24/2019 - 21:49:23: "Graham<14><BOT><TERRORIST>" [913 1902 135] attacked "Elmer<18><BOT><CT>" [558 2810 160] with "negev" (damage "23") (damage_armor "4") (health "77") (armor "95") (hitgroup "chest")
+L 11/24/2019 - 21:49:23: "Niles<16><BOT><TERRORIST>" [862 2330 144] attacked "Elmer<18><BOT><CT>" [558 2810 160] with "mac10" (damage "16") (damage_armor "0") (health "61") (armor "95") (hitgroup "left leg")
+L 11/24/2019 - 21:49:23: "Graham<14><BOT><TERRORIST>" [913 1902 135] attacked "Elmer<18><BOT><CT>" [558 2810 160] with "negev" (damage "29") (damage_armor "5") (health "32") (armor "89") (hitgroup "stomach")
+L 11/24/2019 - 21:49:23: "Niles<16><BOT><TERRORIST>" [862 2330 144] attacked "Elmer<18><BOT><CT>" [558 2810 160] with "mac10" (damage "16") (damage_armor "5") (health "16") (armor "83") (hitgroup "stomach")
+L 11/24/2019 - 21:49:23: "Niles<16><BOT><TERRORIST>" [862 2330 144] attacked "Elmer<18><BOT><CT>" [558 2810 160] with "mac10" (damage "16") (damage_armor "5") (health "0") (armor "77") (hitgroup "stomach")
+L 11/24/2019 - 21:49:23: "Niles<16><BOT><TERRORIST>" [862 2330 144] killed "Elmer<18><BOT><CT>" [558 2810 224] with "mac10"
+L 11/24/2019 - 21:49:23: "Graham<14><BOT><TERRORIST>" assisted killing "Elmer<18><BOT><CT>"
+L 11/24/2019 - 21:49:27: "Uri<13><BOT><CT>" [528 2814 160] attacked "Graham<14><BOT><TERRORIST>" [841 2151 142] with "m4a1" (damage "88") (damage_armor "18") (health "12") (armor "81") (hitgroup "head")
+L 11/24/2019 - 21:49:30: Starting Freeze period
+L 11/24/2019 - 21:49:30: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Got_The_Bomb"
+L 11/24/2019 - 21:49:30: "Uri<13><BOT><CT>" purchased "hegrenade"
+L 11/24/2019 - 21:49:30: "Bob<21><BOT><CT>" purchased "mp7"
+L 11/24/2019 - 21:49:30: "Bob<21><BOT><CT>" purchased "hegrenade"
+L 11/24/2019 - 21:49:30: "Elmer<18><BOT><CT>" purchased "mp9"
+L 11/24/2019 - 21:49:30: "Elmer<18><BOT><CT>" purchased "hegrenade"
+L 11/24/2019 - 21:49:30: "Fergus<20><BOT><TERRORIST>" purchased "deagle"
+L 11/24/2019 - 21:49:35: World triggered "Round_Start"
+L 11/24/2019 - 21:49:36: "Fergus<20><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_deagle weapon_ak47 kevlar(100) helmet ]
+L 11/24/2019 - 21:49:37: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_c4 kevlar(100) helmet C4 ]
+L 11/24/2019 - 21:49:37: "Bob<21><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_mp7 weapon_hegrenade defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:49:37: "Graham<14><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_p250 weapon_negev kevlar(100) helmet ]
+L 11/24/2019 - 21:49:37: "Uri<13><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_m4a1 weapon_hegrenade defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:49:37: "Yanni<15><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_negev weapon_hegrenade defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:49:37: "Neil<19><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_p250 weapon_p90 weapon_hegrenade kevlar(100) helmet ]
+L 11/24/2019 - 21:49:37: "Elmer<18><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_mp9 weapon_hegrenade defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:49:37: "Niles<16><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_mac10 kevlar(100) helmet ]
+L 11/24/2019 - 21:49:37: "Clarence<17><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_xm1014 weapon_hegrenade defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:49:42: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" purchased "awp"
+L 11/24/2019 - 21:49:44: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_c4 weapon_awp kevlar(100) helmet C4 ]
+L 11/24/2019 - 21:49:47: "Yanni<15><BOT><CT>" threw hegrenade [828 2186 146]
+L 11/24/2019 - 21:49:48: "Bob<21><BOT><CT>" threw hegrenade [616 1961 134]
+L 11/24/2019 - 21:49:56: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_c4 weapon_awp kevlar(100) helmet C4 ]
+L 11/24/2019 - 21:49:57: "Neil<19><BOT><TERRORIST>" threw hegrenade [1531 1180 163]
+L 11/24/2019 - 21:50:00: "Graham<14><BOT><TERRORIST>" [171 614 78] attacked "Clarence<17><BOT><CT>" [88 1182 91] with "negev" (damage "29") (damage_armor "6") (health "71") (armor "93") (hitgroup "stomach")
+L 11/24/2019 - 21:50:00: "Graham<14><BOT><TERRORIST>" [171 614 78] attacked "Clarence<17><BOT><CT>" [88 1182 91] with "negev" (damage "30") (damage_armor "6") (health "41") (armor "86") (hitgroup "stomach")
+L 11/24/2019 - 21:50:03: "Clarence<17><BOT><CT>" [88 1182 91] attacked "Graham<14><BOT><TERRORIST>" [171 614 78] with "hkp2000" (damage "19") (damage_armor "9") (health "81") (armor "90") (hitgroup "stomach")
+L 11/24/2019 - 21:50:03: "Bob<21><BOT><CT>" [103 1394 104] attacked "Graham<14><BOT><TERRORIST>" [171 614 78] with "mp7" (damage "56") (damage_armor "16") (health "25") (armor "73") (hitgroup "head")
+L 11/24/2019 - 21:50:04: "Bob<21><BOT><CT>" [103 1394 104] attacked "Graham<14><BOT><TERRORIST>" [171 614 78] with "mp7" (damage "17") (damage_armor "5") (health "8") (armor "67") (hitgroup "stomach")
+L 11/24/2019 - 21:50:05: "Graham<14><BOT><TERRORIST>" [171 614 78] attacked "Clarence<17><BOT><CT>" [88 1182 91] with "negev" (damage "29") (damage_armor "6") (health "12") (armor "79") (hitgroup "stomach")
+L 11/24/2019 - 21:50:05: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_c4 weapon_awp kevlar(100) helmet C4 ]
+L 11/24/2019 - 21:50:05: "Clarence<17><BOT><CT>" [88 1182 91] attacked "Graham<14><BOT><TERRORIST>" [171 614 78] with "hkp2000" (damage "15") (damage_armor "7") (health "0") (armor "59") (hitgroup "chest")
+L 11/24/2019 - 21:50:05: "Clarence<17><BOT><CT>" [88 1182 91] killed "Graham<14><BOT><TERRORIST>" [171 614 142] with "hkp2000"
+L 11/24/2019 - 21:50:05: "Bob<21><BOT><CT>" assisted killing "Graham<14><BOT><TERRORIST>"
+L 11/24/2019 - 21:50:07: "Fergus<20><BOT><TERRORIST>" [66 698 71] attacked "Clarence<17><BOT><CT>" [89 1160 89] with "ak47" (damage "109") (damage_armor "15") (health "0") (armor "63") (hitgroup "head")
+L 11/24/2019 - 21:50:07: "Fergus<20><BOT><TERRORIST>" [66 698 71] killed "Clarence<17><BOT><CT>" [89 1160 153] with "ak47" (headshot)
+L 11/24/2019 - 21:50:07: "Graham<14><BOT><TERRORIST>" assisted killing "Clarence<17><BOT><CT>"
+L 11/24/2019 - 21:50:07: "Yanni<15><BOT><CT>" [152 1158 90] attacked "Fergus<20><BOT><TERRORIST>" [66 698 71] with "negev" (damage "25") (damage_armor "0") (health "75") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:50:07: "Yanni<15><BOT><CT>" [152 1158 90] attacked "Fergus<20><BOT><TERRORIST>" [66 698 71] with "negev" (damage "25") (damage_armor "0") (health "50") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:50:08: "Yanni<15><BOT><CT>" [152 1158 90] attacked "Fergus<20><BOT><TERRORIST>" [66 698 71] with "negev" (damage "25") (damage_armor "0") (health "25") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:50:08: "Yanni<15><BOT><CT>" [152 1158 90] attacked "Fergus<20><BOT><TERRORIST>" [66 698 71] with "negev" (damage "30") (damage_armor "6") (health "0") (armor "93") (hitgroup "stomach")
+L 11/24/2019 - 21:50:08: "Yanni<15><BOT><CT>" [152 1158 90] killed "Fergus<20><BOT><TERRORIST>" [66 698 135] with "negev"
+L 11/24/2019 - 21:50:13: "Niles<16><BOT><TERRORIST>" [342 527 81] attacked "Elmer<18><BOT><CT>" [58 644 69] with "mac10" (damage "18") (damage_armor "6") (health "82") (armor "93") (hitgroup "stomach")
+L 11/24/2019 - 21:50:13: "Niles<16><BOT><TERRORIST>" [342 527 81] attacked "Elmer<18><BOT><CT>" [57 643 69] with "mac10" (damage "18") (damage_armor "0") (health "64") (armor "93") (hitgroup "right leg")
+L 11/24/2019 - 21:50:13: "Yanni<15><BOT><CT>" [99 740 74] attacked "Niles<16><BOT><TERRORIST>" [342 527 81] with "negev" (damage "30") (damage_armor "6") (health "70") (armor "93") (hitgroup "stomach")
+L 11/24/2019 - 21:50:13: "Yanni<15><BOT><CT>" [99 740 74] attacked "Niles<16><BOT><TERRORIST>" [342 527 81] with "negev" (damage "24") (damage_armor "4") (health "46") (armor "88") (hitgroup "right arm")
+L 11/24/2019 - 21:50:13: "Yanni<15><BOT><CT>" [99 740 74] attacked "Niles<16><BOT><TERRORIST>" [342 527 81] with "negev" (damage "24") (damage_armor "4") (health "22") (armor "83") (hitgroup "chest")
+L 11/24/2019 - 21:50:13: "Yanni<15><BOT><CT>" [99 740 74] attacked "Niles<16><BOT><TERRORIST>" [342 527 81] with "negev" (damage "24") (damage_armor "4") (health "0") (armor "78") (hitgroup "chest")
+L 11/24/2019 - 21:50:13: "Yanni<15><BOT><CT>" [99 740 74] killed "Niles<16><BOT><TERRORIST>" [342 527 145] with "negev"
+L 11/24/2019 - 21:50:44: "Neil<19><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_p250 weapon_p90 kevlar(100) helmet ]
+L 11/24/2019 - 21:51:15: "Elmer<18><BOT><CT>" [1164 2719 128] attacked "Neil<19><BOT><TERRORIST>" [1730 2812 125] with "mp9" (damage "16") (damage_armor "5") (health "84") (armor "94") (hitgroup "stomach")
+L 11/24/2019 - 21:51:31: "Neil<19><BOT><TERRORIST>" [2015 2616 128] attacked "Bob<21><BOT><CT>" [1736 2788 126] with "p90" (damage "20") (damage_armor "4") (health "80") (armor "95") (hitgroup "stomach")
+L 11/24/2019 - 21:51:31: "Neil<19><BOT><TERRORIST>" [2015 2616 128] attacked "Bob<21><BOT><CT>" [1738 2788 126] with "p90" (damage "16") (damage_armor "3") (health "64") (armor "91") (hitgroup "chest")
+L 11/24/2019 - 21:51:32: "Neil<19><BOT><TERRORIST>" [2015 2616 128] attacked "Bob<21><BOT><CT>" [1747 2791 126] with "p90" (damage "65") (damage_armor "14") (health "0") (armor "76") (hitgroup "head")
+L 11/24/2019 - 21:51:32: "Neil<19><BOT><TERRORIST>" [2015 2616 128] killed "Bob<21><BOT><CT>" [1747 2791 190] with "p90" (headshot)
+L 11/24/2019 - 21:51:35: "Yanni<15><BOT><CT>" [2391 1990 128] attacked "Neil<19><BOT><TERRORIST>" [2126 2441 128] with "negev" (damage "24") (damage_armor "4") (health "60") (armor "89") (hitgroup "chest")
+L 11/24/2019 - 21:51:43: "Yanni<15><BOT><CT>" [2280 2239 128] attacked "Neil<19><BOT><TERRORIST>" [2122 2230 144] with "negev" (damage "16") (damage_armor "0") (health "44") (armor "89") (hitgroup "right leg")
+L 11/24/2019 - 21:51:43: "Yanni<15><BOT><CT>" [2280 2239 128] attacked "Neil<19><BOT><TERRORIST>" [2122 2230 144] with "negev" (damage "17") (damage_armor "0") (health "27") (armor "89") (hitgroup "right leg")
+L 11/24/2019 - 21:51:43: "Yanni<15><BOT><CT>" [2280 2239 128] attacked "Neil<19><BOT><TERRORIST>" [2122 2230 144] with "negev" (damage "26") (damage_armor "0") (health "1") (armor "89") (hitgroup "right leg")
+L 11/24/2019 - 21:51:44: "Yanni<15><BOT><CT>" [2280 2239 128] attacked "Neil<19><BOT><TERRORIST>" [2122 2230 144] with "negev" (damage "16") (damage_armor "0") (health "0") (armor "89") (hitgroup "right leg")
+L 11/24/2019 - 21:51:44: "Yanni<15><BOT><CT>" [2280 2239 128] killed "Neil<19><BOT><TERRORIST>" [2122 2230 190] with "negev" (penetrated)
+L 11/24/2019 - 21:51:46: "Yanni<15><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_negev defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:51:47: "Uri<13><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_m4a1 weapon_hegrenade defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:51:54: Team "CT" triggered "SFUI_Notice_Target_Saved" (CT "2") (T "3")
+L 11/24/2019 - 21:51:54: Team "CT" scored "2" with "5" players
+L 11/24/2019 - 21:51:54: Team "TERRORIST" scored "3" with "5" players
+L 11/24/2019 - 21:51:54: World triggered "Round_End"
+L 11/24/2019 - 21:52:04: Starting Freeze period
+L 11/24/2019 - 21:52:04: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Got_The_Bomb"
+L 11/24/2019 - 21:52:05: "Uri<13><BOT><CT>" purchased "deagle"
+L 11/24/2019 - 21:52:05: "Clarence<17><BOT><CT>" purchased "mp7"
+L 11/24/2019 - 21:52:05: "Clarence<17><BOT><CT>" purchased "flashbang"
+L 11/24/2019 - 21:52:05: "Neil<19><BOT><TERRORIST>" purchased "mac10"
+L 11/24/2019 - 21:52:05: "Bob<21><BOT><CT>" purchased "ssg08"
+L 11/24/2019 - 21:52:05: "Graham<14><BOT><TERRORIST>" purchased "negev"
+L 11/24/2019 - 21:52:05: "Niles<16><BOT><TERRORIST>" purchased "negev"
+L 11/24/2019 - 21:52:05: "Fergus<20><BOT><TERRORIST>" purchased "m249"
+L 11/24/2019 - 21:52:07: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" purchased "molotov"
+L 11/24/2019 - 21:52:09: World triggered "Round_Start"
+L 11/24/2019 - 21:52:11: "Uri<13><BOT><CT>" left buyzone with [ weapon_knife weapon_deagle weapon_m4a1 weapon_hegrenade defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:52:11: "Yanni<15><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_negev weapon_hegrenade defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:52:11: "Bob<21><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_ssg08 defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:52:11: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_c4 weapon_awp weapon_molotov kevlar(100) helmet C4 ]
+L 11/24/2019 - 21:52:11: "Elmer<18><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_mp9 weapon_hegrenade defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:52:11: "Fergus<20><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_m249 kevlar(100) helmet ]
+L 11/24/2019 - 21:52:12: "Clarence<17><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_mp7 weapon_flashbang defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:52:12: "Neil<19><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_mac10 kevlar(100) helmet ]
+L 11/24/2019 - 21:52:12: "Graham<14><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_negev kevlar(100) helmet ]
+L 11/24/2019 - 21:52:12: "Niles<16><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_negev kevlar(100) helmet ]
+L 11/24/2019 - 21:52:45: Molotov projectile spawned at 519.998291 2613.323242 220.839340, velocity -386.303345 -524.882629 -134.658920
+L 11/24/2019 - 21:52:45: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" threw molotov [421 2447 162]
+L 11/24/2019 - 21:52:45: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [648 2648 152] attacked "Clarence<17><BOT><CT>" [444 2465 160] with "inferno" (damage "1") (damage_armor "0") (health "99") (armor "100") (hitgroup "generic")
+L 11/24/2019 - 21:52:46: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [678 2622 140] attacked "Clarence<17><BOT><CT>" [444 2465 160] with "inferno" (damage "2") (damage_armor "0") (health "97") (armor "100") (hitgroup "generic")
+L 11/24/2019 - 21:52:46: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [706 2593 136] attacked "Clarence<17><BOT><CT>" [460 2469 160] with "inferno" (damage "3") (damage_armor "0") (health "94") (armor "100") (hitgroup "generic")
+L 11/24/2019 - 21:52:46: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [734 2563 136] attacked "Clarence<17><BOT><CT>" [494 2478 190] with "inferno" (damage "4") (damage_armor "0") (health "90") (armor "100") (hitgroup "generic")
+L 11/24/2019 - 21:52:46: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [752 2530 136] attacked "Clarence<17><BOT><CT>" [499 2491 221] with "inferno" (damage "4") (damage_armor "0") (health "86") (armor "100") (hitgroup "generic")
+L 11/24/2019 - 21:52:46: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [763 2491 136] attacked "Clarence<17><BOT><CT>" [499 2504 223] with "inferno" (damage "5") (damage_armor "0") (health "81") (armor "100") (hitgroup "generic")
+L 11/24/2019 - 21:52:47: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [771 2454 136] attacked "Clarence<17><BOT><CT>" [499 2517 195] with "inferno" (damage "6") (damage_armor "0") (health "75") (armor "100") (hitgroup "generic")
+L 11/24/2019 - 21:52:47: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [788 2416 136] attacked "Clarence<17><BOT><CT>" [489 2537 160] with "inferno" (damage "7") (damage_armor "0") (health "68") (armor "100") (hitgroup "generic")
+L 11/24/2019 - 21:52:47: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [807 2381 137] attacked "Clarence<17><BOT><CT>" [484 2576 160] with "inferno" (damage "8") (damage_armor "0") (health "60") (armor "100") (hitgroup "generic")
+L 11/24/2019 - 21:52:47: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [813 2344 137] attacked "Clarence<17><BOT><CT>" [503 2608 160] with "inferno" (damage "8") (damage_armor "0") (health "52") (armor "100") (hitgroup "generic")
+L 11/24/2019 - 21:52:47: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [812 2304 137] attacked "Clarence<17><BOT><CT>" [543 2618 160] with "inferno" (damage "8") (damage_armor "0") (health "44") (armor "100") (hitgroup "generic")
+L 11/24/2019 - 21:52:50: "Neil<19><BOT><TERRORIST>" [2231 69 129] attacked "Yanni<15><BOT><CT>" [2278 957 160] with "mac10" (damage "44") (damage_armor "16") (health "56") (armor "83") (hitgroup "head")
+L 11/24/2019 - 21:52:51: "Fergus<20><BOT><TERRORIST>" [1855 -22 128] attacked "Yanni<15><BOT><CT>" [2278 957 160] with "m249" (damage "10") (damage_armor "1") (health "46") (armor "81") (hitgroup "chest")
+L 11/24/2019 - 21:52:51: "Yanni<15><BOT><CT>" [2278 957 160] attacked "Neil<19><BOT><TERRORIST>" [2231 69 129] with "negev" (damage "24") (damage_armor "0") (health "76") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:52:52: "Yanni<15><BOT><CT>" [2278 957 160] attacked "Neil<19><BOT><TERRORIST>" [2231 69 129] with "negev" (damage "29") (damage_armor "6") (health "47") (armor "93") (hitgroup "stomach")
+L 11/24/2019 - 21:52:52: "Yanni<15><BOT><CT>" [2278 957 160] attacked "Neil<19><BOT><TERRORIST>" [2231 69 129] with "negev" (damage "23") (damage_armor "4") (health "24") (armor "88") (hitgroup "chest")
+L 11/24/2019 - 21:52:52: "Yanni<15><BOT><CT>" [2278 957 160] attacked "Neil<19><BOT><TERRORIST>" [2231 69 129] with "negev" (damage "23") (damage_armor "4") (health "1") (armor "83") (hitgroup "chest")
+L 11/24/2019 - 21:52:52: "Niles<16><BOT><TERRORIST>" [2020 67 130] attacked "Bob<21><BOT><CT>" [1959 195 160] with "negev" (damage "24") (damage_armor "5") (health "76") (armor "94") (hitgroup "left arm")
+L 11/24/2019 - 21:52:52: "Yanni<15><BOT><CT>" [2278 957 160] attacked "Neil<19><BOT><TERRORIST>" [2231 69 129] with "negev" (damage "24") (damage_armor "0") (health "0") (armor "83") (hitgroup "right leg")
+L 11/24/2019 - 21:52:52: "Yanni<15><BOT><CT>" [2278 957 160] killed "Neil<19><BOT><TERRORIST>" [2231 69 193] with "negev"
+L 11/24/2019 - 21:52:52: "Niles<16><BOT><TERRORIST>" [2030 61 130] attacked "Bob<21><BOT><CT>" [1959 195 160] with "negev" (damage "30") (damage_armor "6") (health "46") (armor "87") (hitgroup "stomach")
+L 11/24/2019 - 21:52:52: "Niles<16><BOT><TERRORIST>" [2040 56 130] attacked "Bob<21><BOT><CT>" [1959 195 160] with "negev" (damage "24") (damage_armor "5") (health "22") (armor "81") (hitgroup "chest")
+L 11/24/2019 - 21:52:53: "Niles<16><BOT><TERRORIST>" [2043 47 129] attacked "Bob<21><BOT><CT>" [1959 195 160] with "negev" (damage "24") (damage_armor "5") (health "0") (armor "75") (hitgroup "chest")
+L 11/24/2019 - 21:52:53: "Niles<16><BOT><TERRORIST>" [2043 47 129] killed "Bob<21><BOT><CT>" [1959 195 206] with "negev"
+L 11/24/2019 - 21:52:55: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [837 1975 142] attacked "Clarence<17><BOT><CT>" [832 2610 138] with "awp" (damage "138") (damage_armor "1") (health "0") (armor "98") (hitgroup "stomach")
+L 11/24/2019 - 21:52:55: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [837 1975 142] killed "Clarence<17><BOT><CT>" [832 2610 202] with "awp"
+L 11/24/2019 - 21:52:56: "Clarence<17><BOT><CT>" threw flashbang [806 1871 134] flashbang entindex 194)
+L 11/24/2019 - 21:52:56: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" blinded for 1.02 by "Clarence<17><BOT><CT>" from flashbang entindex 194 
+L 11/24/2019 - 21:52:56: "Clarence<17><BOT><CT>" blinded for 4.03 by "Clarence<17><BOT><CT>" from flashbang entindex 194 
+L 11/24/2019 - 21:52:57: "Uri<13><BOT><CT>" [1865 354 160] attacked "Niles<16><BOT><TERRORIST>" [2103 20 127] with "hegrenade" (damage "1") (damage_armor "0") (health "99") (armor "99") (hitgroup "generic")
+L 11/24/2019 - 21:52:57: "Uri<13><BOT><CT>" [1865 354 160] attacked "Niles<16><BOT><TERRORIST>" [2103 20 127] with "hegrenade" (damage "1") (damage_armor "0") (health "98") (armor "98") (hitgroup "generic")
+L 11/24/2019 - 21:52:58: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [869 2049 142] attacked "Elmer<18><BOT><CT>" [572 2849 160] with "awp" (damage "110") (damage_armor "1") (health "0") (armor "98") (hitgroup "chest")
+L 11/24/2019 - 21:52:58: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [869 2049 142] killed "Elmer<18><BOT><CT>" [572 2849 224] with "awp"
+L 11/24/2019 - 21:52:58: "Niles<16><BOT><TERRORIST>" [2103 20 127] attacked "Uri<13><BOT><CT>" [1865 354 160] with "negev" (damage "30") (damage_armor "6") (health "70") (armor "93") (hitgroup "stomach")
+L 11/24/2019 - 21:52:58: "Niles<16><BOT><TERRORIST>" [2103 20 127] attacked "Uri<13><BOT><CT>" [1865 354 160] with "negev" (damage "24") (damage_armor "4") (health "46") (armor "88") (hitgroup "right arm")
+L 11/24/2019 - 21:52:58: "Yanni<15><BOT><CT>" [2364 652 150] attacked "Niles<16><BOT><TERRORIST>" [2103 20 127] with "negev" (damage "29") (damage_armor "6") (health "69") (armor "91") (hitgroup "stomach")
+L 11/24/2019 - 21:52:58: "Uri<13><BOT><CT>" [1865 354 160] attacked "Niles<16><BOT><TERRORIST>" [2103 20 127] with "m4a1" (damage "22") (damage_armor "4") (health "47") (armor "86") (hitgroup "chest")
+L 11/24/2019 - 21:52:58: "Uri<13><BOT><CT>" threw hegrenade [2140 -32 130]
+L 11/24/2019 - 21:52:58: "Uri<13><BOT><CT>" [1865 354 160] attacked "Niles<16><BOT><TERRORIST>" [2103 20 127] with "hegrenade" (damage "47") (damage_armor "15") (health "0") (armor "70") (hitgroup "generic")
+L 11/24/2019 - 21:52:58: "Uri<13><BOT><CT>" [1865 354 160] killed "Niles<16><BOT><TERRORIST>" [2103 20 191] with "hegrenade"
+L 11/24/2019 - 21:52:58: "Uri<13><BOT><CT>" [1865 354 160] attacked "Fergus<20><BOT><TERRORIST>" [2064 64 130] with "hegrenade" (damage "29") (damage_armor "9") (health "71") (armor "90") (hitgroup "generic")
+L 11/24/2019 - 21:52:58: "Uri<13><BOT><CT>" [1865 354 160] attacked "Fergus<20><BOT><TERRORIST>" [2067 65 130] with "m4a1" (damage "22") (damage_armor "4") (health "49") (armor "85") (hitgroup "chest")
+L 11/24/2019 - 21:52:59: "Uri<13><BOT><CT>" [1865 354 160] attacked "Fergus<20><BOT><TERRORIST>" [2068 65 130] with "m4a1" (damage "22") (damage_armor "4") (health "27") (armor "80") (hitgroup "right arm")
+L 11/24/2019 - 21:52:59: "Uri<13><BOT><CT>" [1865 354 160] attacked "Fergus<20><BOT><TERRORIST>" [2068 65 130] with "m4a1" (damage "22") (damage_armor "4") (health "5") (armor "75") (hitgroup "chest")
+L 11/24/2019 - 21:52:59: "Uri<13><BOT><CT>" [1865 354 160] attacked "Fergus<20><BOT><TERRORIST>" [2068 65 130] with "m4a1" (damage "22") (damage_armor "4") (health "0") (armor "70") (hitgroup "chest")
+L 11/24/2019 - 21:52:59: "Uri<13><BOT><CT>" [1865 354 160] killed "Fergus<20><BOT><TERRORIST>" [2068 65 194] with "m4a1"
+L 11/24/2019 - 21:53:04: "Uri<13><BOT><CT>" [1883 -6 128] attacked "Graham<14><BOT><TERRORIST>" [1542 111 129] with "m4a1" (damage "28") (damage_armor "6") (health "72") (armor "93") (hitgroup "stomach")
+L 11/24/2019 - 21:53:06: "Graham<14><BOT><TERRORIST>" [1542 111 129] attacked "Uri<13><BOT><CT>" [1883 -6 128] with "negev" (damage "30") (damage_armor "6") (health "16") (armor "81") (hitgroup "stomach")
+L 11/24/2019 - 21:53:06: "Graham<14><BOT><TERRORIST>" [1542 111 129] attacked "Uri<13><BOT><CT>" [1883 -6 128] with "negev" (damage "30") (damage_armor "6") (health "0") (armor "74") (hitgroup "stomach")
+L 11/24/2019 - 21:53:06: "Graham<14><BOT><TERRORIST>" [1542 111 129] killed "Uri<13><BOT><CT>" [1883 -6 192] with "negev"
+L 11/24/2019 - 21:53:06: "Niles<16><BOT><TERRORIST>" assisted killing "Uri<13><BOT><CT>"
+L 11/24/2019 - 21:53:08: "Yanni<15><BOT><CT>" [2131 136 160] attacked "Graham<14><BOT><TERRORIST>" [1542 111 129] with "negev" (damage "23") (damage_armor "4") (health "49") (armor "88") (hitgroup "chest")
+L 11/24/2019 - 21:53:08: "Yanni<15><BOT><CT>" [2131 136 160] attacked "Graham<14><BOT><TERRORIST>" [1542 111 129] with "negev" (damage "25") (damage_armor "0") (health "24") (armor "88") (hitgroup "right leg")
+L 11/24/2019 - 21:53:08: "Yanni<15><BOT><CT>" [2131 136 160] attacked "Graham<14><BOT><TERRORIST>" [1542 111 129] with "negev" (damage "95") (damage_armor "19") (health "0") (armor "68") (hitgroup "head")
+L 11/24/2019 - 21:53:08: "Yanni<15><BOT><CT>" [2131 136 160] killed "Graham<14><BOT><TERRORIST>" [1542 111 193] with "negev" (headshot)
+L 11/24/2019 - 21:53:10: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" threw hegrenade [524 2803 162]
+L 11/24/2019 - 21:53:15: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Planted_The_Bomb"
+L 11/24/2019 - 21:53:48: "Yanni<15><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_negev weapon_hegrenade defuser kevlar(81) helmet ]
+L 11/24/2019 - 21:53:56: Team "TERRORIST" triggered "SFUI_Notice_Target_Bombed" (CT "2") (T "4")
+L 11/24/2019 - 21:53:56: Team "CT" scored "2" with "5" players
+L 11/24/2019 - 21:53:56: Team "TERRORIST" scored "4" with "5" players
+L 11/24/2019 - 21:53:56: World triggered "Round_End"
+L 11/24/2019 - 21:53:56: "Yanni<15><BOT><CT>" [913 2745 193] was killed by the bomb.
+L 11/24/2019 - 21:54:06: Starting Freeze period
+L 11/24/2019 - 21:54:06: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Got_The_Bomb"
+L 11/24/2019 - 21:54:07: "Graham<14><BOT><TERRORIST>" purchased "mac10"
+L 11/24/2019 - 21:54:07: "Graham<14><BOT><TERRORIST>" purchased "hegrenade"
+L 11/24/2019 - 21:54:07: "Niles<16><BOT><TERRORIST>" purchased "negev"
+L 11/24/2019 - 21:54:07: "Niles<16><BOT><TERRORIST>" purchased "hegrenade"
+L 11/24/2019 - 21:54:07: "Elmer<18><BOT><CT>" purchased "m4a1"
+L 11/24/2019 - 21:54:07: "Fergus<20><BOT><TERRORIST>" purchased "g3sg1"
+L 11/24/2019 - 21:54:07: "Uri<13><BOT><CT>" purchased "mp9"
+L 11/24/2019 - 21:54:07: "Uri<13><BOT><CT>" purchased "deagle"
+L 11/24/2019 - 21:54:07: "Uri<13><BOT><CT>" purchased "hegrenade"
+L 11/24/2019 - 21:54:07: "Yanni<15><BOT><CT>" purchased "scar20"
+L 11/24/2019 - 21:54:07: "Clarence<17><BOT><CT>" purchased "m249"
+L 11/24/2019 - 21:54:07: "Clarence<17><BOT><CT>" purchased "hegrenade"
+L 11/24/2019 - 21:54:07: "Neil<19><BOT><TERRORIST>" purchased "negev"
+L 11/24/2019 - 21:54:07: "Neil<19><BOT><TERRORIST>" purchased "hegrenade"
+L 11/24/2019 - 21:54:07: "Bob<21><BOT><CT>" purchased "mp9"
+L 11/24/2019 - 21:54:11: World triggered "Round_Start"
+L 11/24/2019 - 21:54:12: "Clarence<17><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_m249 weapon_hegrenade defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:54:12: "Uri<13><BOT><CT>" left buyzone with [ weapon_knife weapon_deagle weapon_mp9 weapon_hegrenade defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:54:13: "Yanni<15><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_scar20 defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:54:13: "Graham<14><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_mac10 weapon_hegrenade kevlar(100) helmet ]
+L 11/24/2019 - 21:54:13: "Niles<16><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_negev weapon_hegrenade kevlar(100) helmet ]
+L 11/24/2019 - 21:54:13: "Bob<21><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_mp9 defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:54:13: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" purchased "decoy"
+L 11/24/2019 - 21:54:14: "Elmer<18><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_m4a1 defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:54:14: "Neil<19><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_negev weapon_hegrenade kevlar(100) helmet ]
+L 11/24/2019 - 21:54:14: "Fergus<20><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_g3sg1 kevlar(100) helmet ]
+L 11/24/2019 - 21:54:18: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_c4 weapon_awp kevlar(100) helmet C4 ]
+L 11/24/2019 - 21:54:19: "Uri<13><BOT><CT>" threw hegrenade [1666 1214 168]
+L 11/24/2019 - 21:54:25: "Graham<14><BOT><TERRORIST>" threw hegrenade [787 538 89]
+L 11/24/2019 - 21:54:25: "Graham<14><BOT><TERRORIST>" [296 656 21] killed other "chicken<193>" [771 529 87] with "hegrenade"
+L 11/24/2019 - 21:54:29: "Neil<19><BOT><TERRORIST>" threw hegrenade [81 697 81]
+L 11/24/2019 - 21:54:34: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" threw decoy [-1552 209 -62]
+L 11/24/2019 - 21:54:39: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [708 560 87] attacked "Yanni<15><BOT><CT>" [884 -201 96] with "awp" (damage "110") (damage_armor "1") (health "0") (armor "98") (hitgroup "chest")
+L 11/24/2019 - 21:54:39: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [708 560 87] killed "Yanni<15><BOT><CT>" [884 -201 160] with "awp"
+L 11/24/2019 - 21:54:48: "Bob<21><BOT><CT>" [543 2870 160] attacked "Fergus<20><BOT><TERRORIST>" [889 2196 140] with "mp9" (damage "15") (damage_armor "0") (health "85") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:54:54: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [1507 -322 256] killed other "chicken<173>" [1706 -279 256] with "awp"
+L 11/24/2019 - 21:54:55: "Fergus<20><BOT><TERRORIST>" [928 2182 140] attacked "Elmer<18><BOT><CT>" [694 2579 136] with "g3sg1" (damage "80") (damage_armor "8") (health "20") (armor "91") (hitgroup "stomach")
+L 11/24/2019 - 21:54:55: "Fergus<20><BOT><TERRORIST>" [928 2182 140] attacked "Elmer<18><BOT><CT>" [694 2579 136] with "g3sg1" (damage "81") (damage_armor "8") (health "0") (armor "82") (hitgroup "stomach")
+L 11/24/2019 - 21:54:55: "Fergus<20><BOT><TERRORIST>" [928 2182 140] killed "Elmer<18><BOT><CT>" [694 2579 200] with "g3sg1"
+L 11/24/2019 - 21:55:00: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2072 -210 256] attacked "Clarence<17><BOT><CT>" [2360 749 151] with "awp" (damage "439") (damage_armor "5") (health "0") (armor "94") (hitgroup "head")
+L 11/24/2019 - 21:55:00: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2072 -210 256] killed "Clarence<17><BOT><CT>" [2360 749 215] with "awp" (headshot)
+L 11/24/2019 - 21:55:06: "Uri<13><BOT><CT>" [63 642 69] attacked "Graham<14><BOT><TERRORIST>" [742 521 87] with "mp9" (damage "16") (damage_armor "5") (health "84") (armor "94") (hitgroup "stomach")
+L 11/24/2019 - 21:55:06: "Uri<13><BOT><CT>" [63 642 69] attacked "Graham<14><BOT><TERRORIST>" [742 521 87] with "mp9" (damage "16") (damage_armor "5") (health "68") (armor "88") (hitgroup "stomach")
+L 11/24/2019 - 21:55:07: "Graham<14><BOT><TERRORIST>" [742 521 87] attacked "Uri<13><BOT><CT>" [63 642 69] with "mac10" (damage "12") (damage_armor "4") (health "88") (armor "95") (hitgroup "chest")
+L 11/24/2019 - 21:55:07: "Graham<14><BOT><TERRORIST>" [742 521 87] attacked "Uri<13><BOT><CT>" [63 642 69] with "mac10" (damage "15") (damage_armor "5") (health "73") (armor "89") (hitgroup "stomach")
+L 11/24/2019 - 21:55:07: "Graham<14><BOT><TERRORIST>" [742 521 87] attacked "Uri<13><BOT><CT>" [63 642 69] with "mac10" (damage "12") (damage_armor "4") (health "61") (armor "84") (hitgroup "right arm")
+L 11/24/2019 - 21:55:07: "Uri<13><BOT><CT>" [63 642 69] attacked "Graham<14><BOT><TERRORIST>" [742 521 87] with "mp9" (damage "51") (damage_armor "17") (health "17") (armor "70") (hitgroup "head")
+L 11/24/2019 - 21:55:07: "Fergus<20><BOT><TERRORIST>" [224 1465 107] attacked "Uri<13><BOT><CT>" [63 642 69] with "g3sg1" (damage "63") (damage_armor "6") (health "0") (armor "77") (hitgroup "chest")
+L 11/24/2019 - 21:55:07: "Fergus<20><BOT><TERRORIST>" [224 1465 107] killed "Uri<13><BOT><CT>" [63 642 133] with "g3sg1"
+L 11/24/2019 - 21:55:07: "Neil<19><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_negev kevlar(100) helmet ]
+L 11/24/2019 - 21:55:09: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Planted_The_Bomb"
+L 11/24/2019 - 21:55:18: "Bob<21><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_mp9 defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:55:32: "Neil<19><BOT><TERRORIST>" [2326 1619 160] attacked "Bob<21><BOT><CT>" [2456 1392 160] with "negev" (damage "30") (damage_armor "6") (health "70") (armor "93") (hitgroup "stomach")
+L 11/24/2019 - 21:55:32: "Neil<19><BOT><TERRORIST>" [2326 1619 160] attacked "Bob<21><BOT><CT>" [2456 1393 160] with "negev" (damage "30") (damage_armor "6") (health "40") (armor "86") (hitgroup "stomach")
+L 11/24/2019 - 21:55:33: "Neil<19><BOT><TERRORIST>" [2326 1619 160] attacked "Bob<21><BOT><CT>" [2456 1393 160] with "negev" (damage "24") (damage_armor "4") (health "16") (armor "81") (hitgroup "right arm")
+L 11/24/2019 - 21:55:33: "Neil<19><BOT><TERRORIST>" [2326 1619 160] attacked "Bob<21><BOT><CT>" [2456 1393 160] with "negev" (damage "24") (damage_armor "4") (health "0") (armor "76") (hitgroup "chest")
+L 11/24/2019 - 21:55:33: "Neil<19><BOT><TERRORIST>" [2326 1619 160] killed "Bob<21><BOT><CT>" [2456 1393 206] with "negev"
+L 11/24/2019 - 21:55:33: Team "TERRORIST" triggered "SFUI_Notice_Terrorists_Win" (CT "2") (T "5")
+L 11/24/2019 - 21:55:33: Team "CT" scored "2" with "5" players
+L 11/24/2019 - 21:55:33: Team "TERRORIST" scored "5" with "5" players
+L 11/24/2019 - 21:55:33: World triggered "Round_End"
+L 11/24/2019 - 21:55:43: Starting Freeze period
+L 11/24/2019 - 21:55:43: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Got_The_Bomb"
+L 11/24/2019 - 21:55:43: "Elmer<18><BOT><CT>" purchased "p90"
+L 11/24/2019 - 21:55:43: "Elmer<18><BOT><CT>" purchased "deagle"
+L 11/24/2019 - 21:55:43: "Elmer<18><BOT><CT>" purchased "hegrenade"
+L 11/24/2019 - 21:55:43: "Uri<13><BOT><CT>" purchased "bizon"
+L 11/24/2019 - 21:55:43: "Yanni<15><BOT><CT>" purchased "nova"
+L 11/24/2019 - 21:55:43: "Yanni<15><BOT><CT>" purchased "p250"
+L 11/24/2019 - 21:55:43: "Clarence<17><BOT><CT>" purchased "mag7"
+L 11/24/2019 - 21:55:43: "Bob<21><BOT><CT>" purchased "negev"
+L 11/24/2019 - 21:55:43: "Bob<21><BOT><CT>" purchased "p250"
+L 11/24/2019 - 21:55:48: World triggered "Round_Start"
+L 11/24/2019 - 21:55:49: "Elmer<18><BOT><CT>" left buyzone with [ weapon_knife weapon_deagle weapon_p90 weapon_hegrenade defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:55:49: "Neil<19><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_negev kevlar(100) helmet ]
+L 11/24/2019 - 21:55:49: "Graham<14><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_mac10 kevlar(100) helmet ]
+L 11/24/2019 - 21:55:49: "Fergus<20><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_g3sg1 kevlar(100) helmet ]
+L 11/24/2019 - 21:55:49: "Niles<16><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_negev weapon_hegrenade kevlar(100) helmet ]
+L 11/24/2019 - 21:55:50: "Uri<13><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_bizon defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:55:50: "Bob<21><BOT><CT>" left buyzone with [ weapon_knife weapon_p250 weapon_negev defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:55:50: "Yanni<15><BOT><CT>" left buyzone with [ weapon_knife weapon_p250 weapon_nova defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:55:50: "Clarence<17><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_mag7 defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:55:53: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_hegrenade weapon_awp weapon_c4 kevlar(100) helmet C4 ]
+L 11/24/2019 - 21:55:55: "Elmer<18><BOT><CT>" threw hegrenade [1530 918 158]
+L 11/24/2019 - 21:56:02: "Niles<16><BOT><TERRORIST>" threw hegrenade [1076 422 104]
+L 11/24/2019 - 21:56:10: "Niles<16><BOT><TERRORIST>" [364 646 83] attacked "Clarence<17><BOT><CT>" [1328 408 124] with "negev" (damage "29") (damage_armor "5") (health "71") (armor "94") (hitgroup "stomach")
+L 11/24/2019 - 21:56:14: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [78 655 71] attacked "Bob<21><BOT><CT>" [1322 437 125] with "awp" (damage "109") (damage_armor "1") (health "0") (armor "98") (hitgroup "chest")
+L 11/24/2019 - 21:56:14: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [78 655 71] killed "Bob<21><BOT><CT>" [1322 437 189] with "awp"
+L 11/24/2019 - 21:56:17: "Neil<19><BOT><TERRORIST>" [342 645 81] attacked "Clarence<17><BOT><CT>" [1282 504 120] with "negev" (damage "23") (damage_armor "4") (health "48") (armor "89") (hitgroup "chest")
+L 11/24/2019 - 21:56:17: "Clarence<17><BOT><CT>" [1287 527 121] attacked "Niles<16><BOT><TERRORIST>" [838 527 88] with "hkp2000" (damage "24") (damage_armor "0") (health "76") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:56:17: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [606 551 89] attacked "Clarence<17><BOT><CT>" [1287 527 121] with "glock" (damage "14") (damage_armor "7") (health "34") (armor "81") (hitgroup "stomach")
+L 11/24/2019 - 21:56:17: "Niles<16><BOT><TERRORIST>" [838 527 88] attacked "Clarence<17><BOT><CT>" [1287 527 121] with "negev" (damage "25") (damage_armor "0") (health "9") (armor "81") (hitgroup "right leg")
+L 11/24/2019 - 21:56:17: "Elmer<18><BOT><CT>" [769 21 93] attacked "Niles<16><BOT><TERRORIST>" [838 527 88] with "p90" (damage "16") (damage_armor "0") (health "60") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:56:17: "Elmer<18><BOT><CT>" [769 21 93] attacked "Niles<16><BOT><TERRORIST>" [838 527 88] with "p90" (damage "16") (damage_armor "0") (health "44") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:56:18: "Elmer<18><BOT><CT>" [769 21 93] attacked "Niles<16><BOT><TERRORIST>" [838 527 88] with "p90" (damage "19") (damage_armor "4") (health "25") (armor "95") (hitgroup "stomach")
+L 11/24/2019 - 21:56:18: "Elmer<18><BOT><CT>" [769 21 93] attacked "Niles<16><BOT><TERRORIST>" [838 527 88] with "p90" (damage "19") (damage_armor "4") (health "6") (armor "90") (hitgroup "stomach")
+L 11/24/2019 - 21:56:18: "Elmer<18><BOT><CT>" [769 21 93] attacked "Niles<16><BOT><TERRORIST>" [838 527 88] with "p90" (damage "16") (damage_armor "0") (health "0") (armor "90") (hitgroup "left leg")
+L 11/24/2019 - 21:56:18: "Elmer<18><BOT><CT>" [769 21 93] killed "Niles<16><BOT><TERRORIST>" [838 527 152] with "p90"
+L 11/24/2019 - 21:56:18: "Fergus<20><BOT><TERRORIST>" [689 474 89] attacked "Clarence<17><BOT><CT>" [1287 527 121] with "g3sg1" (damage "64") (damage_armor "6") (health "0") (armor "74") (hitgroup "right arm")
+L 11/24/2019 - 21:56:18: "Fergus<20><BOT><TERRORIST>" [689 474 89] killed "Clarence<17><BOT><CT>" [1287 527 185] with "g3sg1"
+L 11/24/2019 - 21:56:18: "Niles<16><BOT><TERRORIST>" assisted killing "Clarence<17><BOT><CT>"
+L 11/24/2019 - 21:56:20: "Elmer<18><BOT><CT>" [701 -37 88] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [795 517 87] with "p90" (damage "15") (damage_armor "3") (health "85") (armor "96") (hitgroup "chest")
+L 11/24/2019 - 21:56:30: "Neil<19><BOT><TERRORIST>" [811 11 94] attacked "Elmer<18><BOT><CT>" [204 -184 74] with "negev" (damage "3") (damage_armor "0") (health "96") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:56:31: "Neil<19><BOT><TERRORIST>" [811 11 94] attacked "Elmer<18><BOT><CT>" [204 -184 74] with "negev" (damage "3") (damage_armor "0") (health "93") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:56:32: "Neil<19><BOT><TERRORIST>" [811 11 94] attacked "Elmer<18><BOT><CT>" [204 -184 74] with "negev" (damage "3") (damage_armor "0") (health "90") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:56:32: "Neil<19><BOT><TERRORIST>" [811 11 94] attacked "Elmer<18><BOT><CT>" [204 -184 74] with "negev" (damage "23") (damage_armor "4") (health "67") (armor "95") (hitgroup "right arm")
+L 11/24/2019 - 21:56:32: "Neil<19><BOT><TERRORIST>" [811 11 94] attacked "Elmer<18><BOT><CT>" [204 -184 74] with "negev" (damage "23") (damage_armor "4") (health "44") (armor "90") (hitgroup "chest")
+L 11/24/2019 - 21:56:33: "Elmer<18><BOT><CT>" [204 -184 74] attacked "Neil<19><BOT><TERRORIST>" [811 11 94] with "p90" (damage "16") (damage_armor "0") (health "84") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:56:33: "Elmer<18><BOT><CT>" [204 -184 74] attacked "Neil<19><BOT><TERRORIST>" [811 11 94] with "p90" (damage "18") (damage_armor "4") (health "66") (armor "95") (hitgroup "stomach")
+L 11/24/2019 - 21:56:33: "Elmer<18><BOT><CT>" [204 -184 74] attacked "Neil<19><BOT><TERRORIST>" [811 11 94] with "p90" (damage "18") (damage_armor "4") (health "48") (armor "90") (hitgroup "stomach")
+L 11/24/2019 - 21:56:33: "Elmer<18><BOT><CT>" [204 -184 74] attacked "Neil<19><BOT><TERRORIST>" [811 11 94] with "p90" (damage "18") (damage_armor "4") (health "30") (armor "85") (hitgroup "stomach")
+L 11/24/2019 - 21:56:33: "Neil<19><BOT><TERRORIST>" [811 11 94] attacked "Elmer<18><BOT><CT>" [204 -184 74] with "negev" (damage "95") (damage_armor "19") (health "0") (armor "70") (hitgroup "head")
+L 11/24/2019 - 21:56:33: "Neil<19><BOT><TERRORIST>" [811 11 94] killed "Elmer<18><BOT><CT>" [204 -184 120] with "negev" (headshot)
+L 11/24/2019 - 21:56:37: "Uri<13><BOT><CT>" [-84 -84 34] killed other "func_breakable<112>" [973 -12 172] with "bizon"
+L 11/24/2019 - 21:56:37: "Uri<13><BOT><CT>" [-84 -84 34] attacked "Fergus<20><BOT><TERRORIST>" [752 -51 92] with "bizon" (damage "14") (damage_armor "0") (health "86") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:56:37: "Uri<13><BOT><CT>" [-84 -84 34] attacked "Fergus<20><BOT><TERRORIST>" [752 -51 92] with "bizon" (damage "14") (damage_armor "0") (health "72") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:56:37: "Uri<13><BOT><CT>" [-84 -84 34] killed other "func_breakable<113>" [973 -61 175] with "bizon"
+L 11/24/2019 - 21:56:38: "Uri<13><BOT><CT>" [-84 -84 34] killed other "func_breakable<114>" [973 -112 176] with "bizon"
+L 11/24/2019 - 21:56:38: "Uri<13><BOT><CT>" [-84 -84 34] attacked "Neil<19><BOT><TERRORIST>" [817 -139 93] with "bizon" (damage "41") (damage_armor "15") (health "0") (armor "69") (hitgroup "head")
+L 11/24/2019 - 21:56:38: "Uri<13><BOT><CT>" [-84 -84 34] killed "Neil<19><BOT><TERRORIST>" [817 -139 157] with "bizon" (headshot)
+L 11/24/2019 - 21:56:38: "Elmer<18><BOT><CT>" assisted killing "Neil<19><BOT><TERRORIST>"
+L 11/24/2019 - 21:56:38: "Graham<14><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_mac10 kevlar(100) helmet ]
+L 11/24/2019 - 21:56:39: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Planted_The_Bomb"
+L 11/24/2019 - 21:56:42: "Fergus<20><BOT><TERRORIST>" [752 -51 92] attacked "Uri<13><BOT><CT>" [-84 -84 34] with "g3sg1" (damage "63") (damage_armor "6") (health "35") (armor "93") (hitgroup "chest")
+L 11/24/2019 - 21:56:42: "Fergus<20><BOT><TERRORIST>" [752 -51 92] attacked "Uri<13><BOT><CT>" [-84 -84 34] with "g3sg1" (damage "79") (damage_armor "8") (health "0") (armor "84") (hitgroup "stomach")
+L 11/24/2019 - 21:56:42: "Fergus<20><BOT><TERRORIST>" [752 -51 92] killed "Uri<13><BOT><CT>" [-84 -84 98] with "g3sg1"
+L 11/24/2019 - 21:56:53: "Yanni<15><BOT><CT>" left buyzone with [ weapon_knife weapon_p250 weapon_nova defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:57:10: "Yanni<15><BOT><CT>" triggered "Begin_Bomb_Defuse_With_Kit"
+L 11/24/2019 - 21:57:11: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" threw hegrenade [2420 313 681]
+L 11/24/2019 - 21:57:15: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [1955 222 160] attacked "Yanni<15><BOT><CT>" [1936 296 160] with "awp" (damage "111") (damage_armor "1") (health "0") (armor "98") (hitgroup "chest")
+L 11/24/2019 - 21:57:15: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [1955 222 160] killed "Yanni<15><BOT><CT>" [1936 296 224] with "awp"
+L 11/24/2019 - 21:57:15: Team "TERRORIST" triggered "SFUI_Notice_Terrorists_Win" (CT "2") (T "6")
+L 11/24/2019 - 21:57:15: Team "CT" scored "2" with "5" players
+L 11/24/2019 - 21:57:15: Team "TERRORIST" scored "6" with "5" players
+L 11/24/2019 - 21:57:15: World triggered "Round_End"
+L 11/24/2019 - 21:57:20: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [1404 171 192] was killed by the bomb.
+L 11/24/2019 - 21:57:25: Starting Freeze period
+L 11/24/2019 - 21:57:25: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Got_The_Bomb"
+L 11/24/2019 - 21:57:26: "Uri<13><BOT><CT>" purchased "bizon"
+L 11/24/2019 - 21:57:26: "Yanni<15><BOT><CT>" purchased "xm1014"
+L 11/24/2019 - 21:57:26: "Yanni<15><BOT><CT>" purchased "deagle"
+L 11/24/2019 - 21:57:26: "Clarence<17><BOT><CT>" purchased "p90"
+L 11/24/2019 - 21:57:26: "Neil<19><BOT><TERRORIST>" purchased "nova"
+L 11/24/2019 - 21:57:26: "Bob<21><BOT><CT>" purchased "negev"
+L 11/24/2019 - 21:57:26: "Graham<14><BOT><TERRORIST>" purchased "p250"
+L 11/24/2019 - 21:57:26: "Graham<14><BOT><TERRORIST>" purchased "hegrenade"
+L 11/24/2019 - 21:57:26: "Elmer<18><BOT><CT>" purchased "xm1014"
+L 11/24/2019 - 21:57:26: "Fergus<20><BOT><TERRORIST>" purchased "deagle"
+L 11/24/2019 - 21:57:26: "Fergus<20><BOT><TERRORIST>" purchased "hegrenade"
+L 11/24/2019 - 21:57:26: "Niles<16><BOT><TERRORIST>" purchased "p90"
+L 11/24/2019 - 21:57:26: "Niles<16><BOT><TERRORIST>" purchased "decoy"
+L 11/24/2019 - 21:57:28: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" purchased "flashbang"
+L 11/24/2019 - 21:57:29: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" purchased "hegrenade"
+L 11/24/2019 - 21:57:29: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" purchased "smokegrenade"
+L 11/24/2019 - 21:57:30: World triggered "Round_Start"
+L 11/24/2019 - 21:57:31: "Yanni<15><BOT><CT>" left buyzone with [ weapon_knife weapon_deagle weapon_xm1014 defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:57:32: "Clarence<17><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_p90 defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:57:32: "Graham<14><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_p250 weapon_mac10 weapon_hegrenade kevlar(100) helmet ]
+L 11/24/2019 - 21:57:32: "Elmer<18><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_xm1014 defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:57:32: "Niles<16><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_p90 weapon_decoy kevlar(100) helmet ]
+L 11/24/2019 - 21:57:32: "Uri<13><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_bizon defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:57:32: "Bob<21><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_negev defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:57:32: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_c4 weapon_flashbang weapon_hegrenade weapon_smokegrenade kevlar(100) helmet C4 ]
+L 11/24/2019 - 21:57:32: "Fergus<20><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_deagle weapon_g3sg1 weapon_hegrenade kevlar(100) helmet ]
+L 11/24/2019 - 21:57:33: "Neil<19><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_nova kevlar(100) helmet ]
+L 11/24/2019 - 21:57:46: "Neil<19><BOT><TERRORIST>" [158 637 78] attacked "Uri<13><BOT><CT>" [1075 562 105] with "glock" (damage "13") (damage_armor "7") (health "87") (armor "92") (hitgroup "stomach")
+L 11/24/2019 - 21:57:46: "Neil<19><BOT><TERRORIST>" [158 637 78] attacked "Yanni<15><BOT><CT>" [1136 558 112] with "glock" (damage "2") (damage_armor "1") (health "98") (armor "98") (hitgroup "stomach")
+L 11/24/2019 - 21:57:46: "Niles<16><BOT><TERRORIST>" [234 661 80] attacked "Yanni<15><BOT><CT>" [1136 558 112] with "p90" (damage "14") (damage_armor "0") (health "84") (armor "98") (hitgroup "right leg")
+L 11/24/2019 - 21:57:46: "Niles<16><BOT><TERRORIST>" [234 661 80] attacked "Uri<13><BOT><CT>" [1075 562 105] with "p90" (damage "15") (damage_armor "0") (health "72") (armor "92") (hitgroup "right leg")
+L 11/24/2019 - 21:57:46: "Niles<16><BOT><TERRORIST>" [234 661 80] attacked "Yanni<15><BOT><CT>" [1136 558 112] with "p90" (damage "2") (damage_armor "0") (health "82") (armor "98") (hitgroup "right leg")
+L 11/24/2019 - 21:57:46: "Niles<16><BOT><TERRORIST>" [234 661 80] attacked "Uri<13><BOT><CT>" [1075 562 105] with "p90" (damage "13") (damage_armor "3") (health "59") (armor "88") (hitgroup "chest")
+L 11/24/2019 - 21:57:46: "Niles<16><BOT><TERRORIST>" [234 661 80] attacked "Yanni<15><BOT><CT>" [1136 558 112] with "p90" (damage "2") (damage_armor "0") (health "80") (armor "97") (hitgroup "stomach")
+L 11/24/2019 - 21:57:46: "Neil<19><BOT><TERRORIST>" [158 637 78] attacked "Uri<13><BOT><CT>" [1075 562 105] with "glock" (damage "13") (damage_armor "7") (health "46") (armor "80") (hitgroup "stomach")
+L 11/24/2019 - 21:57:46: "Neil<19><BOT><TERRORIST>" [158 637 78] attacked "Yanni<15><BOT><CT>" [1136 558 112] with "glock" (damage "3") (damage_armor "0") (health "77") (armor "97") (hitgroup "left leg")
+L 11/24/2019 - 21:57:46: "Neil<19><BOT><TERRORIST>" [158 637 78] attacked "Uri<13><BOT><CT>" [1075 562 105] with "glock" (damage "13") (damage_armor "7") (health "33") (armor "72") (hitgroup "stomach")
+L 11/24/2019 - 21:57:46: "Neil<19><BOT><TERRORIST>" [158 637 78] attacked "Yanni<15><BOT><CT>" [1136 558 112] with "glock" (damage "2") (damage_armor "1") (health "75") (armor "95") (hitgroup "stomach")
+L 11/24/2019 - 21:57:46: "Uri<13><BOT><CT>" [1075 562 105] attacked "Niles<16><BOT><TERRORIST>" [219 650 80] with "bizon" (damage "13") (damage_armor "0") (health "87") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:57:46: "Uri<13><BOT><CT>" [1075 562 105] attacked "Niles<16><BOT><TERRORIST>" [215 647 80] with "bizon" (damage "13") (damage_armor "0") (health "74") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:57:46: "Uri<13><BOT><CT>" [1075 562 105] attacked "Niles<16><BOT><TERRORIST>" [212 644 80] with "bizon" (damage "13") (damage_armor "4") (health "61") (armor "95") (hitgroup "stomach")
+L 11/24/2019 - 21:57:47: "Uri<13><BOT><CT>" [1075 562 105] attacked "Niles<16><BOT><TERRORIST>" [209 642 80] with "bizon" (damage "13") (damage_armor "0") (health "48") (armor "95") (hitgroup "right leg")
+L 11/24/2019 - 21:57:47: "Graham<14><BOT><TERRORIST>" threw hegrenade [956 2295 399]
+L 11/24/2019 - 21:57:49: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" threw smokegrenade [1044 2707 130]
+L 11/24/2019 - 21:57:58: "Uri<13><BOT><CT>" [496 545 84] attacked "Fergus<20><BOT><TERRORIST>" [58 706 70] with "bizon" (damage "15") (damage_armor "5") (health "85") (armor "94") (hitgroup "stomach")
+L 11/24/2019 - 21:57:59: "Yanni<15><BOT><CT>" [463 511 83] attacked "Fergus<20><BOT><TERRORIST>" [52 724 70] with "xm1014" (damage "10") (damage_armor "0") (health "75") (armor "94") (hitgroup "right leg")
+L 11/24/2019 - 21:57:59: "Uri<13><BOT><CT>" [496 545 84] attacked "Fergus<20><BOT><TERRORIST>" [51 724 70] with "bizon" (damage "16") (damage_armor "0") (health "59") (armor "94") (hitgroup "right leg")
+L 11/24/2019 - 21:57:59: "Clarence<17><BOT><CT>" [772 534 87] attacked "Fergus<20><BOT><TERRORIST>" [46 741 69] with "p90" (damage "15") (damage_armor "0") (health "44") (armor "94") (hitgroup "right leg")
+L 11/24/2019 - 21:57:59: "Yanni<15><BOT><CT>" [463 511 83] attacked "Fergus<20><BOT><TERRORIST>" [46 742 69] with "xm1014" (damage "10") (damage_armor "0") (health "34") (armor "94") (hitgroup "right leg")
+L 11/24/2019 - 21:57:59: "Yanni<15><BOT><CT>" [463 511 83] attacked "Fergus<20><BOT><TERRORIST>" [46 742 69] with "xm1014" (damage "10") (damage_armor "0") (health "24") (armor "94") (hitgroup "right leg")
+L 11/24/2019 - 21:57:59: "Yanni<15><BOT><CT>" [463 511 83] attacked "Fergus<20><BOT><TERRORIST>" [46 742 69] with "xm1014" (damage "10") (damage_armor "0") (health "14") (armor "94") (hitgroup "right leg")
+L 11/24/2019 - 21:57:59: "Uri<13><BOT><CT>" [496 545 84] attacked "Fergus<20><BOT><TERRORIST>" [46 745 69] with "bizon" (damage "16") (damage_armor "0") (health "0") (armor "94") (hitgroup "right leg")
+L 11/24/2019 - 21:57:59: "Uri<13><BOT><CT>" [496 545 84] killed "Fergus<20><BOT><TERRORIST>" [46 745 133] with "bizon"
+L 11/24/2019 - 21:58:00: "Uri<13><BOT><CT>" [496 545 84] attacked "Neil<19><BOT><TERRORIST>" [-68 807 48] with "bizon" (damage "14") (damage_armor "5") (health "86") (armor "94") (hitgroup "stomach")
+L 11/24/2019 - 21:58:01: "Uri<13><BOT><CT>" [496 545 84] attacked "Neil<19><BOT><TERRORIST>" [-40 830 54] with "bizon" (damage "14") (damage_armor "5") (health "72") (armor "88") (hitgroup "stomach")
+L 11/24/2019 - 21:58:02: "Yanni<15><BOT><CT>" [462 516 83] attacked "Neil<19><BOT><TERRORIST>" [71 804 71] with "deagle" (damage "60") (damage_armor "2") (health "12") (armor "85") (hitgroup "stomach")
+L 11/24/2019 - 21:58:02: "Yanni<15><BOT><CT>" [462 516 83] attacked "Neil<19><BOT><TERRORIST>" [77 796 72] with "deagle" (damage "38") (damage_armor "0") (health "0") (armor "85") (hitgroup "right leg")
+L 11/24/2019 - 21:58:02: "Yanni<15><BOT><CT>" [462 516 83] killed "Neil<19><BOT><TERRORIST>" [77 796 136] with "deagle"
+L 11/24/2019 - 21:58:04: "Neil<19><BOT><TERRORIST>" threw hegrenade [557 449 86]
+L 11/24/2019 - 21:58:04: "Neil<19><BOT><TERRORIST>" [77 796 136] attacked "Elmer<18><BOT><CT>" [615 514 91] with "hegrenade" (damage "31") (damage_armor "10") (health "69") (armor "89") (hitgroup "generic")
+L 11/24/2019 - 21:58:04: "Neil<19><BOT><TERRORIST>" [77 796 136] attacked "Uri<13><BOT><CT>" [508 549 84] with "hegrenade" (damage "34") (damage_armor "11") (health "0") (armor "60") (hitgroup "generic")
+L 11/24/2019 - 21:58:04: "Neil<19><BOT><TERRORIST>" [77 796 136] killed "Uri<13><BOT><CT>" [508 549 148] with "hegrenade"
+L 11/24/2019 - 21:58:04: "Neil<19><BOT><TERRORIST>" [77 796 136] attacked "Yanni<15><BOT><CT>" [470 555 85] with "hegrenade" (damage "26") (damage_armor "8") (health "49") (armor "86") (hitgroup "generic")
+L 11/24/2019 - 21:58:04: "Neil<19><BOT><TERRORIST>" [77 796 136] attacked "Clarence<17><BOT><CT>" [738 543 87] with "hegrenade" (damage "2") (damage_armor "0") (health "98") (armor "99") (hitgroup "generic")
+L 11/24/2019 - 21:58:07: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" threw flashbang [104 498 67] flashbang entindex 199)
+L 11/24/2019 - 21:58:07: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" blinded for 4.04 by "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" from flashbang entindex 199 
+L 11/24/2019 - 21:58:07: "Uri<13><BOT><CT>" blinded for 4.61 by "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" from flashbang entindex 199 
+L 11/24/2019 - 21:58:07: "Yanni<15><BOT><CT>" blinded for 4.30 by "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" from flashbang entindex 199 
+L 11/24/2019 - 21:58:07: "Clarence<17><BOT><CT>" blinded for 1.01 by "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" from flashbang entindex 199 
+L 11/24/2019 - 21:58:07: "Elmer<18><BOT><CT>" blinded for 0.99 by "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" from flashbang entindex 199 
+L 11/24/2019 - 21:58:07: "Neil<19><BOT><TERRORIST>" blinded for 3.99 by "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" from flashbang entindex 199 
+L 11/24/2019 - 21:58:07: "Bob<21><BOT><CT>" blinded for 1.07 by "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" from flashbang entindex 199 
+L 11/24/2019 - 21:58:14: "Elmer<18><BOT><CT>" [68 1084 84] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [256 1268 106] with "xm1014" (damage "16") (damage_armor "2") (health "84") (armor "97") (hitgroup "stomach")
+L 11/24/2019 - 21:58:14: "Elmer<18><BOT><CT>" [68 1084 84] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [256 1268 106] with "xm1014" (damage "16") (damage_armor "2") (health "68") (armor "94") (hitgroup "stomach")
+L 11/24/2019 - 21:58:14: "Elmer<18><BOT><CT>" [68 1084 84] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [256 1268 106] with "xm1014" (damage "16") (damage_armor "2") (health "52") (armor "91") (hitgroup "stomach")
+L 11/24/2019 - 21:58:14: "Elmer<18><BOT><CT>" [68 1084 84] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [256 1268 106] with "xm1014" (damage "12") (damage_armor "0") (health "40") (armor "91") (hitgroup "right leg")
+L 11/24/2019 - 21:58:14: "Elmer<18><BOT><CT>" [68 1084 84] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [256 1268 106] with "xm1014" (damage "12") (damage_armor "0") (health "28") (armor "91") (hitgroup "left leg")
+L 11/24/2019 - 21:58:14: "Elmer<18><BOT><CT>" [68 1084 84] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [256 1268 106] with "xm1014" (damage "13") (damage_armor "1") (health "15") (armor "89") (hitgroup "chest")
+L 11/24/2019 - 21:58:14: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [256 1268 106] attacked "Elmer<18><BOT><CT>" [68 1084 84] with "glock" (damage "16") (damage_armor "9") (health "53") (armor "79") (hitgroup "stomach")
+L 11/24/2019 - 21:58:14: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [256 1268 106] attacked "Elmer<18><BOT><CT>" [68 1084 84] with "glock" (damage "16") (damage_armor "9") (health "37") (armor "69") (hitgroup "stomach")
+L 11/24/2019 - 21:58:14: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" threw hegrenade [99 1114 85]
+L 11/24/2019 - 21:58:14: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [256 1268 106] attacked "Elmer<18><BOT><CT>" [68 1084 84] with "hegrenade" (damage "50") (damage_armor "16") (health "0") (armor "52") (hitgroup "generic")
+L 11/24/2019 - 21:58:14: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [256 1268 106] killed "Elmer<18><BOT><CT>" [68 1084 148] with "hegrenade"
+L 11/24/2019 - 21:58:14: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [256 1268 106] attacked "Clarence<17><BOT><CT>" [62 836 71] with "hegrenade" (damage "3") (damage_armor "1") (health "95") (armor "97") (hitgroup "generic")
+L 11/24/2019 - 21:58:16: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [96 1319 97] attacked "Clarence<17><BOT><CT>" [171 1158 99] with "glock" (damage "13") (damage_armor "7") (health "82") (armor "89") (hitgroup "chest")
+L 11/24/2019 - 21:58:17: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [93 1319 97] attacked "Clarence<17><BOT><CT>" [171 1158 99] with "glock" (damage "13") (damage_armor "7") (health "69") (armor "81") (hitgroup "chest")
+L 11/24/2019 - 21:58:17: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [93 1319 97] attacked "Clarence<17><BOT><CT>" [171 1158 99] with "glock" (damage "13") (damage_armor "7") (health "56") (armor "73") (hitgroup "chest")
+L 11/24/2019 - 21:58:17: "Clarence<17><BOT><CT>" [171 1158 99] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [93 1319 97] with "p90" (damage "17") (damage_armor "3") (health "0") (armor "85") (hitgroup "right arm")
+L 11/24/2019 - 21:58:17: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Dropped_The_Bomb"
+L 11/24/2019 - 21:58:17: "Clarence<17><BOT><CT>" [171 1158 99] killed "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [93 1319 161] with "p90"
+L 11/24/2019 - 21:58:17: "Elmer<18><BOT><CT>" assisted killing "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>"
+L 11/24/2019 - 21:58:21: "Niles<16><BOT><TERRORIST>" threw decoy [115 1585 109]
+L 11/24/2019 - 21:58:23: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [-574 847 16] attacked "Bob<21><BOT><CT>" [25 809 68] with "mac10" (damage "16") (damage_armor "0") (health "84") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:58:23: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [-574 847 16] attacked "Bob<21><BOT><CT>" [25 809 68] with "mac10" (damage "16") (damage_armor "0") (health "68") (armor "100") (hitgroup "left leg")
+L 11/24/2019 - 21:58:23: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [-574 847 16] attacked "Bob<21><BOT><CT>" [25 809 68] with "mac10" (damage "16") (damage_armor "0") (health "52") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:58:23: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [-574 847 16] attacked "Bob<21><BOT><CT>" [25 809 68] with "mac10" (damage "16") (damage_armor "0") (health "36") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:58:23: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [-574 847 16] attacked "Bob<21><BOT><CT>" [25 809 68] with "mac10" (damage "12") (damage_armor "4") (health "24") (armor "95") (hitgroup "right arm")
+L 11/24/2019 - 21:58:24: "Bob<21><BOT><CT>" [25 809 68] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [-574 847 16] with "negev" (damage "23") (damage_armor "4") (health "77") (armor "95") (hitgroup "chest")
+L 11/24/2019 - 21:58:24: "Bob<21><BOT><CT>" [25 809 68] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [-574 847 16] with "negev" (damage "25") (damage_armor "0") (health "52") (armor "95") (hitgroup "right leg")
+L 11/24/2019 - 21:58:24: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [-574 847 16] attacked "Bob<21><BOT><CT>" [25 809 68] with "mac10" (damage "51") (damage_armor "18") (health "0") (armor "76") (hitgroup "head")
+L 11/24/2019 - 21:58:24: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [-574 847 16] killed "Bob<21><BOT><CT>" [25 809 132] with "mac10" (headshot)
+L 11/24/2019 - 21:58:26: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [-574 847 16] attacked "Yanni<15><BOT><CT>" [23 896 70] with "mac10" (damage "16") (damage_armor "0") (health "33") (armor "86") (hitgroup "right leg")
+L 11/24/2019 - 21:58:27: "Yanni<15><BOT><CT>" [23 896 70] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [-574 847 16] with "deagle" (damage "36") (damage_armor "0") (health "16") (armor "95") (hitgroup "right leg")
+L 11/24/2019 - 21:58:28: "Yanni<15><BOT><CT>" [23 896 70] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [-574 847 16] with "deagle" (damage "45") (damage_armor "1") (health "0") (armor "93") (hitgroup "chest")
+L 11/24/2019 - 21:58:28: "Yanni<15><BOT><CT>" [23 896 70] killed "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [-574 847 80] with "deagle"
+L 11/24/2019 - 21:58:28: "Elmer<18><BOT><CT>" assisted killing "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>"
+L 11/24/2019 - 21:58:28: "Clarence<17><BOT><CT>" [144 1504 108] attacked "Niles<16><BOT><TERRORIST>" [212 1583 113] with "p90" (damage "17") (damage_armor "3") (health "31") (armor "91") (hitgroup "right arm")
+L 11/24/2019 - 21:58:28: "Clarence<17><BOT><CT>" [144 1504 108] attacked "Niles<16><BOT><TERRORIST>" [212 1583 113] with "p90" (damage "21") (damage_armor "4") (health "10") (armor "86") (hitgroup "stomach")
+L 11/24/2019 - 21:58:28: "Niles<16><BOT><TERRORIST>" [212 1583 113] attacked "Clarence<17><BOT><CT>" [144 1504 108] with "p90" (damage "17") (damage_armor "3") (health "39") (armor "69") (hitgroup "right arm")
+L 11/24/2019 - 21:58:28: "Clarence<17><BOT><CT>" [144 1504 108] attacked "Niles<16><BOT><TERRORIST>" [212 1583 113] with "p90" (damage "21") (damage_armor "4") (health "0") (armor "81") (hitgroup "stomach")
+L 11/24/2019 - 21:58:28: "Clarence<17><BOT><CT>" [144 1504 108] killed "Niles<16><BOT><TERRORIST>" [212 1583 177] with "p90"
+L 11/24/2019 - 21:58:28: "Uri<13><BOT><CT>" assisted killing "Niles<16><BOT><TERRORIST>"
+L 11/24/2019 - 21:58:28: Team "CT" triggered "SFUI_Notice_CTs_Win" (CT "3") (T "6")
+L 11/24/2019 - 21:58:28: Team "CT" scored "3" with "5" players
+L 11/24/2019 - 21:58:28: Team "TERRORIST" scored "6" with "5" players
+L 11/24/2019 - 21:58:28: World triggered "Round_End"
+L 11/24/2019 - 21:58:38: Starting Freeze period
+L 11/24/2019 - 21:58:38: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Got_The_Bomb"
+L 11/24/2019 - 21:58:38: "Graham<14><BOT><TERRORIST>" purchased "negev"
+L 11/24/2019 - 21:58:38: "Graham<14><BOT><TERRORIST>" purchased "hegrenade"
+L 11/24/2019 - 21:58:38: "Niles<16><BOT><TERRORIST>" purchased "sg556"
+L 11/24/2019 - 21:58:38: "Niles<16><BOT><TERRORIST>" purchased "hegrenade"
+L 11/24/2019 - 21:58:38: "Elmer<18><BOT><CT>" purchased "nova"
+L 11/24/2019 - 21:58:38: "Elmer<18><BOT><CT>" purchased "p250"
+L 11/24/2019 - 21:58:38: "Fergus<20><BOT><TERRORIST>" purchased "negev"
+L 11/24/2019 - 21:58:38: "Uri<13><BOT><CT>" purchased "aug"
+L 11/24/2019 - 21:58:38: "Uri<13><BOT><CT>" purchased "p250"
+L 11/24/2019 - 21:58:38: "Yanni<15><BOT><CT>" purchased "hegrenade"
+L 11/24/2019 - 21:58:38: "Neil<19><BOT><TERRORIST>" purchased "galilar"
+L 11/24/2019 - 21:58:38: "Bob<21><BOT><CT>" purchased "bizon"
+L 11/24/2019 - 21:58:42: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" purchased "sg556"
+L 11/24/2019 - 21:58:43: World triggered "Round_Start"
+L 11/24/2019 - 21:58:43: "Fergus<20><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_negev kevlar(100) helmet ]
+L 11/24/2019 - 21:58:44: "Neil<19><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_galilar kevlar(100) helmet ]
+L 11/24/2019 - 21:58:44: "Graham<14><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_negev weapon_hegrenade kevlar(100) helmet ]
+L 11/24/2019 - 21:58:45: "Uri<13><BOT><CT>" left buyzone with [ weapon_knife weapon_p250 weapon_aug defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:58:45: "Bob<21><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_bizon defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:58:45: "Niles<16><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_sg556 weapon_hegrenade kevlar(100) helmet ]
+L 11/24/2019 - 21:58:45: "Clarence<17><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_p90 defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:58:45: "Yanni<15><BOT><CT>" left buyzone with [ weapon_knife weapon_deagle weapon_xm1014 weapon_hegrenade defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:58:45: "Elmer<18><BOT><CT>" left buyzone with [ weapon_knife weapon_p250 weapon_nova defuser kevlar(100) helmet ]
+L 11/24/2019 - 21:58:46: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_c4 weapon_sg556 kevlar(100) helmet C4 ]
+L 11/24/2019 - 21:59:05: "Graham<14><BOT><TERRORIST>" threw hegrenade [1514 -298 258]
+L 11/24/2019 - 21:59:11: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2330 131 128] attacked "Bob<21><BOT><CT>" [2468 239 145] with "sg556" (damage "37") (damage_armor "0") (health "63") (armor "100") (hitgroup "stomach")
+L 11/24/2019 - 21:59:13: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2482 247 150] attacked "Bob<21><BOT><CT>" [2473 386 212] with "sg556" (damage "37") (damage_armor "0") (health "26") (armor "100") (hitgroup "stomach")
+L 11/24/2019 - 21:59:13: "Bob<21><BOT><CT>" [2479 388 212] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2482 263 160] with "bizon" (damage "18") (damage_armor "0") (health "82") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 21:59:13: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2482 263 161] attacked "Bob<21><BOT><CT>" [2477 387 212] with "sg556" (damage "29") (damage_armor "0") (health "0") (armor "100") (hitgroup "chest")
+L 11/24/2019 - 21:59:13: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2482 263 161] killed "Bob<21><BOT><CT>" [2477 387 276] with "sg556"
+L 11/24/2019 - 21:59:15: "Fergus<20><BOT><TERRORIST>" [1563 106 129] attacked "Uri<13><BOT><CT>" [2021 154 160] with "negev" (damage "24") (damage_armor "4") (health "76") (armor "95") (hitgroup "chest")
+L 11/24/2019 - 21:59:17: "Niles<16><BOT><TERRORIST>" [1699 67 129] attacked "Uri<13><BOT><CT>" [1930 92 130] with "sg556" (damage "29") (damage_armor "0") (health "47") (armor "95") (hitgroup "right arm")
+L 11/24/2019 - 21:59:18: "Fergus<20><BOT><TERRORIST>" [1570 117 129] attacked "Uri<13><BOT><CT>" [1930 92 130] with "negev" (damage "24") (damage_armor "4") (health "23") (armor "90") (hitgroup "chest")
+L 11/24/2019 - 21:59:18: "Fergus<20><BOT><TERRORIST>" [1570 117 129] attacked "Uri<13><BOT><CT>" [1930 92 130] with "negev" (damage "30") (damage_armor "6") (health "0") (armor "83") (hitgroup "stomach")
+L 11/24/2019 - 21:59:18: "Fergus<20><BOT><TERRORIST>" [1570 117 129] killed "Uri<13><BOT><CT>" [1930 92 194] with "negev"
+L 11/24/2019 - 21:59:35: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2411 2128 128] attacked "Clarence<17><BOT><CT>" [2051 2603 128] with "sg556" (damage "29") (damage_armor "0") (health "71") (armor "100") (hitgroup "chest")
+L 11/24/2019 - 21:59:35: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2411 2128 128] attacked "Yanni<15><BOT><CT>" [2019 2648 128] with "sg556" (damage "17") (damage_armor "0") (health "83") (armor "100") (hitgroup "chest")
+L 11/24/2019 - 21:59:36: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2410 2129 128] attacked "Clarence<17><BOT><CT>" [2051 2603 128] with "sg556" (damage "29") (damage_armor "0") (health "42") (armor "100") (hitgroup "chest")
+L 11/24/2019 - 21:59:36: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2410 2129 128] attacked "Yanni<15><BOT><CT>" [2019 2648 128] with "sg556" (damage "17") (damage_armor "0") (health "66") (armor "100") (hitgroup "chest")
+L 11/24/2019 - 21:59:36: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2410 2129 128] attacked "Yanni<15><BOT><CT>" [2019 2648 128] with "sg556" (damage "29") (damage_armor "0") (health "37") (armor "100") (hitgroup "chest")
+L 11/24/2019 - 21:59:37: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2410 2129 128] attacked "Clarence<17><BOT><CT>" [2051 2603 128] with "sg556" (damage "29") (damage_armor "0") (health "13") (armor "100") (hitgroup "chest")
+L 11/24/2019 - 21:59:37: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2410 2129 128] attacked "Yanni<15><BOT><CT>" [2019 2648 128] with "sg556" (damage "17") (damage_armor "0") (health "20") (armor "100") (hitgroup "chest")
+L 11/24/2019 - 21:59:37: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2410 2129 128] attacked "Clarence<17><BOT><CT>" [2051 2603 128] with "sg556" (damage "29") (damage_armor "0") (health "0") (armor "100") (hitgroup "chest")
+L 11/24/2019 - 21:59:37: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2410 2129 128] killed "Clarence<17><BOT><CT>" [2051 2603 192] with "sg556"
+L 11/24/2019 - 21:59:37: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2410 2129 128] attacked "Yanni<15><BOT><CT>" [2019 2648 128] with "sg556" (damage "17") (damage_armor "0") (health "3") (armor "100") (hitgroup "chest")
+L 11/24/2019 - 21:59:37: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2410 2129 128] attacked "Yanni<15><BOT><CT>" [2019 2648 128] with "sg556" (damage "29") (damage_armor "0") (health "0") (armor "100") (hitgroup "chest")
+L 11/24/2019 - 21:59:37: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [2410 2129 128] killed "Yanni<15><BOT><CT>" [2019 2648 192] with "sg556"
+L 11/24/2019 - 21:59:39: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_c4 weapon_sg556 kevlar(100) helmet C4 ]
+L 11/24/2019 - 21:59:40: "Niles<16><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_sg556 weapon_hegrenade kevlar(100) helmet ]
+L 11/24/2019 - 21:59:41: "Fergus<20><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_negev kevlar(100) helmet ]
+L 11/24/2019 - 21:59:42: "Graham<14><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_negev kevlar(100) helmet ]
+L 11/24/2019 - 21:59:46: "Neil<19><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_galilar kevlar(100) helmet ]
+L 11/24/2019 - 21:59:52: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [477 3289 160] attacked "Elmer<18><BOT><CT>" [446 2463 160] with "sg556" (damage "29") (damage_armor "0") (health "71") (armor "100") (hitgroup "chest")
+L 11/24/2019 - 21:59:52: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [477 3289 160] attacked "Elmer<18><BOT><CT>" [446 2463 160] with "sg556" (damage "116") (damage_armor "0") (health "0") (armor "100") (hitgroup "head")
+L 11/24/2019 - 21:59:52: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [477 3289 160] killed "Elmer<18><BOT><CT>" [446 2463 206] with "sg556" (headshot)
+L 11/24/2019 - 21:59:52: Team "TERRORIST" triggered "SFUI_Notice_Terrorists_Win" (CT "3") (T "7")
+L 11/24/2019 - 21:59:52: Team "CT" scored "3" with "5" players
+L 11/24/2019 - 21:59:52: Team "TERRORIST" scored "7" with "5" players
+L 11/24/2019 - 21:59:52: World triggered "Round_End"
+L 11/24/2019 - 22:00:01: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Planted_The_Bomb"
+L 11/24/2019 - 22:00:02: Starting Freeze period
+L 11/24/2019 - 22:00:02: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Got_The_Bomb"
+L 11/24/2019 - 22:00:02: "Niles<16><BOT><TERRORIST>" purchased "p250"
+L 11/24/2019 - 22:00:02: "Elmer<18><BOT><CT>" purchased "m249"
+L 11/24/2019 - 22:00:02: "Elmer<18><BOT><CT>" purchased "hegrenade"
+L 11/24/2019 - 22:00:02: "Uri<13><BOT><CT>" purchased "scar20"
+L 11/24/2019 - 22:00:02: "Uri<13><BOT><CT>" purchased "p250"
+L 11/24/2019 - 22:00:02: "Yanni<15><BOT><CT>" purchased "nova"
+L 11/24/2019 - 22:00:02: "Yanni<15><BOT><CT>" purchased "deagle"
+L 11/24/2019 - 22:00:02: "Clarence<17><BOT><CT>" purchased "mp7"
+L 11/24/2019 - 22:00:02: "Clarence<17><BOT><CT>" purchased "p250"
+L 11/24/2019 - 22:00:02: "Clarence<17><BOT><CT>" purchased "flashbang"
+L 11/24/2019 - 22:00:02: "Bob<21><BOT><CT>" purchased "m249"
+L 11/24/2019 - 22:00:07: World triggered "Round_Start"
+L 11/24/2019 - 22:00:08: "Niles<16><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_p250 weapon_sg556 weapon_hegrenade kevlar(100) helmet ]
+L 11/24/2019 - 22:00:08: "Neil<19><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_galilar kevlar(100) helmet ]
+L 11/24/2019 - 22:00:08: "Elmer<18><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_m249 weapon_hegrenade defuser kevlar(100) helmet ]
+L 11/24/2019 - 22:00:09: "Yanni<15><BOT><CT>" left buyzone with [ weapon_knife weapon_deagle weapon_nova defuser kevlar(100) helmet ]
+L 11/24/2019 - 22:00:09: "Clarence<17><BOT><CT>" left buyzone with [ weapon_knife weapon_p250 weapon_mp7 weapon_flashbang defuser kevlar(100) helmet ]
+L 11/24/2019 - 22:00:10: "Bob<21><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_m249 defuser kevlar(100) helmet ]
+L 11/24/2019 - 22:00:10: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_c4 weapon_sg556 kevlar(100) helmet C4 ]
+L 11/24/2019 - 22:00:10: "Uri<13><BOT><CT>" left buyzone with [ weapon_knife weapon_p250 weapon_scar20 defuser kevlar(100) helmet ]
+L 11/24/2019 - 22:00:10: "Fergus<20><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_negev kevlar(100) helmet ]
+L 11/24/2019 - 22:00:11: "Graham<14><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_negev kevlar(100) helmet ]
+L 11/24/2019 - 22:00:13: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [-833 564 -32] killed other "chicken<174>" [-794 591 -32] with "knife_t"
+L 11/24/2019 - 22:00:14: "Elmer<18><BOT><CT>" threw hegrenade [1533 921 164]
+L 11/24/2019 - 22:00:28: "Niles<16><BOT><TERRORIST>" threw hegrenade [1566 1102 162]
+L 11/24/2019 - 22:00:28: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [658 2878 134] attacked "Uri<13><BOT><CT>" [56 2440 160] with "sg556" (damage "29") (damage_armor "0") (health "71") (armor "100") (hitgroup "right arm")
+L 11/24/2019 - 22:00:28: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [658 2878 134] attacked "Uri<13><BOT><CT>" [56 2440 160] with "sg556" (damage "116") (damage_armor "0") (health "0") (armor "100") (hitgroup "head")
+L 11/24/2019 - 22:00:28: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [658 2878 134] killed "Uri<13><BOT><CT>" [56 2440 206] with "sg556" (headshot)
+L 11/24/2019 - 22:00:29: "Clarence<17><BOT><CT>" [972 2654 131] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [666 2869 132] with "mp7" (damage "19") (damage_armor "0") (health "81") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 22:00:29: "Clarence<17><BOT><CT>" [972 2654 131] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [669 2867 131] with "mp7" (damage "20") (damage_armor "6") (health "61") (armor "93") (hitgroup "stomach")
+L 11/24/2019 - 22:00:29: "Clarence<17><BOT><CT>" [972 2654 131] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [671 2864 131] with "mp7" (damage "20") (damage_armor "6") (health "41") (armor "86") (hitgroup "stomach")
+L 11/24/2019 - 22:00:29: "Clarence<17><BOT><CT>" [972 2654 131] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [674 2862 131] with "mp7" (damage "20") (damage_armor "6") (health "21") (armor "79") (hitgroup "stomach")
+L 11/24/2019 - 22:00:29: "Clarence<17><BOT><CT>" [972 2654 131] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [676 2860 131] with "mp7" (damage "20") (damage_armor "6") (health "1") (armor "72") (hitgroup "stomach")
+L 11/24/2019 - 22:00:29: "Clarence<17><BOT><CT>" [972 2654 131] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [677 2857 131] with "mp7" (damage "16") (damage_armor "4") (health "0") (armor "67") (hitgroup "chest")
+L 11/24/2019 - 22:00:29: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Dropped_The_Bomb"
+L 11/24/2019 - 22:00:29: "Clarence<17><BOT><CT>" [972 2654 131] killed "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [677 2857 195] with "mp7"
+L 11/24/2019 - 22:00:32: "Elmer<18><BOT><CT>" [1398 316 129] attacked "Niles<16><BOT><TERRORIST>" [1474 957 148] with "m249" (damage "24") (damage_armor "3") (health "76") (armor "96") (hitgroup "chest")
+L 11/24/2019 - 22:00:33: "Elmer<18><BOT><CT>" [1398 316 129] attacked "Niles<16><BOT><TERRORIST>" [1474 957 148] with "m249" (damage "98") (damage_armor "12") (health "0") (armor "83") (hitgroup "head")
+L 11/24/2019 - 22:00:33: "Elmer<18><BOT><CT>" [1398 316 129] killed "Niles<16><BOT><TERRORIST>" [1474 957 212] with "m249" (headshot)
+L 11/24/2019 - 22:00:40: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [1632 2403 160] attacked "Clarence<17><BOT><CT>" [1753 2578 160] with "galilar" (damage "9") (damage_armor "1") (health "91") (armor "98") (hitgroup "left arm")
+L 11/24/2019 - 22:00:41: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [1708 2358 160] attacked "Clarence<17><BOT><CT>" [1771 2586 150] with "galilar" (damage "23") (damage_armor "3") (health "68") (armor "94") (hitgroup "chest")
+L 11/24/2019 - 22:00:41: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [1708 2357 160] attacked "Clarence<17><BOT><CT>" [1780 2589 144] with "galilar" (damage "92") (damage_armor "13") (health "0") (armor "80") (hitgroup "head")
+L 11/24/2019 - 22:00:41: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [1708 2357 160] killed "Clarence<17><BOT><CT>" [1780 2589 208] with "galilar" (headshot)
+L 11/24/2019 - 22:00:43: "Graham<14><BOT><TERRORIST>" [1486 1036 154] attacked "Yanni<15><BOT><CT>" [1552 1016 154] with "negev" (damage "26") (damage_armor "0") (health "74") (armor "100") (hitgroup "right leg")
+L 11/24/2019 - 22:00:44: "Graham<14><BOT><TERRORIST>" [1486 1036 154] attacked "Yanni<15><BOT><CT>" [1552 1016 154] with "negev" (damage "30") (damage_armor "6") (health "44") (armor "93") (hitgroup "stomach")
+L 11/24/2019 - 22:00:44: "Graham<14><BOT><TERRORIST>" [1486 1036 154] attacked "Yanni<15><BOT><CT>" [1552 1016 154] with "negev" (damage "30") (damage_armor "6") (health "14") (armor "86") (hitgroup "stomach")
+L 11/24/2019 - 22:00:44: "Graham<14><BOT><TERRORIST>" [1486 1036 154] attacked "Yanni<15><BOT><CT>" [1552 1016 154] with "negev" (damage "30") (damage_armor "6") (health "0") (armor "79") (hitgroup "stomach")
+L 11/24/2019 - 22:00:44: "Graham<14><BOT><TERRORIST>" [1486 1036 154] killed "Yanni<15><BOT><CT>" [1552 1016 218] with "negev"
+L 11/24/2019 - 22:00:45: "Bob<21><BOT><CT>" [1864 1280 160] attacked "Graham<14><BOT><TERRORIST>" [1484 1027 153] with "m249" (damage "31") (damage_armor "3") (health "69") (armor "96") (hitgroup "stomach")
+L 11/24/2019 - 22:00:46: "Bob<21><BOT><CT>" [1864 1280 160] attacked "Graham<14><BOT><TERRORIST>" [1476 1034 155] with "m249" (damage "31") (damage_armor "3") (health "38") (armor "92") (hitgroup "stomach")
+L 11/24/2019 - 22:00:46: "Bob<21><BOT><CT>" [1864 1280 160] attacked "Graham<14><BOT><TERRORIST>" [1477 1035 155] with "m249" (damage "31") (damage_armor "3") (health "7") (armor "88") (hitgroup "stomach")
+L 11/24/2019 - 22:00:46: "Bob<21><BOT><CT>" [1864 1280 160] attacked "Graham<14><BOT><TERRORIST>" [1477 1035 155] with "m249" (damage "24") (damage_armor "3") (health "0") (armor "84") (hitgroup "chest")
+L 11/24/2019 - 22:00:46: "Bob<21><BOT><CT>" [1864 1280 160] killed "Graham<14><BOT><TERRORIST>" [1477 1035 219] with "m249"
+L 11/24/2019 - 22:00:46: "Fergus<20><BOT><TERRORIST>" [1320 312 129] attacked "Elmer<18><BOT><CT>" [1524 136 128] with "negev" (damage "24") (damage_armor "4") (health "76") (armor "95") (hitgroup "chest")
+L 11/24/2019 - 22:00:46: "Elmer<18><BOT><CT>" [1524 136 128] attacked "Fergus<20><BOT><TERRORIST>" [1320 312 129] with "m249" (damage "25") (damage_armor "3") (health "75") (armor "96") (hitgroup "right arm")
+L 11/24/2019 - 22:00:46: "Elmer<18><BOT><CT>" [1524 136 128] attacked "Fergus<20><BOT><TERRORIST>" [1320 312 129] with "m249" (damage "25") (damage_armor "3") (health "50") (armor "92") (hitgroup "right arm")
+L 11/24/2019 - 22:00:46: "Elmer<18><BOT><CT>" [1524 136 128] attacked "Fergus<20><BOT><TERRORIST>" [1320 312 129] with "m249" (damage "10") (damage_armor "1") (health "40") (armor "90") (hitgroup "chest")
+L 11/24/2019 - 22:00:47: "Elmer<18><BOT><CT>" [1524 136 128] attacked "Fergus<20><BOT><TERRORIST>" [1320 312 129] with "m249" (damage "10") (damage_armor "1") (health "30") (armor "88") (hitgroup "chest")
+L 11/24/2019 - 22:00:47: "Elmer<18><BOT><CT>" [1524 136 128] attacked "Fergus<20><BOT><TERRORIST>" [1320 312 129] with "m249" (damage "11") (damage_armor "1") (health "19") (armor "86") (hitgroup "chest")
+L 11/24/2019 - 22:00:47: "Elmer<18><BOT><CT>" [1524 136 128] attacked "Fergus<20><BOT><TERRORIST>" [1320 312 129] with "m249" (damage "11") (damage_armor "1") (health "8") (armor "84") (hitgroup "chest")
+L 11/24/2019 - 22:00:47: "Elmer<18><BOT><CT>" [1524 136 128] attacked "Fergus<20><BOT><TERRORIST>" [1320 312 129] with "m249" (damage "25") (damage_armor "3") (health "0") (armor "80") (hitgroup "right arm")
+L 11/24/2019 - 22:00:47: "Elmer<18><BOT><CT>" [1524 136 128] killed "Fergus<20><BOT><TERRORIST>" [1320 312 193] with "m249"
+L 11/24/2019 - 22:00:50: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Got_The_Bomb"
+L 11/24/2019 - 22:01:02: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" triggered "Planted_The_Bomb"
+L 11/24/2019 - 22:01:20: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [521 3112 206] attacked "Elmer<18><BOT><CT>" [675 2510 140] with "mp7" (damage "14") (damage_armor "4") (health "62") (armor "90") (hitgroup "chest")
+L 11/24/2019 - 22:01:20: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [521 3112 206] attacked "Elmer<18><BOT><CT>" [674 2513 140] with "mp7" (damage "14") (damage_armor "4") (health "48") (armor "85") (hitgroup "chest")
+L 11/24/2019 - 22:01:21: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [521 3112 206] attacked "Elmer<18><BOT><CT>" [674 2514 140] with "mp7" (damage "14") (damage_armor "4") (health "34") (armor "80") (hitgroup "chest")
+L 11/24/2019 - 22:01:21: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [521 3112 206] attacked "Elmer<18><BOT><CT>" [674 2514 140] with "mp7" (damage "14") (damage_armor "4") (health "20") (armor "75") (hitgroup "chest")
+L 11/24/2019 - 22:01:21: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [521 3112 206] attacked "Elmer<18><BOT><CT>" [674 2514 140] with "mp7" (damage "14") (damage_armor "4") (health "6") (armor "70") (hitgroup "chest")
+L 11/24/2019 - 22:01:22: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [521 3112 206] attacked "Elmer<18><BOT><CT>" [674 2514 140] with "mp7" (damage "14") (damage_armor "4") (health "0") (armor "65") (hitgroup "neck")
+L 11/24/2019 - 22:01:22: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [521 3112 206] killed "Elmer<18><BOT><CT>" [674 2514 204] with "mp7"
+L 11/24/2019 - 22:01:29: "Bob<21><BOT><CT>" [399 1900 130] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [849 2247 142] with "m249" (damage "30") (damage_armor "3") (health "70") (armor "96") (hitgroup "stomach")
+L 11/24/2019 - 22:01:29: "Bob<21><BOT><CT>" [399 1900 130] attacked "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [849 2247 142] with "m249" (damage "30") (damage_armor "3") (health "40") (armor "92") (hitgroup "stomach")
+L 11/24/2019 - 22:01:29: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [849 2247 142] attacked "Bob<21><BOT><CT>" [399 1900 130] with "m249" (damage "98") (damage_armor "12") (health "2") (armor "87") (hitgroup "head")
+L 11/24/2019 - 22:01:30: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [849 2247 142] attacked "Bob<21><BOT><CT>" [399 1900 130] with "m249" (damage "23") (damage_armor "0") (health "0") (armor "87") (hitgroup "right leg")
+L 11/24/2019 - 22:01:30: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [849 2247 142] killed "Bob<21><BOT><CT>" [399 1900 194] with "m249"
+L 11/24/2019 - 22:01:30: Team "TERRORIST" triggered "SFUI_Notice_Terrorists_Win" (CT "3") (T "8")
+L 11/24/2019 - 22:01:30: Team "CT" scored "3" with "5" players
+L 11/24/2019 - 22:01:30: Team "TERRORIST" scored "8" with "5" players
+L 11/24/2019 - 22:01:30: World triggered "Round_End"
+L 11/24/2019 - 22:01:30: ACCOLADE, FINAL: {hsp},	Uri<2>,	VALUE: 33.333332,	POS: 1,	SCORE: 18.148148
+L 11/24/2019 - 22:01:30: ACCOLADE, FINAL: {3k},	Yanni<4>,	VALUE: 1.000000,	POS: 1,	SCORE: 26.666668
+L 11/24/2019 - 22:01:30: ACCOLADE, FINAL: {firstkills},	Clarence<6>,	VALUE: 2.000000,	POS: 1,	SCORE: 12.727274
+L 11/24/2019 - 22:01:30: ACCOLADE, FINAL: {cashspent},	Elmer<7>,	VALUE: 23000.000000,	POS: 1,	SCORE: 6.233767
+L 11/24/2019 - 22:01:30: ACCOLADE, FINAL: {deaths},	Bob<10>,	VALUE: 11.000000,	POS: 1,	SCORE: 40.000000
+L 11/24/2019 - 22:01:30: ACCOLADE, FINAL: {mvps},	tbroedsgaard<1>,	VALUE: 8.000000,	POS: 1,	SCORE: 58.181824
+L 11/24/2019 - 22:01:30: ACCOLADE, FINAL: {assists},	Niles<5>,	VALUE: 3.000000,	POS: 1,	SCORE: 2.467533
+L 11/24/2019 - 22:01:30: ACCOLADE, FINAL: {cashspent},	Fergus<9>,	VALUE: 18600.000000,	POS: 1,	SCORE: 3.948052
+L 11/24/2019 - 22:01:30: ACCOLADE, FINAL: {3k},	Neil<8>,	VALUE: 1.000000,	POS: 2,	SCORE: 20.000002
+L 11/24/2019 - 22:01:30: ACCOLADE, FINAL: {hsp},	Graham<3>,	VALUE: 33.333332,	POS: 2,	SCORE: 12.962962
+L 11/24/2019 - 22:01:30: Game Over: casual mg_de_inferno de_inferno score 3:8 after 18 min
+L 11/24/2019 - 22:01:30: World triggered "Round_Start"
+L 11/24/2019 - 22:01:44: "tbroedsgaard<12><STEAM_1:1:42376214><TERRORIST>" [849 2247 206] was killed by the bomb.
+L 11/24/2019 - 22:01:56: "tbroedsgaard<12><STEAM_1:1:42376214>" switched from team <TERRORIST> to <Unassigned>
+L 11/24/2019 - 22:01:56: "Uri<13><BOT>" switched from team <CT> to <Unassigned>
+L 11/24/2019 - 22:01:56: "Graham<14><BOT>" switched from team <TERRORIST> to <Unassigned>
+L 11/24/2019 - 22:01:56: "Yanni<15><BOT>" switched from team <CT> to <Unassigned>
+L 11/24/2019 - 22:01:56: "Niles<16><BOT>" switched from team <TERRORIST> to <Unassigned>
+L 11/24/2019 - 22:01:56: "Clarence<17><BOT>" switched from team <CT> to <Unassigned>
+L 11/24/2019 - 22:01:56: "Elmer<18><BOT>" switched from team <CT> to <Unassigned>
+L 11/24/2019 - 22:01:56: "Neil<19><BOT>" switched from team <TERRORIST> to <Unassigned>
+L 11/24/2019 - 22:01:57: "Fergus<20><BOT>" switched from team <TERRORIST> to <Unassigned>
+L 11/24/2019 - 22:01:57: "Bob<21><BOT>" switched from team <CT> to <Unassigned>
+L 11/24/2019 - 22:01:57: Starting Freeze period
+L 11/24/2019 - 22:01:57: World triggered "Match_Start" on "de_inferno"
+L 11/24/2019 - 22:01:57: "Graham<14><BOT>" switched from team <Unassigned> to <TERRORIST>
+L 11/24/2019 - 22:01:57: World triggered "Game_Commencing"
+L 11/24/2019 - 22:01:57: "Niles<16><BOT>" switched from team <Unassigned> to <TERRORIST>
+L 11/24/2019 - 22:01:57: "Elmer<18><BOT>" switched from team <Unassigned> to <CT>
+L 11/24/2019 - 22:01:57: "Fergus<20><BOT>" switched from team <Unassigned> to <TERRORIST>
+L 11/24/2019 - 22:01:57: "Uri<13><BOT><Unassigned>" disconnected (reason "Kicked by Console")
+L 11/24/2019 - 22:01:57: "Yanni<15><BOT>" switched from team <Unassigned> to <CT>
+L 11/24/2019 - 22:01:57: "Clarence<17><BOT>" switched from team <Unassigned> to <CT>
+L 11/24/2019 - 22:01:57: "Neil<19><BOT>" switched from team <Unassigned> to <TERRORIST>
+L 11/24/2019 - 22:01:57: "Bob<21><BOT>" switched from team <Unassigned> to <CT>
+L 11/24/2019 - 22:01:57: "Yanni<15><BOT><CT>" disconnected (reason "Kicked by Console")
+L 11/24/2019 - 22:01:57: "Yanni<15><BOT>" switched from team <CT> to <Unassigned>
+L 11/24/2019 - 22:01:57: "Graham<14><BOT><TERRORIST>" disconnected (reason "Kicked by Console")
+L 11/24/2019 - 22:01:57: "Graham<14><BOT>" switched from team <TERRORIST> to <Unassigned>
+L 11/24/2019 - 22:01:57: "Clarence<17><BOT><CT>" disconnected (reason "Kicked by Console")
+L 11/24/2019 - 22:01:57: "Clarence<17><BOT>" switched from team <CT> to <Unassigned>
+L 11/24/2019 - 22:01:57: "Niles<16><BOT><TERRORIST>" disconnected (reason "Kicked by Console")
+L 11/24/2019 - 22:01:57: "Niles<16><BOT>" switched from team <TERRORIST> to <Unassigned>
+L 11/24/2019 - 22:01:57: "Elmer<18><BOT><CT>" disconnected (reason "Kicked by Console")
+L 11/24/2019 - 22:01:57: "Elmer<18><BOT>" switched from team <CT> to <Unassigned>
+L 11/24/2019 - 22:01:57: "Neil<19><BOT><TERRORIST>" disconnected (reason "Kicked by Console")
+L 11/24/2019 - 22:01:57: "Neil<19><BOT>" switched from team <TERRORIST> to <Unassigned>
+L 11/24/2019 - 22:01:57: "Bob<21><BOT><CT>" disconnected (reason "Kicked by Console")
+L 11/24/2019 - 22:01:57: "Bob<21><BOT>" switched from team <CT> to <Unassigned>
+L 11/24/2019 - 22:01:57: "Fergus<20><BOT><TERRORIST>" disconnected (reason "Kicked by Console")
+L 11/24/2019 - 22:01:57: "Fergus<20><BOT>" switched from team <TERRORIST> to <Unassigned>
+L 11/24/2019 - 22:01:57: Starting Freeze period
+L 11/24/2019 - 22:01:57: World triggered "Match_Start" on "de_inferno"
+L 11/24/2019 - 22:02:02: World triggered "Round_Start"
+L 11/24/2019 - 22:02:06: "tbroedsgaard<12><STEAM_1:1:42376214><Unassigned>" disconnected (reason "Disconnect")
+L 11/24/2019 - 22:02:07: server_message: "quit"
+L 11/24/2019 - 22:02:07: Log file closed
