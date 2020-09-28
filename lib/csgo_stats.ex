@@ -17,7 +17,7 @@ defmodule CsgoStats do
       |> String.split("\n")
       |> Enum.reject(fn logline -> logline == "" end)
       |> Enum.map(fn
-        <<"L ", local_log::binary>> -> String.replace(local_log, ": ", ".000 - ")
+        <<"L ", local_log::binary>> -> Regex.replace(~r/(?<=:\d\d): /, local_log, ".000 - ")
         server_log -> server_log
       end)
 

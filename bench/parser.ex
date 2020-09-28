@@ -4,7 +4,7 @@ local_log_to_server_log = fn filename ->
   File.read!(filename)
   |> String.split("\n")
   |> Enum.map(fn
-    <<"L ", local_log::binary>> -> String.replace(local_log, ": ", ".000 - ")
+    <<"L ", local_log::binary>> -> Regex.replace(~r/(?<=:\d\d): /, local_log, ".000 - ")
     server_log -> server_log
   end)
   |> Enum.join("\n")
