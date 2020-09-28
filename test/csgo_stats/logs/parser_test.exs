@@ -20,7 +20,7 @@ defmodule CsgoStats.Logs.ParserTest do
 
     test "Match start" do
       line = "11/24/2019 - 21:43:39.781 - World triggered \"Match_Start\" on \"de_inferno\""
-      assert {:ok, [%Events.MatchStart{map: "de_inferno"}]} = Parser.parse(line)
+      assert {:ok, [%Events.MatchStart{map: :de_inferno}]} = Parser.parse(line)
     end
 
     test "Round start" do
@@ -60,8 +60,8 @@ defmodule CsgoStats.Logs.ParserTest do
       assert {:ok,
               [
                 %Events.GameOver{
-                  game_mode: "casual",
-                  game_map: "de_inferno",
+                  game_mode: :casual,
+                  game_map: :de_inferno,
                   ct_score: 3,
                   t_score: 8,
                   duration: 18
@@ -308,7 +308,7 @@ defmodule CsgoStats.Logs.ParserTest do
               [
                 %Events.Accolade{
                   player: %{username: "Neil"},
-                  award: "3k",
+                  award: :"3k",
                   value: 1.0,
                   score: 20.000002
                 }
@@ -323,7 +323,7 @@ defmodule CsgoStats.Logs.ParserTest do
               [
                 %Events.PlayerDisconnected{
                   player: %{username: "tbroedsgaard"},
-                  reason: "Disconnect"
+                  reason: :disconnect
                 }
               ]} = Parser.parse(line)
 
@@ -334,7 +334,7 @@ defmodule CsgoStats.Logs.ParserTest do
               [
                 %Events.PlayerDisconnected{
                   player: %{username: "Fergus"},
-                  reason: "Kicked by Console"
+                  reason: :kicked_by_console
                 }
               ]} = Parser.parse(kicked_by_console)
     end
