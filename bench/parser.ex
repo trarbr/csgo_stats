@@ -3,10 +3,7 @@ Logger.configure(level: :warn)
 local_log_to_server_log = fn filename ->
   File.read!(filename)
   |> String.split("\n")
-  |> Enum.map(fn
-    <<"L ", local_log::binary>> -> Regex.replace(~r/(?<=:\d\d): /, local_log, ".000 - ")
-    server_log -> server_log
-  end)
+  |> Enum.map(&CsgoStats.ensure_http_log_format/1)
   |> Enum.join("\n")
 end
 
