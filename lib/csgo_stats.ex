@@ -16,10 +16,7 @@ defmodule CsgoStats do
       File.read!(logfile)
       |> String.split("\n")
       |> Enum.reject(fn logline -> logline == "" end)
-      |> Enum.map(fn
-        <<"L ", local_log::binary>> -> String.replace(local_log, ": ", ".000 - ")
-        server_log -> server_log
-      end)
+      |> Enum.map(&ensure_http_log_format/1)
 
     timestamps =
       loglines
@@ -73,5 +70,17 @@ defmodule CsgoStats do
 
       Process.sleep(sleep_interval)
     end)
+  end
+
+  def ensure_http_log_format(line) do
+    # If the line is prefixed with `L `, translate from local log format to
+    # HTTP log format. The translation removes the `L ` prefix, adds
+    # milliseconds to the timestamp and changes the delimiter between timestamp
+    # and log message. E.g. `L 12/30/2019 - 17:51:08: ` is changed to
+    # `12/30/2019 - 17:51:08.000 - `.
+    case line do
+      <<"L ", local_log::binary>> -> Regex.replace(~r/(?<=:\d\d): /, local_log, ".000 - ")
+      server_log -> server_log
+    end
   end
 end
