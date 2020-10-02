@@ -43,6 +43,7 @@
       <div class="table">
         <div class="table-row table-header">
           <div class="table-data"></div>
+          <div class="table-data">$</div>
           <div class="table-data">K</div>
           <div class="table-data">A</div>
           <div class="table-data">D</div>
@@ -50,6 +51,7 @@
         <%= for {username, player} <- @match.players, player.team == :ct do %>
         <div class="table-row">
           <div class="table-data"><%= username %></div>
+          <div class="table-data"><%= player.money %></div>
           <div class="table-data"><%= player.kills %></div>
           <div class="table-data"><%= player.assists %></div>
           <div class="table-data"><%= player.deaths %></div>
@@ -77,6 +79,7 @@
         <%= for {username, player} <- @match.players, player.team == :terrorist do %>
         <div class="table-row">
           <div class="table-data"><%= username %></div>
+          <div class="table-data"><%= player.money %></div>
           <div class="table-data"><%= player.kills %></div>
           <div class="table-data"><%= player.assists %></div>
           <div class="table-data"><%= player.deaths %></div>
