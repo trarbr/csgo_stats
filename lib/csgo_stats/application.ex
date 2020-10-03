@@ -7,6 +7,7 @@ defmodule CsgoStats.Application do
     CsgoStats.Matches.DB.init()
 
     children = [
+      {Phoenix.PubSub, name: CsgoStats.PubSub},
       CsgoStats.Matches.Supervisor,
       {Registry, keys: :unique, name: CsgoStats.Matches.EventHandler},
       {Registry, keys: :duplicate, name: CsgoStats.Matches.DB},

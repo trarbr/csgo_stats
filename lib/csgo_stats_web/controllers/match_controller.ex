@@ -8,6 +8,6 @@ defmodule CsgoStatsWeb.MatchController do
   end
 
   def show(conn, params) do
-    live_render(conn, MatchLive.Show, session: %{server_instance_token: params["id"]})
+    live_render(conn, MatchLive.Show, session: %{"server_instance_token" => params["id"]})
   end
 end

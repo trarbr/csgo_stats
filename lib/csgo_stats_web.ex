@@ -37,16 +37,7 @@ defmodule CsgoStatsWeb do
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 1, get_flash: 2, view_module: 1]
 
-      import Phoenix.LiveView,
-        only: [
-          live_render: 2,
-          live_render: 3,
-          live_link: 1,
-          live_link: 2,
-          live_component: 2,
-          live_component: 3,
-          live_component: 4
-        ]
+      import Phoenix.LiveView.Helpers
 
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
@@ -62,6 +53,7 @@ defmodule CsgoStatsWeb do
       use Phoenix.Router
       import Plug.Conn
       import Phoenix.Controller
+      import Phoenix.LiveView.Router
     end
   end
 
