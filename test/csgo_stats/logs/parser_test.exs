@@ -401,6 +401,28 @@ defmodule CsgoStats.Logs.ParserTest do
                   item: :defuser
                 }
               ]} = Parser.parse(defuser)
+
+      c4 = "12/11/2019 - 20:48:19.644 - \"George<21><BOT><CT>\" picked up \"c4\""
+
+      assert {:ok,
+              [
+                %Events.PickedUp{
+                  player: %{username: "George"},
+                  item: :c4
+                }
+              ]} = Parser.parse(c4)
+    end
+
+    test "dropped" do
+      line = "12/11/2019 - 20:48:19.644 - \"Wesley<16><BOT><TERRORIST>\" dropped \"glock\""
+
+      assert {:ok,
+              [
+                %Events.Dropped{
+                  player: %{username: "Wesley"},
+                  item: :glock
+                }
+              ]} = Parser.parse(line)
     end
   end
 

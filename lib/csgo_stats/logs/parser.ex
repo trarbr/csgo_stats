@@ -77,7 +77,8 @@ defmodule CsgoStats.Logs.Parser do
       Parser.KilledOther.parser(),
       Parser.MoneyChange.parser(),
       Parser.LeftBuyzone.parser(),
-      Parser.PickedUp.parser()
+      Parser.PickedUp.parser(),
+      Parser.Dropped.parser()
     ])
     |> reduce({:set_player, []})
 
