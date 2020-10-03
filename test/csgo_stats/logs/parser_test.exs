@@ -380,6 +380,28 @@ defmodule CsgoStats.Logs.ParserTest do
                 }
               ]} = Parser.parse(line)
     end
+
+    test "picked up" do
+      line = "12/11/2019 - 20:48:19.644 - \"George<21><BOT><CT>\" picked up \"hkp2000\""
+
+      assert {:ok,
+              [
+                %Events.PickedUp{
+                  player: %{username: "George"},
+                  item: :hkp2000
+                }
+              ]} = Parser.parse(line)
+
+      defuser = "12/11/2019 - 20:48:19.644 - \"George<21><BOT><CT>\" picked up \"defuser\""
+
+      assert {:ok,
+              [
+                %Events.PickedUp{
+                  player: %{username: "George"},
+                  item: :defuser
+                }
+              ]} = Parser.parse(defuser)
+    end
   end
 
   describe "multi-line parsing" do

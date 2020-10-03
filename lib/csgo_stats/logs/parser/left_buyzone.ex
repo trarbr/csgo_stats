@@ -18,10 +18,6 @@ defmodule CsgoStats.Logs.Parser.LeftBuyzone do
     |> repeat()
   end
 
-  # unhandled
-  # C4
-  # defuser
-  # helmet
   defp item() do
     choice([
       weapon(),
