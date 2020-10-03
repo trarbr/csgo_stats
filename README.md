@@ -21,7 +21,7 @@ docker run -it -p 4000:4000 \
     trarbr/csgo_stats
 ```
 
-Then launch a CS:GO server and set the following cvars: `log on; mp_logdetail 3; logaddress_add_http "http://localhost:4000/api/logs`
+Then launch a CS:GO server and set the following cvars: `mp_logdetail 3; mp_logmoney 1; mp_logdetail_items 1; log on; logaddress_add_http "http://localhost:4000/api/logs";`
 
 ## Running tests and benchmarks
 

@@ -338,6 +338,35 @@ defmodule CsgoStats.Logs.ParserTest do
                 }
               ]} = Parser.parse(kicked_by_console)
     end
+
+    test "money change" do
+      line =
+        "12/11/2019 - 20:48:19.644 - \"Marvin<5><BOT><CT>\" money change 1400+3250 = $4650 (tracked)"
+
+      assert {:ok,
+              [
+                %Events.MoneyChange{
+                  player: %{username: "Marvin"},
+                  previous: 1400,
+                  diff: 3250,
+                  result: 4650
+                }
+              ]} = Parser.parse(line)
+
+      purchase =
+        "12/11/2019 - 20:48:19.644 - \"Uri<8><BOT><CT>\" money change 3000-2000 = $1000 (tracked) (purchase: weapon_xm1014)"
+
+      assert {:ok,
+              [
+                %Events.MoneyChange{
+                  player: %{username: "Uri"},
+                  previous: 3000,
+                  diff: -2000,
+                  result: 1000,
+                  purchase: "weapon_xm1014"
+                }
+              ]} = Parser.parse(purchase)
+    end
   end
 
   describe "multi-line parsing" do

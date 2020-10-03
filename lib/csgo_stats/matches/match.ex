@@ -15,7 +15,7 @@ defmodule CsgoStats.Matches.Match do
   ]
 
   defmodule Player do
-    defstruct team: nil, health: 100, armor: 0, kills: 0, assists: 0, deaths: 0
+    defstruct team: nil, health: 100, armor: 0, kills: 0, assists: 0, deaths: 0, money: 800
   end
 
   def new(server_instance_token) do
@@ -123,6 +123,15 @@ defmodule CsgoStats.Matches.Match do
     players =
       Map.update!(state.players, event.player.username, fn player ->
         %{player | deaths: player.deaths + 1}
+      end)
+
+    %{state | players: players}
+  end
+
+  def apply(state, %Events.MoneyChange{} = event) do
+    players =
+      Map.update!(state.players, event.player.username, fn player ->
+        %{player | money: event.result}
       end)
 
     %{state | players: players}
