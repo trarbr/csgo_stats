@@ -424,6 +424,29 @@ defmodule CsgoStats.Logs.ParserTest do
                 }
               ]} = Parser.parse(line)
     end
+
+    test "purchased" do
+      line = "12/11/2019 - 20:48:19.644 - \"Ryan<16><BOT><TERRORIST>\" purchased \"negev\""
+
+      assert {:ok,
+              [
+                %Events.Purchased{
+                  player: %{username: "Ryan"},
+                  item: :negev
+                }
+              ]} = Parser.parse(line)
+
+      line =
+        "12/11/2019 - 20:48:19.644 - \"Ryan<16><BOT><TERRORIST>\" purchased \"item_assaultsuit\""
+
+      assert {:ok,
+              [
+                %Events.Purchased{
+                  player: %{username: "Ryan"},
+                  item: :vesthelm
+                }
+              ]} = Parser.parse(line)
+    end
   end
 
   describe "multi-line parsing" do
