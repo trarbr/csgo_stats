@@ -34,7 +34,7 @@ defmodule CsgoStats.Logs.Parser.GameOver do
     game_mode =
       case game_mode do
         "casual" -> :casual
-        "competetive" -> :competetive
+        "competitive" -> :competitive
       end
 
     %Events.GameOver{
