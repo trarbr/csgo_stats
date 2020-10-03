@@ -1,7 +1,7 @@
 defmodule CsgoStatsWeb.MatchLive.Index do
   use Phoenix.LiveView
 
-  def mount(_params, socket) do
+  def mount(_params, _assigns, socket) do
     matches = CsgoStats.Matches.list_matches()
     CsgoStats.Matches.subscribe_all()
 

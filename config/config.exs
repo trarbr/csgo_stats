@@ -13,7 +13,7 @@ config :csgo_stats, CsgoStatsWeb.Endpoint,
   cache_static_manifest: "priv/static/cache_manifest.json",
   secret_key_base: "cEfaMdhkk8VZvdYxRby9MjB8Eek0b0yysYfVXwoV4ul5WzZfBRmWz6k0Bf5rhH4Q",
   render_errors: [view: CsgoStatsWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: CsgoStats.PubSub, adapter: Phoenix.PubSub.PG2],
+  pubsub_server: CsgoStats.PubSub,
   live_view: [
     signing_salt: "DDcvRhbPTARYZtDaxsNgNDoo0LzBilJB"
   ]
