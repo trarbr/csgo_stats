@@ -448,6 +448,18 @@ defmodule CsgoStats.Logs.ParserTest do
                 }
               ]} = Parser.parse(line)
     end
+
+    test "threw grenade" do
+      line = "12/11/2019 - 20:48:19.644 - \"Wesley<16><BOT><TERRORIST>\" threw flashbang [1333 376 179] flashbang entindex 239)"
+
+      assert {:ok,
+              [
+                %Events.ThrewGrenade{
+                  player: %{username: "Wesley"},
+                  item: :flashbang
+                }
+              ]} = Parser.parse(line)
+    end
   end
 
   describe "multi-line parsing" do
