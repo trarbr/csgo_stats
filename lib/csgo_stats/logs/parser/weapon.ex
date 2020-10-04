@@ -1,6 +1,54 @@
 defmodule CsgoStats.Logs.Parser.Weapon do
   import NimbleParsec
 
+  @weapons [
+    string("ak47"),
+    string("aug"),
+    string("awp"),
+    string("bizon"),
+    string("c4"),
+    string("cz75a"),
+    string("deagle"),
+    string("elite"),
+    string("famas"),
+    string("g3sg1"),
+    string("galilar"),
+    string("glock"),
+    string("hkp2000"),
+    string("knife_t"),
+    string("knife"),
+    string("m249"),
+    string("m4a1_silencer"),
+    string("m4a1"),
+    string("mac10"),
+    string("mag7"),
+    string("mp7"),
+    string("mp9"),
+    string("negev"),
+    string("nova"),
+    string("p250"),
+    string("p90"),
+    string("sawedoff"),
+    string("scar20"),
+    string("sg556"),
+    string("ssg08"),
+    string("taser"),
+    string("tec9"),
+    string("ump45"),
+    string("usp_silencer"),
+    string("xm1014")
+  ]
+
+  @grenades [
+    string("smokegrenade"),
+    string("flashbang"),
+    string("incgrenade"),
+    string("hegrenade"),
+    string("inferno"),
+    string("molotov"),
+    string("decoy")
+  ]
+
   # Example: "glock"
   def parser() do
     ignore(string(~s/"/))
@@ -9,50 +57,12 @@ defmodule CsgoStats.Logs.Parser.Weapon do
   end
 
   def weapon_name() do
-    choice([
-      string("ak47"),
-      string("aug"),
-      string("awp"),
-      string("bizon"),
-      string("c4"),
-      string("cz75a"),
-      string("deagle"),
-      string("decoy"),
-      string("elite"),
-      string("famas"),
-      string("flashbang"),
-      string("g3sg1"),
-      string("galilar"),
-      string("glock"),
-      string("hegrenade"),
-      string("hkp2000"),
-      string("incgrenade"),
-      string("inferno"),
-      string("knife_t"),
-      string("knife"),
-      string("m249"),
-      string("m4a1_silencer"),
-      string("m4a1"),
-      string("mac10"),
-      string("mag7"),
-      string("molotov"),
-      string("mp7"),
-      string("mp9"),
-      string("negev"),
-      string("nova"),
-      string("p250"),
-      string("p90"),
-      string("sawedoff"),
-      string("scar20"),
-      string("sg556"),
-      string("smokegrenade"),
-      string("ssg08"),
-      string("taser"),
-      string("tec9"),
-      string("ump45"),
-      string("usp_silencer"),
-      string("xm1014")
-    ])
+    choice(@weapons ++ @grenades)
+    |> reduce({__MODULE__, :cast, []})
+  end
+
+  def grenade_name() do
+    choice(@grenades)
     |> reduce({__MODULE__, :cast, []})
   end
 

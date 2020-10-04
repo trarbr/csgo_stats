@@ -33,6 +33,8 @@ defmodule CsgoStats.Matches.Match do
         :defuser -> %{player | defuser: true}
         :vesthelm -> %{player | armor: 100, helmet: true}
         :vest -> %{player | armor: 100}
+        :knife -> player
+        :knife_t -> player
         weapon -> %{player | weapons: player.weapons ++ [weapon]}
       end
     end
@@ -129,7 +131,7 @@ defmodule CsgoStats.Matches.Match do
   def apply(state, %Events.Killed{} = event) do
     players =
       Map.update!(state.players, event.killed.username, fn player ->
-        %{player | deaths: player.deaths + 1, armor: 0}
+        %{player | deaths: player.deaths + 1, armor: 0, weapons: []}
       end)
 
     players =
@@ -152,7 +154,7 @@ defmodule CsgoStats.Matches.Match do
   def apply(state, %Events.KilledByTheBomb{} = event) do
     players =
       Map.update!(state.players, event.player.username, fn player ->
-        %{player | deaths: player.deaths + 1}
+        %{player | deaths: player.deaths + 1, weapons: []}
       end)
 
     %{state | players: players}
@@ -168,15 +170,6 @@ defmodule CsgoStats.Matches.Match do
   end
 
   def apply(state, %Events.PickedUp{} = event) do
-    players =
-      Map.update!(state.players, event.player.username, fn player ->
-        Player.add_item(player, event.item)
-      end)
-
-    %{state | players: players}
-  end
-
-  def apply(state, %Events.Purchased{} = event) do
     players =
       Map.update!(state.players, event.player.username, fn player ->
         Player.add_item(player, event.item)
