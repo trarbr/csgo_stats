@@ -33,7 +33,8 @@ defmodule CsgoStats.Matches.Match do
         :defuser -> %{player | defuser: true}
         :vesthelm -> %{player | armor: 100, helmet: true}
         :vest -> %{player | armor: 100}
-        :knife -> %{player | weapons: player.weapons}
+        :knife -> player
+        :knife_t -> player
         weapon -> %{player | weapons: player.weapons ++ [weapon]}
       end
     end

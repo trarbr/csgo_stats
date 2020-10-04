@@ -23,7 +23,6 @@ defmodule CsgoStats.Logs.Parser.Weapon do
     string("m4a1"),
     string("mac10"),
     string("mag7"),
-    string("molotov"),
     string("mp7"),
     string("mp9"),
     string("negev"),
@@ -46,7 +45,8 @@ defmodule CsgoStats.Logs.Parser.Weapon do
     string("flashbang"),
     string("incgrenade"),
     string("hegrenade"),
-    string("inferno")
+    string("inferno"),
+    string("molotov")
   ]
 
   # Example: "glock"
