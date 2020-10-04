@@ -15,6 +15,7 @@ defmodule CsgoStats.Logs.Parser.Weapon do
       string("awp"),
       string("bizon"),
       string("c4"),
+      string("cz75a"),
       string("deagle"),
       string("decoy"),
       string("elite"),
@@ -62,6 +63,7 @@ defmodule CsgoStats.Logs.Parser.Weapon do
       "awp" -> :awp
       "bizon" -> :bizon
       "c4" -> :c4
+      "cz75a" -> :cz75a
       "deagle" -> :deagle
       "decoy" -> :decoy
       "elite" -> :elite
