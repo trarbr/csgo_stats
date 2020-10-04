@@ -15,7 +15,37 @@ defmodule CsgoStats.Matches.Match do
   ]
 
   defmodule Player do
-    defstruct team: nil, health: 100, armor: 0, kills: 0, assists: 0, deaths: 0, money: 800
+    defstruct team: nil,
+              health: 100,
+              armor: 0,
+              kills: 0,
+              assists: 0,
+              deaths: 0,
+              money: 800,
+              c4: false,
+              defuser: false,
+              helmet: false,
+              weapons: []
+
+    def add_item(player, item) do
+      case item do
+        :c4 -> %{player | c4: true}
+        :defuser -> %{player | defuser: true}
+        :vesthelm -> %{player | armor: 100, helmet: true}
+        :vest -> %{player | armor: 100}
+        weapon -> %{player | weapons: player.weapons ++ [weapon]}
+      end
+    end
+
+    def remove_item(player, item) do
+      case item do
+        :c4 -> %{player | c4: false}
+        :defuser -> %{player | defuser: false}
+        :vesthelm -> %{player | armor: 0, helmet: false}
+        :vest -> %{player | armor: 0}
+        weapon -> %{player | weapons: player.weapons -- [weapon]}
+      end
+    end
   end
 
   def new(server_instance_token) do
@@ -132,6 +162,33 @@ defmodule CsgoStats.Matches.Match do
     players =
       Map.update!(state.players, event.player.username, fn player ->
         %{player | money: event.result}
+      end)
+
+    %{state | players: players}
+  end
+
+  def apply(state, %Events.PickedUp{} = event) do
+    players =
+      Map.update!(state.players, event.player.username, fn player ->
+        Player.add_item(player, event.item)
+      end)
+
+    %{state | players: players}
+  end
+
+  def apply(state, %Events.Purchased{} = event) do
+    players =
+      Map.update!(state.players, event.player.username, fn player ->
+        Player.add_item(player, event.item)
+      end)
+
+    %{state | players: players}
+  end
+
+  def apply(state, %Events.Dropped{} = event) do
+    players =
+      Map.update!(state.players, event.player.username, fn player ->
+        Player.remove_item(player, event.item)
       end)
 
     %{state | players: players}

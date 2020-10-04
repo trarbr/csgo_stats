@@ -145,7 +145,7 @@ defmodule CsgoStats.Logs.ParserTest do
                     steam_id: "BOT",
                     team: :terrorist
                   },
-                  weapon: "hkp2000",
+                  weapon: :hkp2000,
                   damage: 61,
                   damage_armor: 29,
                   health: 39,
@@ -162,7 +162,7 @@ defmodule CsgoStats.Logs.ParserTest do
                 %Events.Attacked{
                   attacker: %{username: "Clarence"},
                   attacked: %{username: "Niles"},
-                  weapon: "aug",
+                  weapon: :aug,
                   hitgroup: "left leg"
                 }
               ]} = Parser.parse(left_leg)
@@ -177,7 +177,7 @@ defmodule CsgoStats.Logs.ParserTest do
                 %Events.Killed{
                   killer: %{username: "Niles"},
                   killed: %{username: "Elmer"},
-                  weapon: "glock",
+                  weapon: :glock,
                   headshot: false,
                   penetrated: false
                 }
@@ -191,7 +191,7 @@ defmodule CsgoStats.Logs.ParserTest do
                 %Events.Killed{
                   killer: %{username: "Niles"},
                   killed: %{username: "Albert"},
-                  weapon: "knife_t",
+                  weapon: :knife_t,
                   headshot: false,
                   penetrated: false
                 }
@@ -205,7 +205,7 @@ defmodule CsgoStats.Logs.ParserTest do
                 %Events.Killed{
                   killer: %{username: "Niles"},
                   killed: %{username: "Albert"},
-                  weapon: "usp_silencer",
+                  weapon: :usp_silencer,
                   headshot: false,
                   penetrated: false
                 }
@@ -219,7 +219,7 @@ defmodule CsgoStats.Logs.ParserTest do
                 %Events.Killed{
                   killer: %{username: "tbroedsgaard"},
                   killed: %{username: "Yanni"},
-                  weapon: "glock",
+                  weapon: :glock,
                   headshot: true,
                   penetrated: false
                 }
@@ -233,7 +233,7 @@ defmodule CsgoStats.Logs.ParserTest do
                 %Events.Killed{
                   killer: %{username: "tbroedsgaard"},
                   killed: %{username: "Clarence"},
-                  weapon: "glock",
+                  weapon: :glock,
                   headshot: false,
                   penetrated: true
                 }
@@ -256,7 +256,7 @@ defmodule CsgoStats.Logs.ParserTest do
                 %Events.KilledOther{
                   killer: %{username: "tbroedsgaard"},
                   killed: "chicken",
-                  weapon: "awp",
+                  weapon: :awp,
                   penetrated: false,
                   headshot: false
                 }
@@ -270,7 +270,7 @@ defmodule CsgoStats.Logs.ParserTest do
                 %Events.KilledOther{
                   killer: %{username: "tbroedsgaard"},
                   killed: "chicken",
-                  weapon: "awp",
+                  weapon: :awp,
                   penetrated: false,
                   headshot: true
                 }
@@ -284,7 +284,7 @@ defmodule CsgoStats.Logs.ParserTest do
                 %Events.KilledOther{
                   killer: %{username: "Yogi"},
                   killed: "func_breakable",
-                  weapon: "mp7",
+                  weapon: :mp7,
                   penetrated: true,
                   headshot: false
                 }
@@ -366,6 +366,87 @@ defmodule CsgoStats.Logs.ParserTest do
                   purchase: "weapon_xm1014"
                 }
               ]} = Parser.parse(purchase)
+    end
+
+    test "left buyzone" do
+      line =
+        "12/11/2019 - 20:48:19.644 - \"Fred<27><BOT><CT>\" left buyzone with [ weapon_knife weapon_hkp2000 weapon_c4 C4 ]"
+
+      assert {:ok,
+              [
+                %Events.LeftBuyzone{
+                  player: %{username: "Fred"},
+                  weapons: [:knife, :hkp2000],
+                  c4: true
+                }
+              ]} = Parser.parse(line)
+    end
+
+    test "picked up" do
+      line = "12/11/2019 - 20:48:19.644 - \"George<21><BOT><CT>\" picked up \"hkp2000\""
+
+      assert {:ok,
+              [
+                %Events.PickedUp{
+                  player: %{username: "George"},
+                  item: :hkp2000
+                }
+              ]} = Parser.parse(line)
+
+      defuser = "12/11/2019 - 20:48:19.644 - \"George<21><BOT><CT>\" picked up \"defuser\""
+
+      assert {:ok,
+              [
+                %Events.PickedUp{
+                  player: %{username: "George"},
+                  item: :defuser
+                }
+              ]} = Parser.parse(defuser)
+
+      c4 = "12/11/2019 - 20:48:19.644 - \"George<21><BOT><CT>\" picked up \"c4\""
+
+      assert {:ok,
+              [
+                %Events.PickedUp{
+                  player: %{username: "George"},
+                  item: :c4
+                }
+              ]} = Parser.parse(c4)
+    end
+
+    test "dropped" do
+      line = "12/11/2019 - 20:48:19.644 - \"Wesley<16><BOT><TERRORIST>\" dropped \"glock\""
+
+      assert {:ok,
+              [
+                %Events.Dropped{
+                  player: %{username: "Wesley"},
+                  item: :glock
+                }
+              ]} = Parser.parse(line)
+    end
+
+    test "purchased" do
+      line = "12/11/2019 - 20:48:19.644 - \"Ryan<16><BOT><TERRORIST>\" purchased \"negev\""
+
+      assert {:ok,
+              [
+                %Events.Purchased{
+                  player: %{username: "Ryan"},
+                  item: :negev
+                }
+              ]} = Parser.parse(line)
+
+      line =
+        "12/11/2019 - 20:48:19.644 - \"Ryan<16><BOT><TERRORIST>\" purchased \"item_assaultsuit\""
+
+      assert {:ok,
+              [
+                %Events.Purchased{
+                  player: %{username: "Ryan"},
+                  item: :vesthelm
+                }
+              ]} = Parser.parse(line)
     end
   end
 
