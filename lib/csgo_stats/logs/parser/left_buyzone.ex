@@ -47,6 +47,8 @@ defmodule CsgoStats.Logs.Parser.LeftBuyzone do
       items,
       %Events.LeftBuyzone{weapons: [], defuser: false, c4: false, helmet: false, kevlar: 0},
       fn
+        # Skip {:weapon, :c4} as these buyzone events also contain "C4"
+        {:weapon, :c4}, acc -> acc
         {:weapon, weapon}, acc -> %{acc | weapons: acc.weapons ++ [weapon]}
         {:kevlar, hitpoints}, acc -> %{acc | kevlar: hitpoints}
         "C4", acc -> %{acc | c4: true}

@@ -370,13 +370,14 @@ defmodule CsgoStats.Logs.ParserTest do
 
     test "left buyzone" do
       line =
-        "12/11/2019 - 20:48:19.644 - \"Fred<27><BOT><CT>\" left buyzone with [ weapon_knife weapon_hkp2000 ]"
+        "12/11/2019 - 20:48:19.644 - \"Fred<27><BOT><CT>\" left buyzone with [ weapon_knife weapon_hkp2000 weapon_c4 C4 ]"
 
       assert {:ok,
               [
                 %Events.LeftBuyzone{
                   player: %{username: "Fred"},
-                  weapons: [:knife, :hkp2000]
+                  weapons: [:knife, :hkp2000],
+                  c4: true
                 }
               ]} = Parser.parse(line)
     end
