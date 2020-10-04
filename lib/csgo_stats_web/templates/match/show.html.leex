@@ -42,6 +42,7 @@
         <div class="table-row table-header">
           <div class="table-data"></div>
           <div class="table-data">+</div>
+          <div class="table-data">🛡️</div>
           <div class="table-data">$</div>
           <div class="table-data">K</div>
           <div class="table-data">A</div>
@@ -51,8 +52,17 @@
         <div class="table-row">
           <div class="table-data"><%= username %></div>
           <div class="table-data">
-            <div class="progressbar <%= if player.health <= 75, do: 'yellow', else: '' %> <%= if player.health <= 40, do: 'red', else: '' %>" data-progress="<%= player.health %>">
+            <div
+              class="progressbar <%= if player.health <= 75, do: 'yellow', else: '' %> <%= if player.health <= 40, do: 'red', else: '' %>"
+              data-progress="<%= player.health %>">
               <span style="width: <%= player.health %>%;"></span>
+            </div>
+          </div>
+          <div class="table-data">
+            <div
+              class="progressbar <%= if player.armor <= 75, do: 'yellow', else: '' %> <%= if player.armor <= 40, do: 'red', else: '' %>"
+              data-progress="<%= player.armor %>">
+              <span style="width: <%= player.armor %>%;"></span>
             </div>
           </div>
           <div class="table-data"><%= player.money %></div>
@@ -84,8 +94,17 @@
         <div class="table-row">
           <div class="table-data"><%= username %></div>
           <div class="table-data">
-            <div class="progressbar <%= if player.health <= 75, do: 'yellow', else: '' %> <%= if player.health <= 40, do: 'red', else: '' %>" data-progress="<%= player.health %>">
+            <div
+              class="progressbar <%= if player.health <= 75, do: 'yellow', else: '' %> <%= if player.health <= 40, do: 'red', else: '' %>"
+              data-progress="<%= player.health %>">
               <span style="width: <%= player.health %>%;"></span>
+            </div>
+          </div>
+          <div class="table-data">
+            <div
+              class="progressbar <%= if player.armor <= 75, do: 'yellow', else: '' %> <%= if player.armor <= 40, do: 'red', else: '' %>"
+              data-progress="<%= player.armor %>">
+              <span style="width: <%= player.armor %>%;"></span>
             </div>
           </div>
           <div class="table-data"><%= player.money %></div>
