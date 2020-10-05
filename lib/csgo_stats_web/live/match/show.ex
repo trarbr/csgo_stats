@@ -15,7 +15,7 @@ defmodule CsgoStatsWeb.MatchLive.Show do
       :timer.send_interval(1000, self(), :tick)
     end
 
-    {:ok, assign(socket, match: match, time_left: timer(match))}
+    {:ok, assign(socket, match: match, time_left: timer(match, 0))}
   end
 
   def render(assigns) do
@@ -23,25 +23,27 @@ defmodule CsgoStatsWeb.MatchLive.Show do
   end
 
   def handle_info(:tick, socket) do
-    {:noreply, assign(socket, time_left: timer(socket.assigns.match))}
+    {:noreply, assign(socket, time_left: timer(socket.assigns.match, socket.assigns.time_left))}
   end
 
   def handle_info({:match_updated, match}, socket) do
     match = %{match | players: sort_players(match.players)}
-    {:noreply, assign(socket, match: match, time_left: timer(socket.assigns.match))}
+    {:noreply, assign(socket, match: match, time_left: timer(socket.assigns.match, socket.assigns.time_left))}
   end
 
-  defp timer(%Match{bomb_timeout: nil, round_timeout: nil, freeze_timeout: nil}), do: 0
+  defp timer(%Match{bomb_timeout: nil, round_timeout: nil, freeze_timeout: nil}, _), do: 0
 
-  defp timer(%Match{bomb_timeout: nil, round_timeout: nil} = match) do
+  defp timer(%Match{bomb_timeout: nil, round_timeout: nil} = match, _) do
     NaiveDateTime.diff(match.freeze_timeout, NaiveDateTime.utc_now())
   end
 
-  defp timer(%Match{bomb_timeout: nil} = match) do
+  defp timer(%Match{bomb_timeout: nil} = match, _) do
     NaiveDateTime.diff(match.round_timeout, NaiveDateTime.utc_now())
   end
 
-  defp timer(%Match{} = match) do
+  defp timer(%Match{phase: :round_over}, time_left), do: time_left
+
+  defp timer(%Match{} = match, _) do
     NaiveDateTime.diff(match.bomb_timeout, NaiveDateTime.utc_now())
   end
 

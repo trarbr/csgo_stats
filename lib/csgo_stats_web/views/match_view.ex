@@ -18,5 +18,6 @@ defmodule CsgoStatsWeb.MatchView do
   def timer_class(_), do: "red"
 
   def bomb_class(%Match{bomb_timeout: nil}), do: ""
+  def bomb_class(%Match{phase: :round_over}), do: "shown white"
   def bomb_class(_), do: "shown"
 end
