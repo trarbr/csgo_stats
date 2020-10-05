@@ -59,7 +59,7 @@ defmodule CsgoStats.Matches.Match do
       score_ct: 0,
       wins: [],
       players: %{},
-      kill_feed: [],
+      kill_feed: []
     }
   end
 

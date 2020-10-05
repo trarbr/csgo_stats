@@ -28,7 +28,9 @@ defmodule CsgoStatsWeb.MatchLive.Show do
 
   def handle_info({:match_updated, match}, socket) do
     match = %{match | players: sort_players(match.players)}
-    {:noreply, assign(socket, match: match, time_left: timer(socket.assigns.match, socket.assigns.time_left))}
+
+    {:noreply,
+     assign(socket, match: match, time_left: timer(socket.assigns.match, socket.assigns.time_left))}
   end
 
   defp timer(%Match{bomb_timeout: nil, round_timeout: nil, freeze_timeout: nil}, _), do: 0

@@ -5,7 +5,9 @@ defmodule CsgoStatsWeb.MatchView do
 
   def formatted_roundtime(time_left) do
     minutes = floor(time_left / 60)
-    seconds = time_left - minutes * 60
+
+    seconds =
+      (time_left - minutes * 60)
       |> Integer.to_string()
       |> String.pad_leading(2, "0")
 
