@@ -7,6 +7,7 @@ defmodule CsgoStats.Matches.Match do
     :wins,
     :map,
     :players,
+    :freeze_timeout,
     :round_timeout,
     :bomb_timeout,
     :kill_feed,
@@ -75,7 +76,7 @@ defmodule CsgoStats.Matches.Match do
 
   def apply(%{phase: :freeze_period} = state, %Events.RoundStart{}) do
     # TODO: set timeout depending on cvar mp_roundtime or mp_roundtime_defuse
-    timeout = NaiveDateTime.add(NaiveDateTime.utc_now(), 3 * 60, :second)
+    timeout = NaiveDateTime.add(NaiveDateTime.utc_now(), 90, :second)
     %{state | phase: :round, round_timeout: timeout}
   end
 
@@ -89,7 +90,7 @@ defmodule CsgoStats.Matches.Match do
   end
 
   def apply(%{phase: :round} = state, %Events.RoundEnd{}) do
-    %{state | phase: :round_over, round_timeout: nil, bomb_timeout: nil}
+    %{state | phase: :round_over, round_timeout: nil}
   end
 
   def apply(%{phase: :round_over} = state, %Events.GameOver{}) do
@@ -102,7 +103,17 @@ defmodule CsgoStats.Matches.Match do
         {username, %{player | health: 100}}
       end)
 
-    %{state | phase: :freeze_period, players: players, kill_feed: []}
+    # TODO: set timeout depending on cvar mp_freezetime
+    timeout = NaiveDateTime.add(NaiveDateTime.utc_now(), 10, :second)
+
+    %{
+      state
+      | phase: :freeze_period,
+        players: players,
+        kill_feed: [],
+        bomb_timeout: nil,
+        freeze_timeout: timeout
+    }
   end
 
   def apply(state, %Events.PlayerSwitchedTeam{} = event) do

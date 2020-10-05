@@ -6,6 +6,14 @@
     <div class="value"><%= if @match.map != nil, do: @match.map, else: "Unknown" %></div>
   </div>
 
+  <div class="round-info">
+    <div class="timer <%= timer_class(@match) %>">
+      <%= formatted_roundtime(@time_left) %>
+    </div>
+
+    <img src="<%= Routes.static_path(@socket, "/images/bomb-planted.svg") %>" class="bomb <%= bomb_class(@match) %>">
+  </div>
+
   <div class="kill-feed">
     <%= for %{killer: killer, killed: killed, weapon: weapon, headshot: headshot} <- @match.kill_feed |> Enum.slice(0..2) do %>
     <div class="kill">

@@ -1,24 +1,48 @@
 defmodule CsgoStatsWeb.MatchLive.Show do
   use Phoenix.LiveView
 
+  alias CsgoStats.Matches.Match
+
   def mount(_params, %{"server_instance_token" => server_instance_token}, socket) do
     match =
       CsgoStats.Matches.get_match(server_instance_token) ||
-        CsgoStats.Matches.Match.new(server_instance_token)
+        Match.new(server_instance_token)
 
     CsgoStats.Matches.subscribe_match(server_instance_token)
     match = %{match | players: sort_players(match.players)}
 
-    {:ok, assign(socket, match: match)}
+    if connected?(socket) do
+      :timer.send_interval(1000, self(), :tick)
+    end
+
+    {:ok, assign(socket, match: match, time_left: timer(match))}
   end
 
   def render(assigns) do
     CsgoStatsWeb.MatchView.render("show.html", assigns)
   end
 
+  def handle_info(:tick, socket) do
+    {:noreply, assign(socket, time_left: timer(socket.assigns.match))}
+  end
+
   def handle_info({:match_updated, match}, socket) do
     match = %{match | players: sort_players(match.players)}
-    {:noreply, assign(socket, match: match)}
+    {:noreply, assign(socket, match: match, time_left: timer(socket.assigns.match))}
+  end
+
+  defp timer(%Match{bomb_timeout: nil, round_timeout: nil, freeze_timeout: nil}), do: 0
+
+  defp timer(%Match{bomb_timeout: nil, round_timeout: nil} = match) do
+    NaiveDateTime.diff(match.freeze_timeout, NaiveDateTime.utc_now())
+  end
+
+  defp timer(%Match{bomb_timeout: nil} = match) do
+    NaiveDateTime.diff(match.round_timeout, NaiveDateTime.utc_now())
+  end
+
+  defp timer(%Match{} = match) do
+    NaiveDateTime.diff(match.bomb_timeout, NaiveDateTime.utc_now())
   end
 
   defp sort_players(players) do
