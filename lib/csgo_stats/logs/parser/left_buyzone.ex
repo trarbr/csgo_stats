@@ -22,6 +22,7 @@ defmodule CsgoStats.Logs.Parser.LeftBuyzone do
     choice([
       weapon(),
       kevlar(),
+      string("weapon_c4"),
       string("C4"),
       string("defuser"),
       string("helmet")
@@ -29,8 +30,7 @@ defmodule CsgoStats.Logs.Parser.LeftBuyzone do
   end
 
   defp weapon() do
-    ignore(string("weapon_"))
-    |> concat(Parser.Weapon.weapon_name())
+    Parser.Weapon.prefixed()
     |> reduce({__MODULE__, :cast_weapon, []})
   end
 
@@ -47,10 +47,9 @@ defmodule CsgoStats.Logs.Parser.LeftBuyzone do
       items,
       %Events.LeftBuyzone{weapons: [], defuser: false, c4: false, helmet: false, kevlar: 0},
       fn
-        # Skip {:weapon, :c4} as these buyzone events also contain "C4"
-        {:weapon, :c4}, acc -> acc
         {:weapon, weapon}, acc -> %{acc | weapons: acc.weapons ++ [weapon]}
         {:kevlar, hitpoints}, acc -> %{acc | kevlar: hitpoints}
+        "weapon_c4", acc -> %{acc | c4: true}
         "C4", acc -> %{acc | c4: true}
         "defuser", acc -> %{acc | defuser: true}
         "helmet", acc -> %{acc | helmet: true}

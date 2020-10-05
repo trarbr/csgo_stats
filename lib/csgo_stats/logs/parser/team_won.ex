@@ -1,7 +1,7 @@
 defmodule CsgoStats.Logs.Parser.TeamWon do
   import NimbleParsec
 
-  alias CsgoStats.Events
+  alias CsgoStats.{Events, Types}
   alias CsgoStats.Logs.Parser
 
   # Example: Team "TERRORIST" triggered "SFUI_Notice_Terrorists_Win" (CT "0") (T "1")
@@ -29,6 +29,14 @@ defmodule CsgoStats.Logs.Parser.TeamWon do
     ])
   end
 
+  Enum.each(Types.win_conditions(), fn
+    :terrorists_win -> defp cast_win_condition("Terrorists_Win"), do: :terrorists_win
+    :cts_win -> defp cast_win_condition("CTs_Win"), do: :cts_win
+    :target_bombed -> defp cast_win_condition("Target_Bombed"), do: :target_bombed
+    :bomb_defused -> defp cast_win_condition("Bomb_Defused"), do: :bomb_defused
+    :target_saved -> defp cast_win_condition("Target_Saved"), do: :target_saved
+  end)
+
   # Example: (CT "0")
   defp team_score() do
     ignore(string("("))
@@ -39,14 +47,7 @@ defmodule CsgoStats.Logs.Parser.TeamWon do
   end
 
   def cast([team, win_condition, :ct, ct_score, :terrorist, terrorist_score]) do
-    win_condition =
-      case win_condition do
-        "Terrorists_Win" -> :terrorists_win
-        "CTs_Win" -> :cts_win
-        "Target_Bombed" -> :target_bombed
-        "Bomb_Defused" -> :bomb_defused
-        "Target_Saved" -> :target_saved
-      end
+    win_condition = cast_win_condition(win_condition)
 
     %Events.TeamWon{
       team: team,

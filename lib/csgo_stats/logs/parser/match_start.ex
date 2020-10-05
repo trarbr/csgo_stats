@@ -12,7 +12,7 @@ defmodule CsgoStats.Logs.Parser.MatchStart do
     |> reduce({__MODULE__, :cast, []})
   end
 
-  def cast([map]) do
-    %Events.MatchStart{map: map}
+  def cast([game_map]) do
+    %Events.MatchStart{game_map: game_map}
   end
 end
