@@ -11,13 +11,10 @@ import "../css/app.scss"
 //
 import "phoenix_html"
 
-// Import local files
-//
-// Local files can be imported directly using relative paths, for example:
-// import socket from "./socket"
+import TimerHook from './hooks/timer'
 
 import { Socket } from "phoenix"
 import LiveSocket from "phoenix_live_view"
 
-let liveSocket = new LiveSocket("/live", Socket)
+let liveSocket = new LiveSocket("/live", Socket, { hooks: { TimerHook } })
 liveSocket.connect()
