@@ -97,7 +97,7 @@ defmodule CsgoStats.Matches.Match do
     %{state | phase: :game_over}
   end
 
-  def apply(%{phase: :round_over} = state, %Events.FreezePeriodStarted{}) do
+  def apply(state, %Events.FreezePeriodStarted{}) do
     players =
       Map.new(state.players, fn {username, player} ->
         {username, %{player | health: 100}}
