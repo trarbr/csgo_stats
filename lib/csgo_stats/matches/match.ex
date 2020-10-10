@@ -7,9 +7,8 @@ defmodule CsgoStats.Matches.Match do
     :wins,
     :map,
     :players,
-    :freeze_timeout,
-    :round_timeout,
-    :bomb_timeout,
+    :timeout,
+    :time_left,
     :kill_feed,
     :score_terrorist,
     :score_ct
@@ -65,36 +64,16 @@ defmodule CsgoStats.Matches.Match do
 
   def apply(state, event)
 
-  def apply(%{phase: phase} = state, %Events.GameCommencing{})
-      when phase in [:pre_game, :game_over] do
+  def apply(state, %Events.GameCommencing{}) do
     %{state | phase: :game_commencing}
   end
 
-  def apply(%{phase: :game_commencing} = state, %Events.MatchStart{} = event) do
-    %{state | phase: :freeze_period, map: event.map}
-  end
+  def apply(state, %Events.MatchStart{} = event) do
+    # TODO: set timeout depending on cvar mp_freezetime
+    timeout = NaiveDateTime.add(NaiveDateTime.utc_now(), 10, :second)
 
-  def apply(%{phase: :freeze_period} = state, %Events.RoundStart{}) do
-    # TODO: set timeout depending on cvar mp_roundtime or mp_roundtime_defuse
-    timeout = NaiveDateTime.add(NaiveDateTime.utc_now(), 90, :second)
-    %{state | phase: :round, round_timeout: timeout}
-  end
-
-  def apply(state, %Events.TeamWon{} = event) do
-    %{
-      state
-      | wins: state.wins ++ [event.win_condition],
-        score_terrorist: event.terrorist_score,
-        score_ct: event.ct_score
-    }
-  end
-
-  def apply(%{phase: :round} = state, %Events.RoundEnd{}) do
-    %{state | phase: :round_over, round_timeout: nil}
-  end
-
-  def apply(%{phase: :round_over} = state, %Events.GameOver{}) do
-    %{state | phase: :game_over}
+    %{state | phase: :freeze_period, map: event.map, timeout: timeout}
+    |> update_time_left()
   end
 
   def apply(state, %Events.FreezePeriodStarted{}) do
@@ -111,9 +90,40 @@ defmodule CsgoStats.Matches.Match do
       | phase: :freeze_period,
         players: players,
         kill_feed: [],
-        bomb_timeout: nil,
-        freeze_timeout: timeout
+        timeout: timeout
     }
+    |> update_time_left()
+  end
+
+  def apply(state, %Events.RoundStart{}) do
+    # TODO: set timeout depending on cvar mp_roundtime or mp_roundtime_defuse
+    timeout = NaiveDateTime.add(NaiveDateTime.utc_now(), 90, :second)
+
+    %{state | phase: :round_started, timeout: timeout}
+    |> update_time_left()
+  end
+
+  def apply(state, %Events.PlantedTheBomb{}) do
+    timeout = NaiveDateTime.add(NaiveDateTime.utc_now(), 40, :second)
+
+    %{state | phase: :bomb_planted, timeout: timeout}
+    |> update_time_left()
+  end
+
+  def apply(state, %Events.TeamWon{} = event) do
+    %{
+      state
+      | wins: state.wins ++ [event.win_condition],
+        score_terrorist: event.terrorist_score,
+        score_ct: event.ct_score,
+        phase: {:round_over, event.win_condition},
+        timeout: nil,
+        time_left: nil
+    }
+  end
+
+  def apply(state, %Events.GameOver{}) do
+    %{state | phase: :game_over, timeout: nil, time_left: nil}
   end
 
   def apply(state, %Events.PlayerSwitchedTeam{} = event) do
@@ -123,11 +133,6 @@ defmodule CsgoStats.Matches.Match do
       end)
 
     %{state | players: players}
-  end
-
-  def apply(state, %Events.PlantedTheBomb{}) do
-    timeout = NaiveDateTime.add(NaiveDateTime.utc_now(), 40, :second)
-    %{state | bomb_timeout: timeout}
   end
 
   def apply(state, %Events.Attacked{} = event) do
@@ -198,7 +203,20 @@ defmodule CsgoStats.Matches.Match do
     %{state | players: players}
   end
 
+  def apply(%{timeout: timeout} = state, :tick) when timeout !== nil do
+    update_time_left(state)
+  end
+
   def apply(state, _event) do
     state
+  end
+
+  defp update_time_left(state) do
+    time_left =
+      state.timeout
+      |> NaiveDateTime.diff(NaiveDateTime.utc_now())
+      |> max(0)
+
+    %{state | time_left: time_left}
   end
 end

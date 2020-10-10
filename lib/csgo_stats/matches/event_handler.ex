@@ -40,6 +40,7 @@ defmodule CsgoStats.Matches.EventHandler do
         match = Match.new(server_instance_token)
         state = %{match: match}
         events = Keyword.get(opts, :events, [])
+        :timer.send_interval(1_000, :tick)
         {:ok, state, {:continue, {:apply, events}}}
 
       {:error, {reason, _pid}} ->
@@ -55,6 +56,11 @@ defmodule CsgoStats.Matches.EventHandler do
   @impl true
   def handle_cast({:apply, events}, state) do
     apply_events(state, events)
+  end
+
+  @impl true
+  def handle_info(:tick, state) do
+    apply_events(state, [:tick])
   end
 
   defp apply_events(state, events) do

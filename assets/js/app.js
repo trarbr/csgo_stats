@@ -11,10 +11,8 @@ import "../css/app.scss"
 //
 import "phoenix_html"
 
-import TimerHook from './hooks/timer'
-
 import { Socket } from "phoenix"
 import LiveSocket from "phoenix_live_view"
 
-let liveSocket = new LiveSocket("/live", Socket, { hooks: { TimerHook } })
+let liveSocket = new LiveSocket("/live", Socket)
 liveSocket.connect()
