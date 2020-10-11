@@ -1,7 +1,7 @@
 defmodule CsgoStatsWeb.MatchLive.Show do
   use Phoenix.LiveView
 
-  alias CsgoStats.Matches.Match
+  alias CsgoStats.Matches.{EventHandler, Match}
 
   def mount(_params, %{"server_instance_token" => server_instance_token}, socket) do
     match =
@@ -16,6 +16,13 @@ defmodule CsgoStatsWeb.MatchLive.Show do
 
   def render(assigns) do
     CsgoStatsWeb.MatchView.render("show.html", assigns)
+  end
+
+  def handle_event("set-event", %{"event-selector" => event}, socket) do
+    event_index = String.to_integer(event)
+    EventHandler.replay_from_event(socket.assigns.match.server_instance_token, event_index)
+
+    {:noreply, socket}
   end
 
   def handle_info({:match_updated, match}, socket) do

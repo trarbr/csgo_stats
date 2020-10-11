@@ -7,7 +7,11 @@ defmodule CsgoStats do
   if it comes from the database, an external API or others.
   """
 
-  def playback(logfile, url \\ 'http://localhost:4000/api/logs', speedup \\ 1) do
+  def debug?() do
+    Application.get_env(:csgo_stats, :debug, false)
+  end
+
+  def playback(logfile, speedup \\ 1, url \\ 'http://localhost:4000/api/logs') do
     spawn(fn -> do_playback(logfile, url, speedup) end)
   end
 
@@ -70,6 +74,30 @@ defmodule CsgoStats do
 
       Process.sleep(sleep_interval)
     end)
+  end
+
+  def format_timestamp(ts) do
+    {millis, _} = ts.microsecond
+
+    pad(ts.month) <>
+      "/" <>
+      pad(ts.day) <>
+      "/" <>
+      pad(ts.year) <>
+      " - " <>
+      pad(ts.hour) <>
+      ":" <>
+      pad(ts.minute) <>
+      ":" <>
+      pad(ts.second) <>
+      "." <>
+      pad(div(millis, 1000))
+  end
+
+  def pad(number) do
+    number
+    |> Integer.to_string()
+    |> String.pad_leading(2, "0")
   end
 
   def ensure_http_log_format(line) do
