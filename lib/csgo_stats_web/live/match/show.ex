@@ -1,10 +1,12 @@
 defmodule CsgoStatsWeb.MatchLive.Show do
   use Phoenix.LiveView
 
+  alias CsgoStats.Matches.Match
+
   def mount(_params, %{"server_instance_token" => server_instance_token}, socket) do
     match =
       CsgoStats.Matches.get_match(server_instance_token) ||
-        CsgoStats.Matches.Match.new(server_instance_token)
+        Match.new(server_instance_token)
 
     CsgoStats.Matches.subscribe_match(server_instance_token)
     match = %{match | players: sort_players(match.players)}
@@ -18,6 +20,7 @@ defmodule CsgoStatsWeb.MatchLive.Show do
 
   def handle_info({:match_updated, match}, socket) do
     match = %{match | players: sort_players(match.players)}
+
     {:noreply, assign(socket, match: match)}
   end
 
