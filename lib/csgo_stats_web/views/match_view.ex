@@ -1,6 +1,8 @@
 defmodule CsgoStatsWeb.MatchView do
   use CsgoStatsWeb, :view
 
+  alias CsgoStats.Matches.Match.Player
+
   def timer_class(match) do
     case match.phase do
       :freeze_period -> "red"
@@ -30,5 +32,15 @@ defmodule CsgoStatsWeb.MatchView do
       {:round_over, :bomb_defused} -> "shown defused"
       _ -> ""
     end
+  end
+
+  def player_class(%Player{health: 0}), do: "dead"
+  def player_class(_), do: ""
+
+  def events(match) do
+    {processed_events, received_events} =
+      CsgoStats.Matches.EventHandler.get_events(match.server_instance_token)
+
+    "#{Enum.count(processed_events)}/#{Enum.count(received_events)}"
   end
 end
