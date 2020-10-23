@@ -11,6 +11,20 @@ defmodule CsgoStats do
     Application.get_env(:csgo_stats, :debug, false)
   end
 
+  def load(logfile) do
+    loglines =
+      File.read!(logfile)
+      |> String.split("\n")
+      |> Enum.reject(fn logline -> logline == "" end)
+      |> Enum.map(&ensure_http_log_format/1)
+      |> Enum.join("\n")
+
+    {:ok, events} = CsgoStats.Logs.Parser.parse(loglines)
+
+    CsgoStats.Matches.start("qwerty")
+    CsgoStats.Matches.update("qwerty", events)
+  end
+
   def playback(logfile, speedup \\ 1, url \\ 'http://localhost:4000/api/logs') do
     spawn(fn -> do_playback(logfile, url, speedup) end)
   end
