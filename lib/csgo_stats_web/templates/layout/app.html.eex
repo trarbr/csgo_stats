@@ -10,9 +10,7 @@
 </head>
 
 <body>
-  <div class="background">
-    <img src="/images/inferno.jpg">
-  </div>
+  <div class="background"></div>
 
   <nav class="navigation" role="navigation">
     <a href="/" class="logo">

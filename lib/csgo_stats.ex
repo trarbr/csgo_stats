@@ -7,7 +7,25 @@ defmodule CsgoStats do
   if it comes from the database, an external API or others.
   """
 
-  def playback(logfile, url \\ 'http://localhost:4000/api/logs', speedup \\ 1) do
+  def debug?() do
+    Application.get_env(:csgo_stats, :debug, false)
+  end
+
+  def load(logfile) do
+    loglines =
+      File.read!(logfile)
+      |> String.split("\n")
+      |> Enum.reject(fn logline -> logline == "" end)
+      |> Enum.map(&ensure_http_log_format/1)
+      |> Enum.join("\n")
+
+    {:ok, events} = CsgoStats.Logs.Parser.parse(loglines)
+
+    CsgoStats.Matches.start("load-" <> logfile)
+    CsgoStats.Matches.update("load-" <> logfile, events)
+  end
+
+  def playback(logfile, speedup \\ 1, url \\ 'http://localhost:4000/api/logs') do
     spawn(fn -> do_playback(logfile, url, speedup) end)
   end
 
@@ -60,7 +78,7 @@ defmodule CsgoStats do
           {url,
            [
              {'x-server-addr', '0:0:0:0:12345'},
-             {'x-server-instance-token', 'abcdefg'},
+             {'x-server-instance-token', String.to_charlist("playback-" <> logfile)},
              {'x-steamid', '1'},
              {'x-timestamp', '1234'}
            ], 'text/plain', logline},
@@ -70,6 +88,30 @@ defmodule CsgoStats do
 
       Process.sleep(sleep_interval)
     end)
+  end
+
+  def format_timestamp(ts) do
+    {millis, _} = ts.microsecond
+
+    pad(ts.month) <>
+      "/" <>
+      pad(ts.day) <>
+      "/" <>
+      pad(ts.year) <>
+      " - " <>
+      pad(ts.hour) <>
+      ":" <>
+      pad(ts.minute) <>
+      ":" <>
+      pad(ts.second) <>
+      "." <>
+      pad(div(millis, 1000))
+  end
+
+  def pad(number) do
+    number
+    |> Integer.to_string()
+    |> String.pad_leading(2, "0")
   end
 
   def ensure_http_log_format(line) do
