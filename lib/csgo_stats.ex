@@ -21,8 +21,8 @@ defmodule CsgoStats do
 
     {:ok, events} = CsgoStats.Logs.Parser.parse(loglines)
 
-    CsgoStats.Matches.start("load")
-    CsgoStats.Matches.update("load", events)
+    CsgoStats.Matches.start("load-" <> logfile)
+    CsgoStats.Matches.update("load-" <> logfile, events)
   end
 
   def playback(logfile, speedup \\ 1, url \\ 'http://localhost:4000/api/logs') do
@@ -78,7 +78,7 @@ defmodule CsgoStats do
           {url,
            [
              {'x-server-addr', '0:0:0:0:12345'},
-             {'x-server-instance-token', 'playback'},
+             {'x-server-instance-token', String.to_charlist("playback-" <> logfile)},
              {'x-steamid', '1'},
              {'x-timestamp', '1234'}
            ], 'text/plain', logline},

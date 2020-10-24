@@ -53,4 +53,5 @@ iex(2)> CsgoStats.playback("bench/inputs/medium.log")
 ```
 
 You can then visit http://localhost:4000/matches/ - it will list the matches
-`load` and `playback`, which you can then jump to. Happy debugging!
+`load-bench/inputs/medium.log` and `playback-bench/inputs/medium.log`, which
+you can then jump to. Happy debugging!
