@@ -238,6 +238,34 @@ defmodule CsgoStats.Logs.ParserTest do
                   penetrated: true
                 }
               ]} = Parser.parse(penetrated)
+
+      headshot_penetrated =
+        "11/24/2019 - 21:43:39.781 - \"tbroedsgaard<2><STEAM_1:1:42376214><TERRORIST>\" [-481 -2162 -180] killed \"Yogi<9><BOT><CT>\" [-720 -1345 -104] with \"awp\" (headshot penetrated)"
+
+      assert {:ok,
+              [
+                %Events.Killed{
+                  killer: %{username: "tbroedsgaard"},
+                  killed: %{username: "Yogi"},
+                  weapon: :awp,
+                  headshot: true,
+                  penetrated: true
+                }
+              ]} = Parser.parse(headshot_penetrated)
+
+      noscope =
+        "11/24/2019 - 21:43:39.781 - \"tbroedsgaard<2><STEAM_1:1:42376214><TERRORIST>\" [-646 -917 -225] killed \"Harvey<5><BOT><CT>\" [-638 -815 -200] with \"awp\" (noscope)"
+
+      assert {:ok,
+              [
+                %Events.Killed{
+                  killer: %{username: "tbroedsgaard"},
+                  killed: %{username: "Harvey"},
+                  weapon: :awp,
+                  headshot: false,
+                  penetrated: false
+                }
+              ]} = Parser.parse(noscope)
     end
 
     test "Killed by the bomb" do

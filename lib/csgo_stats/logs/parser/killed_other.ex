@@ -15,7 +15,9 @@ defmodule CsgoStats.Logs.Parser.KilledOther do
     |> ignore(Parser.Position.parser())
     |> ignore(string(" with "))
     |> concat(Parser.Weapon.parser())
-    |> optional(choice([string(" (headshot)"), string(" (penetrated)")]))
+    |> optional(
+      choice([string(" (headshot penetrated)"), string(" (headshot)"), string(" (penetrated)")])
+    )
     |> reduce({__MODULE__, :cast, []})
   end
 
@@ -34,6 +36,7 @@ defmodule CsgoStats.Logs.Parser.KilledOther do
     case extra do
       " (headshot)" -> %{event | headshot: true}
       " (penetrated)" -> %{event | penetrated: true}
+      " (headshot penetrated)" -> %{event | headshot: true, penetrated: true}
     end
   end
 end
