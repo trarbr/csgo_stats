@@ -92,7 +92,7 @@ defmodule CsgoStats.Matches.Match do
     %{
       state
       | phase: :freeze_period,
-        map: event.map,
+        map: event.game_map,
         timeout: timeout,
         timeout_event_time: event.timestamp
     }
