@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <%= csrf_meta_tag() %>
+  <%= live_title_tag assigns[:page_title] || "Home", suffix: " · CS:GO Stats" %>
+  <link phx-track-static rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>" />
+  <script defer phx-track-static type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+</head>
+
+<body>
+  <div class="background"></div>
+  <nav class="navigation" role="navigation">
+    <a href="/" class="logo">
+      <img src="<%= Routes.static_path(@conn, "/images/logo.svg") %>" alt="CS:GO Stats Logo" />
+    </a>
+
+    <ul class="menu-items">
+      <li><%= live_redirect("Matches", to: Routes.match_index_path(@conn, :index)) %></li>
+    </ul>
+  </nav>
+
+  <%= @inner_content %>
+</body>
+
+</html>

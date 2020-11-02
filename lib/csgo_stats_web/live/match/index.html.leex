@@ -1,0 +1,14 @@
+<div class="match-list">
+  <%= for match <- @matches do %>
+  <div class="match">
+    <%= live_redirect("#{match.server_instance_token}", to: Routes.match_show_path(@socket, :show, match.server_instance_token)) %>
+    <%= live_redirect("Watch >", to: Routes.match_show_path(@socket, :show, match.server_instance_token)) %>
+  </div>
+  <% end %>
+
+  <%= if Enum.empty?(@matches) do %>
+  <div style="color: #fff;">
+    No matches to display
+  </div>
+  <% end %>
+</div>
