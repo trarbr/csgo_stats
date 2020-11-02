@@ -6,13 +6,19 @@ defmodule CsgoStats.Logs.Parser.BeganBombDefuse do
   # Example: "Clarence<17><BOT><CT>" triggered "Begin_Bomb_Defuse_With_Kit"
   def parser() do
     ignore(string(~s/ triggered "/))
-    |> string("Begin_Bomb_Defuse_With_Kit")
+    |> choice([
+      string("Begin_Bomb_Defuse_With_Kit"),
+      string("Begin_Bomb_Defuse_Without_Kit")
+    ])
     |> ignore(string(~s/"/))
     |> reduce({__MODULE__, :cast, []})
   end
 
-  # TODO: Handle Without_Kit
   def cast(["Begin_Bomb_Defuse_With_Kit"]) do
     %Events.BeganBombDefuse{kit: true}
+  end
+
+  def cast(["Begin_Bomb_Defuse_Without_Kit"]) do
+    %Events.BeganBombDefuse{kit: false}
   end
 end

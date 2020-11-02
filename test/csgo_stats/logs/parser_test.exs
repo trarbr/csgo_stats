@@ -20,7 +20,7 @@ defmodule CsgoStats.Logs.ParserTest do
 
     test "Match start" do
       line = "11/24/2019 - 21:43:39.781 - World triggered \"Match_Start\" on \"de_inferno\""
-      assert {:ok, [%Events.MatchStart{map: :de_inferno}]} = Parser.parse(line)
+      assert {:ok, [%Events.MatchStart{game_map: :de_inferno}]} = Parser.parse(line)
     end
 
     test "Round start" do
@@ -80,7 +80,8 @@ defmodule CsgoStats.Logs.ParserTest do
       line =
         "11/24/2019 - 21:43:39.781 - \"Uri<13><BOT>\" switched from team <Unassigned> to <CT>"
 
-      assert {:ok, [%Events.PlayerSwitchedTeam{player: %{username: "Uri"}, from: nil, to: :ct}]} =
+      assert {:ok,
+              [%Events.PlayerSwitchedTeam{player: %{username: "Uri"}, from: :unassigned, to: :ct}]} =
                Parser.parse(line)
     end
 
@@ -150,7 +151,7 @@ defmodule CsgoStats.Logs.ParserTest do
                   damage_armor: 29,
                   health: 39,
                   armor: 70,
-                  hitgroup: "head"
+                  hitgroup: :head
                 }
               ]} = Parser.parse(line)
 
@@ -163,7 +164,7 @@ defmodule CsgoStats.Logs.ParserTest do
                   attacker: %{username: "Clarence"},
                   attacked: %{username: "Niles"},
                   weapon: :aug,
-                  hitgroup: "left leg"
+                  hitgroup: :left_leg
                 }
               ]} = Parser.parse(left_leg)
     end
@@ -255,7 +256,7 @@ defmodule CsgoStats.Logs.ParserTest do
               [
                 %Events.KilledOther{
                   killer: %{username: "tbroedsgaard"},
-                  killed: "chicken",
+                  killed: :chicken,
                   weapon: :awp,
                   penetrated: false,
                   headshot: false
@@ -269,7 +270,7 @@ defmodule CsgoStats.Logs.ParserTest do
               [
                 %Events.KilledOther{
                   killer: %{username: "tbroedsgaard"},
-                  killed: "chicken",
+                  killed: :chicken,
                   weapon: :awp,
                   penetrated: false,
                   headshot: true
@@ -283,7 +284,7 @@ defmodule CsgoStats.Logs.ParserTest do
               [
                 %Events.KilledOther{
                   killer: %{username: "Yogi"},
-                  killed: "func_breakable",
+                  killed: :func_breakable,
                   weapon: :mp7,
                   penetrated: true,
                   headshot: false
@@ -363,7 +364,7 @@ defmodule CsgoStats.Logs.ParserTest do
                   previous: 3000,
                   diff: -2000,
                   result: 1000,
-                  purchase: "weapon_xm1014"
+                  purchase: :xm1014
                 }
               ]} = Parser.parse(purchase)
     end

@@ -9,18 +9,9 @@ defmodule CsgoStats.Logs.Parser.PickedUp do
     ignore(string(" picked up "))
     |> choice([
       Parser.Weapon.parser(),
-      defuser()
+      Parser.Item.parser()
     ])
     |> reduce({__MODULE__, :cast, []})
-  end
-
-  defp defuser() do
-    ignore(string(~s/"defuser"/))
-    |> reduce({__MODULE__, :cast_defuser, []})
-  end
-
-  def cast_defuser([]) do
-    :defuser
   end
 
   def cast([item]) do

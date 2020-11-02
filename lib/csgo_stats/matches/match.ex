@@ -6,7 +6,7 @@ defmodule CsgoStats.Matches.Match do
     :debug,
     :phase,
     :wins,
-    :map,
+    :game_map,
     :players,
     :timeout,
     :timeout_event_time,
@@ -92,7 +92,7 @@ defmodule CsgoStats.Matches.Match do
     %{
       state
       | phase: :freeze_period,
-        map: event.map,
+        game_map: event.game_map,
         timeout: timeout,
         timeout_event_time: event.timestamp
     }

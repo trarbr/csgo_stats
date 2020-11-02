@@ -1,7 +1,7 @@
 defmodule CsgoStats.Logs.Parser.Attacked do
   import NimbleParsec
 
-  alias CsgoStats.Events
+  alias CsgoStats.{Events, Types}
   alias CsgoStats.Logs.Parser
 
   # Example: "Niles<16><BOT><TERRORIST>" [123 616 72] attacked "Elmer<18><BOT><CT>" [932 550 88] with "glock" (damage "17") (damage_armor "0") (health "83") (armor "100") (hitgroup "right leg")
@@ -28,12 +28,41 @@ defmodule CsgoStats.Logs.Parser.Attacked do
   end
 
   # Example: (hitgroup "right leg")
-  # TODO: atomize
   defp hitgroup() do
     ignore(string(~s/(hitgroup "/))
-    |> ascii_string([?a..?z, ?\s], min: 1)
+    |> choice([
+      string("chest"),
+      string("generic"),
+      string("head"),
+      string("left arm"),
+      string("left leg"),
+      string("neck"),
+      string("right arm"),
+      string("right leg"),
+      string("stomach")
+    ])
     |> ignore(string(~s/")/))
   end
+
+  @hitgroups Enum.map(Types.hitgroups(), fn hitgroup -> to_string(hitgroup) end)
+
+  Enum.each(Types.hitgroups(), fn
+    :left_arm ->
+      defp cast_hitgroup("left arm"), do: :left_arm
+
+    :left_leg ->
+      defp cast_hitgroup("left leg"), do: :left_leg
+
+    :right_arm ->
+      defp cast_hitgroup("right arm"), do: :right_arm
+
+    :right_leg ->
+      defp cast_hitgroup("right leg"), do: :right_leg
+
+    _hitgroup ->
+      defp cast_hitgroup(hitgroup) when hitgroup in @hitgroups,
+        do: String.to_existing_atom(hitgroup)
+  end)
 
   # Example: (damage_armor "32")
   defp stat() do
@@ -58,6 +87,8 @@ defmodule CsgoStats.Logs.Parser.Attacked do
         armor,
         hitgroup
       ]) do
+    hitgroup = cast_hitgroup(hitgroup)
+
     %Events.Attacked{
       attacked: attacked,
       weapon: weapon,
