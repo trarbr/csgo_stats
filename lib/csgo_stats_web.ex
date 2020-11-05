@@ -35,16 +35,20 @@ defmodule CsgoStatsWeb do
         namespace: CsgoStatsWeb
 
       # Import convenience functions from controllers
-      import Phoenix.Controller, only: [get_flash: 1, get_flash: 2, view_module: 1]
+      import Phoenix.Controller,
+        only: [get_flash: 1, get_flash: 2, view_module: 1, view_template: 1]
 
-      import Phoenix.LiveView.Helpers
+      # Include shared imports and aliases for views
+      unquote(view_helpers())
+    end
+  end
 
-      # Use all HTML functionality (forms, tags, etc)
-      use Phoenix.HTML
+  def live_view do
+    quote do
+      use Phoenix.LiveView,
+        layout: {CsgoStatsWeb.LayoutView, "live.html"}
 
-      import CsgoStatsWeb.ErrorHelpers
-      import CsgoStatsWeb.Gettext
-      alias CsgoStatsWeb.Router.Helpers, as: Routes
+      unquote(view_helpers())
     end
   end
 
@@ -61,6 +65,24 @@ defmodule CsgoStatsWeb do
     quote do
       use Phoenix.Channel
       import CsgoStatsWeb.Gettext
+    end
+  end
+
+  defp view_helpers do
+    quote do
+      # Use all HTML functionality (forms, tags, etc)
+      use Phoenix.HTML
+
+      # Import LiveView helpers (live_render, live_component, live_patch, etc)
+      import Phoenix.LiveView.Helpers
+      # import CsgoStatsWeb.LiveHelpers
+
+      # Import basic rendering functionality (render, render_layout, etc)
+      import Phoenix.View
+
+      import CsgoStatsWeb.ErrorHelpers
+      import CsgoStatsWeb.Gettext
+      alias CsgoStatsWeb.Router.Helpers, as: Routes
     end
   end
 
