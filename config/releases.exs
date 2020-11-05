@@ -7,9 +7,9 @@ secret_key_base =
     You can generate one by calling: mix phx.gen.secret
     """
 
-listen_port = String.to_integer(System.get_env("LISTEN_PORT") || "4000")
-url_scheme = System.get_env("URL_SCHEME") || "http"
-url_host = System.get_env("URL_HOST") || "localhost"
+listen_port = String.to_integer(System.get_env("LISTEN_PORT", "4000"))
+url_scheme = System.get_env("URL_SCHEME", "http")
+url_host = System.get_env("URL_HOST", "localhost")
 
 config :csgo_stats, CsgoStatsWeb.Endpoint,
   http: [port: listen_port],
@@ -18,3 +18,5 @@ config :csgo_stats, CsgoStatsWeb.Endpoint,
     host: url_host
   ],
   secret_key_base: secret_key_base
+
+config :csgo_stats, log_dir: System.get_env("LOG_DIR", "/tmp/csgo_stats_logs/")

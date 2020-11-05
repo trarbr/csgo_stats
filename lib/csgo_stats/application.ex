@@ -5,6 +5,7 @@ defmodule CsgoStats.Application do
 
   def start(_type, _args) do
     CsgoStats.Matches.DB.init()
+    CsgoStats.Logs.init()
 
     children = [
       {Phoenix.PubSub, name: CsgoStats.PubSub},
