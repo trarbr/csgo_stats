@@ -1,4 +1,4 @@
-FROM debian:9.11-slim AS builder
+FROM debian:10.6-slim AS builder
 
 RUN apt-get update && \
     apt-get install -y \
@@ -17,19 +17,19 @@ RUN apt-get install -y locales locales-all && \
 ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
 
 # Install Node
-ARG NODE_VERSION=12
+ARG NODE_VERSION=14
 RUN curl -sL https://deb.nodesource.com/setup_${NODE_VERSION}.x | bash - && \
     apt-get install -y nodejs
 
 # Install Erlang
-ARG ERLANG_VERSION=22.1.8-1
+ARG ERLANG_VERSION=23.1-1
 RUN wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && \
     dpkg -i erlang-solutions_1.0_all.deb && \
     apt-get update && \
     apt-get install -y esl-erlang=1:${ERLANG_VERSION}
 
 # Install Elixir
-ARG ELIXIR_VERSION=1.9.4-1
+ARG ELIXIR_VERSION=1.11.2-1
 RUN apt-get install -y elixir=${ELIXIR_VERSION}
 
 RUN /usr/bin/mix local.hex --force && \
@@ -38,24 +38,25 @@ RUN /usr/bin/mix local.hex --force && \
 
 WORKDIR /app
 
-COPY assets assets
-COPY config config
-COPY lib lib
-COPY priv priv
-COPY mix.exs .
-COPY mix.lock .
-
 ENV MIX_ENV=prod
 
-RUN mix do deps.get --only prod, deps.compile && \
-    cd assets && \
+COPY mix.exs .
+COPY mix.lock .
+RUN mix do deps.get --only prod, deps.compile
+
+COPY assets assets
+RUN cd assets && \
     npm install && \
-    npm run deploy && \
-    cd .. && \
-    mix phx.digest && \
+    npm run deploy
+
+COPY config config
+COPY lib lib
+COPY priv/gettext priv/gettext
+COPY priv/repo priv/repo
+RUN mix phx.digest && \
     mix release
 
-FROM debian:9.11-slim
+FROM debian:10.6-slim
 
 RUN apt-get update && \
     apt-get install -y openssl
