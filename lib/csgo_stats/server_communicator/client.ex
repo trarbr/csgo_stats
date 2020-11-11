@@ -15,7 +15,9 @@ defmodule CsgoStats.ServerCommunicator.Client do
   defstruct [:instance, :password, :log_address, :socket, :next_packet_id]
 
   def execute(conn, command) do
+    IO.inspect("exe")
     :gen_statem.call(conn, {:execute, command})
+    IO.inspect("fexe")
   end
 
   def start_link(opts) do
@@ -30,15 +32,17 @@ defmodule CsgoStats.ServerCommunicator.Client do
     data = %__MODULE__{
       instance: Keyword.get(opts, :instance),
       password: Keyword.get(opts, :password, "1234"),
-      log_address: Keyword.get(opts, :log_address, "127.0.0.1:4000/api/logs")
+      log_address: Keyword.get(opts, :log_address, "192.168.1.14:4000/api/logs")
     }
 
+    IO.inspect("init")
     actions = [{:next_event, :internal, :connect}]
     {:ok, :disconnected, data, actions}
   end
 
   @impl true
   def handle_event(:internal, :connect, :disconnected, data) do
+    IO.inspect("connect")
     do_connect(data)
   end
 
@@ -57,6 +61,8 @@ defmodule CsgoStats.ServerCommunicator.Client do
   def handle_event(:internal, :forward_logs, :authenticated, data) do
     id = data.next_packet_id
 
+    IO.inspect("auth")
+
     command =
       "log on; mp_logdetail 3; logaddress_del #{data.log_address}; logaddress_add #{
         data.log_address
@@ -68,29 +74,37 @@ defmodule CsgoStats.ServerCommunicator.Client do
 
     with {:ok, packet} = recv_packet(data.socket),
          true <- response?(packet, id) do
+      IO.inspect("Sent command succesfully")
       {:keep_state, data}
     else
-      false -> :bugger_me
+      error ->
+        IO.inspect("error")
+        IO.inspect(error)
+        :bugger_me
     end
   end
 
-  # def handle_event({:call, from}, {:execute, command}, :authenticated, data) do
-  #   id = data.next_packet_id
-  #   packet = serverdata_execcommand(id, command)
-  #   :ok = send_packet(data.socket, packet)
-  #   data = %{data | next_packet_id: id + 1}
+  def handle_event({:call, from}, {:execute, command}, :authenticated, data) do
+    IO.inspect("Executing command: " <> command)
+    id = data.next_packet_id
+    packet = serverdata_execcommand(id, command)
+    :ok = send_packet(data.socket, packet)
+    data = %{data | next_packet_id: id + 1}
 
-  #   # TODO: handle long responses
-  #   with {:ok, packet} = recv_packet(data.socket),
-  #        true <- response?(packet, id) do
-  #     response_size = byte_size(packet) - 4 - 4 - 2
-  #     <<_::64, response::bytes-size(response_size), 0, 0>> = packet
-  #     actions = [{:reply, from, response}]
-  #     {:keep_state, data, actions}
-  #   else
-  #     false -> :bugger_me
-  #   end
-  # end
+    # TODO: handle long responses
+    with {:ok, packet} = recv_packet(data.socket),
+         true <- response?(packet, id) do
+      response_size = byte_size(packet) - 4 - 4 - 2
+      <<_::64, response::bytes-size(response_size), 0, 0>> = packet
+      actions = [{:reply, from, response}]
+      {:keep_state, data, actions}
+    else
+      f ->
+        IO.inspect("error forwarding")
+        IO.inspect(f)
+        :bugger_me
+    end
+  end
 
   defp response?(<<id::32-signed-integer-little, _rest::bytes>>, expected_id) do
     id == expected_id
@@ -111,6 +125,8 @@ defmodule CsgoStats.ServerCommunicator.Client do
   end
 
   defp serverdata_auth(id, password) do
+    IO.inspect(id)
+    IO.inspect(password)
     <<
       id::32-signed-integer-little,
       3::32-signed-integer-little,
@@ -135,14 +151,22 @@ defmodule CsgoStats.ServerCommunicator.Client do
     :ok = send_packet(data.socket, packet)
     data = %{data | next_packet_id: id + 1}
 
+    IO.inspect("Attempting to authenticate")
+
     with {:ok, packet} = recv_packet(data.socket),
+         _ <- IO.inspect(packet),
          true <- response?(packet, id),
+         _ <- IO.inspect("yup"),
          {:ok, packet} = recv_packet(data.socket),
+         _ <- IO.inspect(packet),
          true <- authenticated?(packet, id) do
+      IO.inspect("Authenticated")
       actions = [{:next_event, :internal, :forward_logs}]
       {:next_state, :authenticated, data, actions}
     else
-      false ->
+      error ->
+        IO.inspect("Did not authenticate. Gonna try again...")
+        IO.inspect(error)
         actions = [{:state_timeout, @auth_backoff_timeout, :backoff}]
         {:keep_state, data, actions}
     end
@@ -156,10 +180,13 @@ defmodule CsgoStats.ServerCommunicator.Client do
            @connect_timeout
          ) do
       {:ok, socket} ->
+        IO.inspect("do_connect succ")
         actions = [{:next_event, :internal, :authenticate}]
-        {:next_state, :connected, %{socket: socket}, actions}
+        {:next_state, :connected, %{data | socket: socket, next_packet_id: 1}, actions}
 
-      {:error, _} ->
+      {:error, e} ->
+        IO.inspect(e)
+        IO.inspect("do_connect error")
         actions = [{:state_timeout, @connect_backoff_timeout, :backoff}]
         {:keep_state_and_data, actions}
     end
