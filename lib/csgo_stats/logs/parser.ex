@@ -38,8 +38,15 @@ defmodule CsgoStats.Logs.Parser do
         Logger.info("event_unhandled||#{unhandled}")
         parse(next_events, accumulator ++ events)
 
-      {:error, error, unparsed, _context, _, _} ->
-        {:error, error, unparsed}
+      {:error, _error, unparsed, _context, _, _} ->
+        [unparsed, next_events] =
+          case String.split(unparsed, "\n", parts: 2) do
+            [unparsed, next_events] -> [unparsed, next_events]
+            [unparsed] -> [unparsed, ""]
+          end
+
+        Logger.info("event_unhandled||#{unparsed}")
+        parse(next_events, accumulator)
     end
   end
 
@@ -114,7 +121,7 @@ defmodule CsgoStats.Logs.Parser do
     ])
     |> ignore(optional(string("\n")))
     |> reduce({:set_timestamp, []})
-    |> repeat(),
+    |> times(min: 1),
     inline: true
   )
 
