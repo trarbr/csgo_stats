@@ -44,7 +44,7 @@ defmodule CsgoStats.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.1"},
       {:nimble_parsec, "~> 1.1"},
-      {:phoenix_live_view, "~> 0.14.7"},
+      {:phoenix_live_view, "~> 0.15.5"},
       {:benchee, "~> 1.0", only: :dev}
     ]
   end
