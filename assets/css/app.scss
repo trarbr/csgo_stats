@@ -6,11 +6,11 @@
 
 @font-face {
     font-family: 'stratum2';
-    src: url('/fonts/stratum2-regular-webfont.eot');
-    src: url('/fonts/stratum2-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/stratum2-regular-webfont.woff') format('woff'),
-         url('/fonts/stratum2-regular-webfont.ttf') format('truetype'),
-         url('/fonts/stratum2-regular-webfont.svg#stratum2') format('svg');
+    src: url('../static/fonts/stratum2-regular-webfont.eot');
+    src: url('../static/fonts/stratum2-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../static/fonts/stratum2-regular-webfont.woff') format('woff'),
+         url('../static/fonts/stratum2-regular-webfont.ttf') format('truetype'),
+         url('../static/fonts/stratum2-regular-webfont.svg#stratum2') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -69,7 +69,7 @@ body {
         height: calc(100% + 100px);
         top: -50px;
         left: -50px;
-        background: url(/images/inferno.jpg);
+        background: url('../static/images/inferno.jpg');
         background-size: cover;
         filter: blur(30px) brightness(0.3);
     }
