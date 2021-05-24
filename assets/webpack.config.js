@@ -29,19 +29,33 @@ module.exports = (env, options) => ({
         }
       },
       {
+        // File loader is here to load images and fonts used in CSS
+        test: /\.(ttf|eot|woff|svg|png|jpg|gif|ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[path][name].[ext]',
+            outputPath: '../',
+            context: 'static'
+          }
+        }
+      },
+      {
         test: /\.(sa|sc|c)ss$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader
+            loader: MiniCssExtractPlugin.loader,
           },
           'css-loader',
           'sass-loader',
         ]
-      }
+      },
     ]
   },
   plugins: [
-    new MiniCssExtractPlugin({ filename: '../css/app.css' }),
+    new MiniCssExtractPlugin({ filename: '../css/app.css',  }),
+    // CopyWebpackPlugin is here to include all static files so they can be
+    // referenced from EEx templates / Elixir code
     new CopyWebpackPlugin({
       patterns: [{ from: 'static/', to: '../' }]
     })
