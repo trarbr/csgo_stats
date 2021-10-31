@@ -34,6 +34,7 @@ defmodule CsgoStats.MixProject do
   defp deps do
     [
       {:phoenix, "~> 1.6.0"},
+      {:esbuild, "~> 0.3.3"},
       {:phoenix_pubsub, "~> 2.0"},
       {:phoenix_ecto, "~> 4.0"},
       {:ecto_sql, "~> 3.1"},
@@ -44,7 +45,7 @@ defmodule CsgoStats.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.1"},
       {:nimble_parsec, "~> 1.1"},
-      {:phoenix_live_view, "~> 0.17.1"},
+      {:phoenix_live_view, "~> 0.17.2"},
       {:benchee, "~> 1.0", only: :dev}
     ]
   end
