@@ -52,6 +52,14 @@ defmodule CsgoStatsWeb do
     end
   end
 
+  def live_component do
+    quote do
+      use Phoenix.LiveComponent
+
+      unquote(view_helpers())
+    end
+  end
+
   def router do
     quote do
       use Phoenix.Router
@@ -83,6 +91,7 @@ defmodule CsgoStatsWeb do
       import CsgoStatsWeb.ErrorHelpers
       import CsgoStatsWeb.Gettext
       alias CsgoStatsWeb.Router.Helpers, as: Routes
+      alias Phoenix.LiveView.JS
     end
   end
 
