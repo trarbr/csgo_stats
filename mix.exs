@@ -61,7 +61,8 @@ defmodule CsgoStats.MixProject do
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       # test: ["ecto.create --quiet", "ecto.migrate", "test"]
-      bench: ["run bench/parser.ex"]
+      bench: ["run bench/parser.ex"],
+      "assets.deploy": ["esbuild default --minify", "phx.digest"]
     ]
   end
 end
