@@ -1,4 +1,4 @@
-defmodule CsgoStats.Matches.Supervisor do
+defmodule CsgoStats.Servers.Supervisor do
   use DynamicSupervisor
 
   def start_link(opts) do

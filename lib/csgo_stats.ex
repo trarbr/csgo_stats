@@ -22,8 +22,8 @@ defmodule CsgoStats do
     {:ok, events} = CsgoStats.Logs.Parser.parse(loglines)
 
     id = String.replace(logfile, "/", "-")
-    CsgoStats.Matches.start("load-" <> id)
-    CsgoStats.Matches.update("load-" <> id, events)
+    CsgoStats.Servers.start_event_handler("load-" <> id)
+    CsgoStats.Servers.handle_events("load-" <> id, events)
   end
 
   def playback(logfile, speedup \\ 1, url \\ 'http://localhost:4000/api/logs') do

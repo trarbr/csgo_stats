@@ -1,18 +1,18 @@
 defmodule CsgoStats.Logs do
   require Logger
 
-  alias CsgoStats.Matches
+  alias CsgoStats.Servers
   alias CsgoStats.Logs.{Entry, Parser}
 
   def process(data, metadata) do
     with {:ok, entry} <- Entry.new(data, metadata),
-         true <- CsgoStats.Matches.started?(entry.server_instance_token) do
+         true <- Servers.event_handler_started?(entry.server_instance_token) do
       :ok = log(entry.server_instance_token, data)
       events = do_parse(entry)
-      :ok = Matches.update(entry.server_instance_token, events)
+      :ok = Servers.handle_events(entry.server_instance_token, events)
     else
       false ->
-        CsgoStats.Matches.start(metadata.server_instance_token)
+        Servers.start_event_handler(metadata.server_instance_token)
         Logger.info("unknown_match||#{metadata.server_instance_token}")
         :restart_log
 

@@ -9,8 +9,8 @@ defmodule CsgoStats.Application do
 
     children = [
       {Phoenix.PubSub, name: CsgoStats.PubSub},
-      CsgoStats.Matches.Supervisor,
-      {Registry, keys: :unique, name: CsgoStats.Matches.EventHandler},
+      CsgoStats.Servers.Supervisor,
+      {Registry, keys: :unique, name: CsgoStats.Servers.EventHandler},
       {Registry, keys: :duplicate, name: CsgoStats.Matches.DB},
       # CsgoStats.Repo,
       CsgoStatsWeb.Endpoint

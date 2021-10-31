@@ -1,6 +1,6 @@
-defmodule CsgoStats.Matches.EventHandler do
+defmodule CsgoStats.Servers.EventHandler do
   @moduledoc """
-  Applies events to a match in order to derive the new state of the match.
+  Handles events logged by the game server.
   """
   use GenServer
 

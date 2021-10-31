@@ -1,7 +1,8 @@
 defmodule CsgoStatsWeb.MatchLive.Show do
   use CsgoStatsWeb, :live_view
 
-  alias CsgoStats.Matches.{EventHandler, Match}
+  alias CsgoStats.Servers.EventHandler
+  alias CsgoStats.Matches.Match
   alias CsgoStats.Matches.Match.Player
 
   def mount(%{"id" => server_instance_token}, _session, socket) do
@@ -69,8 +70,7 @@ defmodule CsgoStatsWeb.MatchLive.Show do
   defp player_class(_), do: ""
 
   defp events(match) do
-    {processed_events, received_events} =
-      CsgoStats.Matches.EventHandler.get_events(match.server_instance_token)
+    {processed_events, received_events} = EventHandler.get_events(match.server_instance_token)
 
     "#{Enum.count(processed_events)}/#{Enum.count(received_events)}"
   end
