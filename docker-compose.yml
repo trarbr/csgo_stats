@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  csgo_server:
+    image: cm2network/csgo
+    ports:
+      - 27016:27016/tcp
+      - 27016:27016/udp
+      - 27021:27021/udp
+    volumes:
+      - ./csgo-data:/home/steam/csgo-dedicated/:delegated
+    environment:
+      SRCDS_PORT: '27016'
+      SRCDS_TV_PORT: '27021'
+      SRCDS_RCONPW: 'csgogames'
+      SRCDS_TOKEN: ${SRCDS_TOKEN}
+      SRCDS_PW: 'csgogames'
