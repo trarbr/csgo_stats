@@ -21,8 +21,3 @@ defmodule CsgoStats.Servers do
     end
   end
 end
-
-# TODO:
-# 1. Create server
-# 2. Start server handlers
-# 3. Handle logged events
